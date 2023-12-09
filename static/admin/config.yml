@@ -9,35 +9,37 @@ public_folder: /assets
 collections:
   - name: hero
     label: Hero Section
-    folder: home/sections
+    folder: home-sections
     widget: "string"
-    create: true
     delete: false
     fields:
       - { name: title, label: Title }
       - { name: subtitle, label: Subtitle }
+      - { name: "image", label: "Image", widget: "image" }
   - name: who-we-are
     label: Who We Are Section
-    folder: home/sections
+    folder: home-sections
     widget: "string"
-    create: true
     delete: false
     fields:
       - { name: title, label: Title, widget: "string" }
       - { name: subtitle, label: Subtitle, widget: "string" }
+      - { name: "image", label: "Image", widget: "image" }
+
   - name: our-services
     label: Our services Section
-    folder: home/sections
+    folder: home-sections
     widget: "string"
-    create: true
     delete: false
     fields:
       - { name: title, label: Title }
       - { name: subtitle, label: Subtitle }
+      - { name: "image", label: "Image", widget: "image" }
   - name: services
     label: Services
-    folder: home/sections
+    folder: home-sections
     create: true
     fields:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - { name: "image", label: "Image", widget: "image" }
