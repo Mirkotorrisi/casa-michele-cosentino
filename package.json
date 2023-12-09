@@ -1,8 +1,8 @@
 {
-  "name": "casa-di-cura-michele-cosentino",
+  "name": "casa-michele-cosentino",
   "version": "1.0.0",
   "private": true,
-  "description": "casa-di-cura-michele-cosentino",
+  "description": "casa-michele-cosentino",
   "author": "mirkotorrisi",
   "keywords": [
     "gatsby"
@@ -22,6 +22,7 @@
     "gatsby-plugin-manifest": "^5.12.3",
     "gatsby-plugin-netlify-cms": "^7.12.0",
     "gatsby-plugin-postcss": "^6.12.0",
+    "gatsby-plugin-sass": "^6.12.3",
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-plugin-sitemap": "^6.12.3",
     "gatsby-source-filesystem": "^5.12.1",
@@ -30,12 +31,15 @@
     "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "sass": "^1.69.5",
     "tailwindcss": "^3.3.6"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "gatsby-plugin-root-import": "^2.0.9",
     "typescript": "^5.1.6"
   }
 }
