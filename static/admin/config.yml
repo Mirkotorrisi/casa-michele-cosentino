@@ -11,16 +11,18 @@ collections:
     label: Hero Section
     folder: home-sections
     widget: "string"
+    create: true
     delete: false
     fields:
-      - { name: title, label: Title }
-      - { name: subtitle, label: Subtitle }
+      - { name: title, label: Title, widget: "string" }
+      - { name: subtitle, label: Subtitle, widget: "string" }
       - { name: "image", label: "Image", widget: "image" }
   - name: who-we-are
     label: Who We Are Section
     folder: home-sections
     widget: "string"
     delete: false
+    create: true
     fields:
       - { name: title, label: Title, widget: "string" }
       - { name: subtitle, label: Subtitle, widget: "string" }
@@ -31,15 +33,58 @@ collections:
     folder: home-sections
     widget: "string"
     delete: false
+    create: true
     fields:
-      - { name: title, label: Title }
-      - { name: subtitle, label: Subtitle }
+      - { name: title, label: Title, widget: "string" }
+      - { name: subtitle, label: Subtitle, widget: "string" }
       - { name: "image", label: "Image", widget: "image" }
   - name: services
     label: Services
     folder: home-sections
     create: true
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: "string" }
       - { name: body, label: Body, widget: markdown }
       - { name: "image", label: "Image", widget: "image" }
+  - name: the-building
+    label: The building Section
+    folder: home-sections
+    create: true
+    delete: false
+    fields:
+      - { name: title, label: Title, widget: "string" }
+      - { name: body, label: Body, widget: markdown }
+      - name: "image_gallery"
+        label: "Images"
+        widget: "image"
+        choose_url: false
+        media_folder: the-building/
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
+  - name: events
+    label: Events Section
+    folder: home-sections
+    create: true
+    delete: false
+    fields:
+      - { name: title, label: Title, widget: "string" }
+      - { name: body, label: Body, widget: markdown }
+      - name: "image_gallery"
+        label: "Images"
+        widget: "image"
+        choose_url: false
+        media_folder: the-building/
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
+  - name: find-us
+    label: Find us Section
+    folder: home-sections
+    create: true
+    delete: false
+    fields:
+      - { name: title, label: Title, widget: "string" }
+      - { name: body, label: Body, widget: markdown }
