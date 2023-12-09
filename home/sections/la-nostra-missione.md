@@ -1,4 +1,5 @@
 ---
+id: who-we-are
 title: La Nostra Missione
 subtitle: Da oltre 20 anni, forniamo un ambiente sicuro e curato, dove i nostri
   ospiti possono godere di una vita dignitosa e indipendente. Impegnati nella

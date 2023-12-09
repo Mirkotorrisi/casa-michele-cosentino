@@ -7,84 +7,31 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: hero
-    label: Hero Section
+  - name: section
+    label: Section
     folder: home/sections
-    widget: "string"
-    create: true
-    delete: false
-    fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: subtitle, label: Subtitle, widget: "string" }
-      - { name: "image", label: "Image", widget: "image" }
-  - name: who-we-are
-    label: Who We Are Section
-    folder: home-sections
-    widget: "string"
     delete: false
     create: true
     fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: subtitle, label: Subtitle, widget: "string" }
-      - { name: "image", label: "Image", widget: "image" }
-
-  - name: our-services
-    label: Our services Section
-    folder: home/sections
-    widget: "string"
-    delete: false
-    create: true
-    fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: subtitle, label: Subtitle, widget: "string" }
-      - { name: "image", label: "Image", widget: "image" }
+      - { name: id, label: id, widget: string }
+      - { name: h2, label: Heading, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - name: image_gallery
+        label: Images
+        widget: image
+        choose_url: false
+        media_folder: the-building/
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
   - name: services
     label: Services
-    folder: home/sections/services
-    create: true
-    fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: body, label: Body, widget: markdown }
-      - { name: "image", label: "Image", widget: "image" }
-  - name: the-building
-    label: The building Section
-    folder: home/sections
+    folder: home/services
+    widget: string
     create: true
     delete: false
     fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: body, label: Body, widget: markdown }
-      - name: "image_gallery"
-        label: "Images"
-        widget: "image"
-        choose_url: false
-        media_folder: the-building/
-        allow_multiple: true
-        media_library:
-          config:
-            multiple: true
-  - name: events
-    label: Events Section
-    folder: home/sections
-    create: true
-    delete: false
-    fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: body, label: Body, widget: markdown }
-      - name: "image_gallery"
-        label: "Images"
-        widget: "image"
-        choose_url: false
-        media_folder: the-building/
-        allow_multiple: true
-        media_library:
-          config:
-            multiple: true
-  - name: find-us
-    label: Find us Section
-    folder: home/sections
-    create: true
-    delete: false
-    fields:
-      - { name: title, label: Title, widget: "string" }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Title, widget: string }
+      - { name: subtitle, label: Subtitle, widget: string }
+      - { name: image, label: Image, widget: image }
