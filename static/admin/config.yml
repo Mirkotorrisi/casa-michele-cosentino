@@ -8,7 +8,7 @@ public_folder: /assets
 
 collections:
   - name: section
-    label: Section
+    label: Sections
     folder: home/sections
     delete: false
     create: true
@@ -22,6 +22,7 @@ collections:
         choose_url: false
         media_folder: the-building/
         allow_multiple: true
+        required: false
         media_library:
           config:
             multiple: true
