@@ -36,6 +36,13 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        path: `${__dirname}/markdown`,
+        name: "markdown",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         path: `${__dirname}/static`,
         name: "static",
       },
