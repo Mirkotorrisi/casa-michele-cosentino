@@ -23,32 +23,32 @@ export default IndexPage;
 
 export const Head: HeadFC = () => <title>Casa Cosentino</title>;
 
-export const pageQuery = graphql`
-  query HomePageQuery {
-    allMarkdownRemark(
-      filter: {
-        frontmatter: { presenters: { elemMatch: { text: { ne: null } } } }
-      }
-      sort: { order: DESC, fields: frontmatter___date }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-    homePageData: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "home-page" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(
+//       filter: {
+//         frontmatter: { presenters: { elemMatch: { text: { ne: null } } } }
+//       }
+//       sort: { order: DESC, fields: frontmatter___date }
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//           }
+//         }
+//       }
+//     }
+//     homePageData: allMarkdownRemark(
+//       filter: { frontmatter: { templateKey: { eq: "home-page" } } }
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

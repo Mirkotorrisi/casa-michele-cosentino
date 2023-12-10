@@ -24,6 +24,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-root-import",
     "gatsby-transformer-sharp",
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -35,8 +36,8 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
+        path: `${__dirname}/static`,
+        name: "static",
       },
     },
   ],
