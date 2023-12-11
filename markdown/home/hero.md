@@ -1,11 +1,11 @@
 ---
+pageKey: home
+sectionKey: hero
+heading: my heading
+body: my body
 headerImage:
   imageAlt: Immagine di header
   image: /img/lucia.jpg
-title: Luciaaa
-upcomingMeetupHeading: Non saprei
-noUpcomingMeetupText: Neanche qua
-mapsNote: Ciao
 callToActions:
   firstCTA:
     heading: Ha segnato simy

@@ -10,11 +10,17 @@ display_url: https://gatsby-netlify-cms-example.netlify.com/
 collections:
   - name: "home"
     label: "Home page sections"
-    description: "All home page sections, use key field to tie content to its component"
+    description: "All home page sections, use sectionKey field to tie content to its component"
     folder: "markdown/home"
     create: true
     fields:
-      - { label: "Key", name: "key", widget: "string" }
+      - {
+          label: "Page Key",
+          name: "pageKey",
+          widget: "hidden",
+          default: "home",
+        }
+      - { label: "Section Key", name: "sectionKey", widget: "string" }
       - { label: "Heading", name: "heading", widget: "string" }
       - {
           label: "Image",
@@ -95,69 +101,6 @@ collections:
               },
             ],
         }
-
-      - file: "markdown/home/home/index.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "home-page",
-            }
-          - {
-              label: "Header Image",
-              name: "headerImage",
-              widget: "object",
-              fields:
-                [
-                  { label: "Image", name: "image", widget: "image" },
-                  {
-                    label: "Image Description",
-                    name: "imageAlt",
-                    widget: "string",
-                  },
-                ],
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Upcoming Meetup Heading",
-              name: "upcomingMeetupHeading",
-              widget: "string",
-            }
-          - {
-              label: "No Upcoming Meetup Text",
-              name: "noUpcomingMeetupText",
-              hint: "This text will be displayed when there are no upcoming meetups",
-              required: true,
-              widget: "string",
-            }
-          - {
-              label: "Maps Note",
-              name: "mapsNote",
-              required: true,
-              widget: "string",
-            }
-          - {
-              label: "SEO & Meta",
-              name: "seo",
-              widget: "object",
-              fields:
-                [
-                  {
-                    label: "Browser Tab Title",
-                    name: "browserTitle",
-                    widget: "string",
-                  },
-                  { label: "Title", name: "title", widget: "string" },
-                  {
-                    label: "Description",
-                    name: "description",
-                    widget: "string",
-                  },
-                ],
-            }
   - name: "navbarAndFooter"
     label: "Navbar & Footer"
     files:
@@ -166,8 +109,8 @@ collections:
         name: "navbar"
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
+              label: "Layout Key",
+              name: "layoutKey",
               widget: "hidden",
               default: "navbar",
             }
@@ -197,8 +140,8 @@ collections:
         name: "footer"
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
+              label: "Layout Key",
+              name: "layoutKey",
               widget: "hidden",
               default: "footer",
             }

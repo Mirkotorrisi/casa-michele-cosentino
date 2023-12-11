@@ -25,7 +25,7 @@ const TemplateWrapper = ({
 export const query = graphql`
   fragment LayoutFragment on Query {
     footerData: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "footer" } } }
+      filter: { frontmatter: { layoutKey: { eq: "footer" } } }
     ) {
       edges {
         node {
@@ -47,7 +47,7 @@ export const query = graphql`
       }
     }
     navbarData: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "navbar" } } }
+      filter: { frontmatter: { layoutKey: { eq: "navbar" } } }
     ) {
       edges {
         node {
