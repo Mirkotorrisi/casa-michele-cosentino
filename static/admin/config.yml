@@ -5,8 +5,6 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-display_url: https://gatsby-netlify-cms-example.netlify.com/
-
 collections:
   - name: "home"
     label: "Home page sections"

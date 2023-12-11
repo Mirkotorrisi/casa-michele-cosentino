@@ -22,51 +22,51 @@ const TemplateWrapper = ({
   </div>
 );
 
-export const query = graphql`
-  fragment LayoutFragment on Query {
-    footerData: allMarkdownRemark(
-      filter: { frontmatter: { layoutKey: { eq: "footer" } } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            logoImage {
-              image
-              imageAlt
-              tagline
-            }
-            socialLinks {
-              image
-              imageAlt
-              label
-              linkURL
-            }
-          }
-        }
-      }
-    }
-    navbarData: allMarkdownRemark(
-      filter: { frontmatter: { layoutKey: { eq: "navbar" } } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            logoImage {
-              image
-              imageAlt
-            }
-            menuItems {
-              label
-              linkType
-              linkURL
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   fragment LayoutFragment on Query {
+//     footerData: allMarkdownRemark(
+//       filter: { frontmatter: { layoutKey: { eq: "footer" } } }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             logoImage {
+//               image
+//               imageAlt
+//               tagline
+//             }
+//             socialLinks {
+//               image
+//               imageAlt
+//               label
+//               linkURL
+//             }
+//           }
+//         }
+//       }
+//     }
+//     navbarData: allMarkdownRemark(
+//       filter: { frontmatter: { layoutKey: { eq: "navbar" } } }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             logoImage {
+//               image
+//               imageAlt
+//             }
+//             menuItems {
+//               label
+//               linkType
+//               linkURL
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default TemplateWrapper;

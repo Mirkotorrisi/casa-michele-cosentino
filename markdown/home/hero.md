@@ -17,8 +17,4 @@ callToActions:
     subHeading: we
     linkType: external
     linkURL: www.facebook.com
-seo:
-  browserTitle: Home pagina
-  title: Home pagine
-  description: Questa amico mio è la home
 ---
