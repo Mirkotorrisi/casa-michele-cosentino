@@ -19,7 +19,7 @@ collections:
           default: "home",
         }
       - { label: "Section Key", name: "sectionKey", widget: "string" }
-      - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Heading", name: "heading", widget: "string", required: false }
       - {
           label: "Image",
           name: "image",
@@ -27,15 +27,21 @@ collections:
           widget: "object",
           fields:
             [
-              { label: "Image", name: "image", widget: "image" },
+              {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: false,
+              },
               {
                 label: "Image Description",
                 name: "imageAlt",
                 widget: "string",
+                required: false,
               },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
       - {
           label: "Call to Actions",
           name: "callToActions",
@@ -46,26 +52,34 @@ collections:
               {
                 label: "First CTA",
                 name: "firstCTA",
-                required: true,
+                required: false,
                 widget: "object",
                 fields:
                   [
-                    { label: "Heading", name: "heading", widget: "string" },
+                    {
+                      label: "Heading",
+                      name: "heading",
+                      widget: "string",
+                      required: false,
+                    },
                     {
                       label: "Sub Heading",
                       name: "subHeading",
                       widget: "string",
+                      required: false,
                     },
                     {
                       label: "Link Type",
                       name: "linkType",
                       widget: "select",
+                      required: false,
                       options: ["internal", "external"],
                     },
                     {
                       label: "Link URL",
                       name: "linkURL",
                       widget: "string",
+                      required: false,
                       hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
                     },
                   ],
@@ -77,22 +91,30 @@ collections:
                 widget: "object",
                 fields:
                   [
-                    { label: "Heading", name: "heading", widget: "string" },
+                    {
+                      label: "Heading",
+                      name: "heading",
+                      widget: "string",
+                      required: false,
+                    },
                     {
                       label: "Sub Heading",
                       name: "subHeading",
                       widget: "string",
+                      required: false,
                     },
                     {
                       label: "Link Type",
                       name: "linkType",
                       widget: "select",
                       options: ["internal", "external"],
+                      required: false,
                     },
                     {
                       label: "Link URL",
                       name: "linkURL",
                       widget: "string",
+                      required: false,
                       hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
                     },
                   ],

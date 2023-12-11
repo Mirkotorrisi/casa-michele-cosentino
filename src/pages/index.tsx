@@ -5,15 +5,23 @@ import Footer from "components/Footer";
 import Hero from "components/Hero";
 import WhoWeAre from "components/WhoWeAre";
 import OurServices from "components/OurServices";
+import { HomePageData, SECTION_KEYS, SectionProps } from "types/home";
 
-const IndexPage: React.FC<PageProps> = ({ data }) => {
-  console.log("🚀 ~ file: index.tsx:10 ~ data:", data);
+const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
+  console.log("🚀 ~ file: index.tsx:11 ~ data:", data);
+  const props: Record<string, SectionProps> = data.homePageData.edges.reduce(
+    (acc, { node: { frontmatter, html } }) => ({
+      ...acc,
+      [frontmatter.sectionKey]: { ...frontmatter, body: html },
+    }),
+    {}
+  );
   return (
     <main className="relative w-screen m-0 flex flex-col">
       <Navbar />
-      <Hero />
-      <WhoWeAre />
-      <OurServices />
+      <Hero {...(props[SECTION_KEYS.HERO] || {})} />
+      <WhoWeAre {...(props[SECTION_KEYS.WHO_WE_ARE] || {})} />
+      <OurServices {...(props[SECTION_KEYS.OUR_SERVICES] || {})} />
       <Footer />
     </main>
   );
@@ -28,6 +36,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          html
           frontmatter {
             headerImage {
               image
@@ -50,7 +59,6 @@ export const query = graphql`
             pageKey
             sectionKey
             heading
-            body
           }
         }
       }

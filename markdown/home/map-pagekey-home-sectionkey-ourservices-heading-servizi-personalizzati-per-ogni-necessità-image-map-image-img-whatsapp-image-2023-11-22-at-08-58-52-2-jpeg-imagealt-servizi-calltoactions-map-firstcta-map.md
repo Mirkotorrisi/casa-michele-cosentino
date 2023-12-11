@@ -11,13 +11,9 @@ callToActions:
     subHeading: no
     linkType: internal
     linkURL: /servizi-offeri
-  secondCTA:
-    heading: no
-    subHeading: no
-    linkType: internal
-    linkURL: no
 ---
-* Supporto sanitario 24/7 per garantire tranquillità a ospiti e familiari.
-* Cure quotidiane con professionalità e attenzione.
-* Eventi culturali e ricreativi per stimolare mente e spirito.
-* Pasti deliziosi e nutrizionalmente equilibrati, cucinati in casa.
+
+- Supporto sanitario 24/7 per garantire tranquillità a ospiti e familiari.
+- Cure quotidiane con professionalità e attenzione.
+- Eventi culturali e ricreativi per stimolare mente e spirito.
+- Pasti deliziosi e nutrizionalmente equilibrati, cucinati in casa.
