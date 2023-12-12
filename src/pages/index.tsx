@@ -36,7 +36,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          html
           frontmatter {
             headerImage {
               image
