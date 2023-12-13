@@ -196,3 +196,43 @@ collections:
                   { label: "Link URL", name: "linkURL", widget: "string" },
                 ],
             }
+  - name: "lists"
+    label: "Iterable items"
+    description: "Any iterable list (cards, lists, links), needs to specify the pageKey and the listKey"
+    folder: "src/lists"
+    create: true
+    fields:
+      - { label: "Page Key", name: "pageKey", widget: "string" }
+      - { label: "List Key", name: "listKey", widget: "string" }
+      - {
+          label: List,
+          name: lsit,
+          required: true,
+          widget: list,
+          fields:
+            [
+              { label: Text, name: text, required: false, widget: markdown },
+              { label: Image, name: image, required: false, widget: image },
+              {
+                label: Links,
+                name: links,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Text,
+                      name: linkText,
+                      widget: string,
+                      required: false,
+                    },
+                    {
+                      label: URL,
+                      name: linkURL,
+                      widget: string,
+                      required: false,
+                    },
+                  ],
+              },
+            ],
+        }
