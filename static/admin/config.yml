@@ -199,14 +199,14 @@ collections:
   - name: "lists"
     label: "Iterable items"
     description: "Any iterable list (cards, lists, links), needs to specify the pageKey and the listKey"
-    folder: "src/lists"
+    folder: "markdown/lists"
     create: true
     fields:
       - { label: "Page Key", name: "pageKey", widget: "string" }
       - { label: "List Key", name: "listKey", widget: "string" }
       - {
-          label: List,
-          name: lsit,
+          label: item,
+          name: listItem,
           required: true,
           widget: list,
           fields:
