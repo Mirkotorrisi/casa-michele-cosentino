@@ -8,16 +8,23 @@ const WhoWeAre = ({
   headerImage,
 }: SectionProps) => {
   return (
-    <section className="w-full h-96 px-28 py-20 bg-white flex-col justify-start items-center gap-20 inline-flex">
-      <div className="h-48 flex-col justify-center items-center gap-12 flex">
-        <div className="self-stretch h-48 flex-col justify-start items-center gap-4 flex">
-          <h2 className="self-stretch text-center text-gray-900 text-6xl font-bold font-['Inter'] leading-10">
-            {heading}
-          </h2>
+    <section className="w-full  px-28 py-20 bg-white flex flex-col justify-start items-center gap-20 relative">
+      <h2 className="self-stretch text-center text-gray-900 text-6xl font-bold font-['Inter'] leading-[84px]">
+        {heading}
+      </h2>
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full  h-96 max-w-6xl bg-orange-500">
+        <img
+          className="h-full max-w-xl"
+          src="https://via.placeholder.com/68x56"
+        />
+        <div className="flex flex-col gap-8">
           <div
-            className="self-stretch text-center text-gray-500 text-xl font-normal font-['Inter'] tracking-tight"
+            className="w-96 h-28 font-normal font-['Ubuntu'] leading-normal"
             dangerouslySetInnerHTML={{ __html: body }}
           />
+          <a href={callToActions.firstCTA.linkURL} className="cta">
+            <span className="">{callToActions.firstCTA.heading}</span>
+          </a>
         </div>
       </div>
     </section>

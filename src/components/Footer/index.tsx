@@ -20,7 +20,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => (
-  <div className="footer mt-auto w-full py-10">
+  <footer className="py-10 bg-amber-300">
     <div className="footer__columns flex justify-between align-center lg:w-1/2  m-auto ">
       <a href={GOOGLE}>
         <i className="fab fa-google" />
@@ -52,7 +52,7 @@ const Footer = () => (
         Privacy policy
       </a>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

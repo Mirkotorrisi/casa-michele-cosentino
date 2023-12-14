@@ -6,6 +6,7 @@ import Hero from "components/Hero";
 import WhoWeAre from "components/WhoWeAre";
 import OurServices from "components/OurServices";
 import { HomePageData, SECTION_KEYS, SectionProps } from "types/home";
+import Carousel from "components/Carousel";
 
 const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
   console.log("🚀 ~ file: index.tsx:11 ~ data:", data);
@@ -17,13 +18,16 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
     {}
   );
   return (
-    <main className="relative w-screen m-0 flex flex-col">
+    <>
       <Navbar />
-      <Hero {...(props[SECTION_KEYS.HERO] || {})} />
-      <WhoWeAre {...(props[SECTION_KEYS.WHO_WE_ARE] || {})} />
-      <OurServices {...(props[SECTION_KEYS.OUR_SERVICES] || {})} />
+      <main className="relative">
+        <Hero {...(props[SECTION_KEYS.HERO] || {})} />
+        <WhoWeAre {...(props[SECTION_KEYS.WHO_WE_ARE] || {})} />
+        <OurServices {...(props[SECTION_KEYS.OUR_SERVICES] || {})} />
+        <Carousel {...(props[SECTION_KEYS.OUR_SERVICES] || {})} />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 
