@@ -12,17 +12,14 @@ const OurServices = ({
     <section className="w-full px-28 py-20 bg-green-200 flex-col justify-start items-center gap-20 inline-flex">
       <div className="self-stretch  flex-col justify-center items-center gap-4 flex">
         <h2 className="self-stretch text-center text-gray-900 text-6xl font-bold font-['Inter'] leading-10">
-          {heading}
+          Qua ci va un heading
         </h2>
-        <div
-          className="self-stretch text-center  text-xl font-normal font-['Inter'] tracking-tight"
-          dangerouslySetInnerHTML={{ __html: body }}
-        />
+        <div className="self-stretch text-center  text-xl font-normal font-['Inter'] tracking-tight" />
         <a
           className="px-5 py-2.5 bg-gray-900 rounded-md justify-center items-center inline-flex text-white text-sm font-semibold font-['Inter'] leading-tight"
-          href={callToActions.firstCTA.linkURL}
+          href={"/"}
         >
-          {callToActions.firstCTA.heading}
+          {"Scopri di più"}
         </a>
       </div>
       <div className="flex justify-between w-full">

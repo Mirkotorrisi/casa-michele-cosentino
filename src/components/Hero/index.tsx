@@ -7,14 +7,11 @@ const Hero = ({ heading, body, callToActions, headerImage }: SectionProps) => {
       <div className="h-72 flex-col justify-center items-center gap-12 flex">
         <div className="self-stretch h-72 flex-col justify-center items-center gap-4 flex">
           <h1 className="self-stretch text-center text-gray-900 text-6xl font-bold font-['Inter'] leading-[84px]">
-            {heading}
+            Qua ci va un heading
           </h1>
-          <div
-            className="self-stretch text-center text-gray-500 text-xl font-normal font-['Inter'] tracking-tight"
-            dangerouslySetInnerHTML={{ __html: body }}
-          />
-          <a className="cta" href={callToActions.firstCTA.linkURL}>
-            {callToActions.firstCTA.heading}
+          <div className="self-stretch text-center text-gray-500 text-xl font-normal font-['Inter'] tracking-tight" />
+          <a className="cta" href={"/"}>
+            {"Scopri di più"}
           </a>
         </div>
       </div>
