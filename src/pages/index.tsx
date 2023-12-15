@@ -41,29 +41,8 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            headerImage {
-              image
-              imageAlt
-            }
-            callToActions {
-              firstCTA {
-                heading
-                subHeading
-                linkType
-                linkURL
-              }
-              secondCTA {
-                heading
-                subHeading
-                linkType
-                linkURL
-              }
-            }
             pageKey
-            sectionKey
-            heading
           }
-          html
         }
       }
     }
