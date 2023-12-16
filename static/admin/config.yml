@@ -10,9 +10,9 @@ collections:
     label: "Vocabulary"
     description: "Every copy or single word, needs a unique key (preferred kebab-case) and a pageKey"
     files:
-      - file: "markdown/vocabulary.md"
-        label: "Vocabulary"
-        name: "vocabulary"
+      - file: "markdown/vocabulary/home.md"
+        label: "Home page Vocabulary"
+        name: "homeVocabulary"
         fields:
           - {
               label: "Terms",
@@ -25,9 +25,68 @@ collections:
                   {
                     label: "Page",
                     name: "pageKey",
-                    widget: "select",
-                    options:
-                      ["home", "chi-siamo", "servizi", "feste-ed-eventi"],
+                    widget: "hidden",
+                    default: "home",
+                  },
+                ],
+            }
+      - file: "markdown/vocabulary/chi-siamo.md"
+        label: "Chi siamo page Vocabulary"
+        name: "chiSiamoVocabulary"
+        fields:
+          - {
+              label: "Terms",
+              name: "terms",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  { label: "Label", name: "label", widget: "string" },
+                  {
+                    label: "Page",
+                    name: "pageKey",
+                    widget: "hidden",
+                    default: "chi-siamo",
+                  },
+                ],
+            }
+      - file: "markdown/vocabulary/servizi.md"
+        label: "Servizi page Vocabulary"
+        name: "serviziVocabulary"
+        fields:
+          - {
+              label: "Terms",
+              name: "terms",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  { label: "Label", name: "label", widget: "string" },
+                  {
+                    label: "Page",
+                    name: "pageKey",
+                    widget: "hidden",
+                    default: "servizi",
+                  },
+                ],
+            }
+      - file: "markdown/vocabulary/feste-ed-eventi.md"
+        label: "Feste ed eventi page Vocabulary"
+        name: "festeEdEventiVocabulary"
+        fields:
+          - {
+              label: "Terms",
+              name: "terms",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  { label: "Label", name: "label", widget: "string" },
+                  {
+                    label: "Page",
+                    name: "pageKey",
+                    widget: "hidden",
+                    default: "feste-ed-eventi",
                   },
                 ],
             }
