@@ -1,11 +1,14 @@
 ---
 pageKey: home
 listKey: special-moments
-lsit:
-  - text: "**Complemese**: la festa di compleanno per tutti quelli che festeggiano
+listItem:
+  - text:
+      "**Complemese**: la festa di compleanno per tutti quelli che festeggiano
       il compleanno nel medesimo mese."
-  - text: "**Feste Tradizional**i: Dalla Festa della Mamma e del Papà al Natale e le
+  - text:
+      "**Feste Tradizional**i: Dalla Festa della Mamma e del Papà al Natale e le
       Sante Ricorrenze."
-  - text: "**Eventi Culturali**: Incontri con associazioni culturali, arricchendo la
+  - text:
+      "**Eventi Culturali**: Incontri con associazioni culturali, arricchendo la
       vita sociale."
 ---

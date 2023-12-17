@@ -1,7 +1,7 @@
 ---
 pageKey: home
 listKey: assistance-and-care
-lsit:
+listItem:
   - text: Assistenza medica e infermieristica
     image: /img/whatsapp-image-2023-11-22-at-08.58.52-2-.jpeg
   - text: Assistenza di base e riabiabilitativa

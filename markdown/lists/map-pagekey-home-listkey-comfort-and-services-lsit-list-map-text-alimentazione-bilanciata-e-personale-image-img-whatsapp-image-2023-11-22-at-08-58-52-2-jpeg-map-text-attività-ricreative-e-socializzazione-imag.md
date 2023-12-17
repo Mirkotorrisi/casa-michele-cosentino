@@ -1,7 +1,7 @@
 ---
 pageKey: home
 listKey: comfort-and-services
-lsit:
+listItem:
   - text: Alimentazione Bilanciata e personale
     image: /img/whatsapp-image-2023-11-22-at-08.58.52-2-.jpeg
   - text: Attività Ricreative e Socializzazione
