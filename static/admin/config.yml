@@ -13,6 +13,7 @@ collections:
       - file: "markdown/vocabulary/home.md"
         label: "Home page Vocabulary"
         name: "homeVocabulary"
+        pageKey: "home"
         fields:
           - {
               label: "Terms",
@@ -22,17 +23,12 @@ collections:
                 [
                   { label: "Key", name: "key", widget: "string" },
                   { label: "Label", name: "label", widget: "string" },
-                  {
-                    label: "Page",
-                    name: "pageKey",
-                    widget: "hidden",
-                    default: "home",
-                  },
                 ],
             }
       - file: "markdown/vocabulary/chi-siamo.md"
         label: "Chi siamo page Vocabulary"
         name: "chiSiamoVocabulary"
+        pageKey: "chi-siamo"
         fields:
           - {
               label: "Terms",
@@ -42,17 +38,12 @@ collections:
                 [
                   { label: "Key", name: "key", widget: "string" },
                   { label: "Label", name: "label", widget: "string" },
-                  {
-                    label: "Page",
-                    name: "pageKey",
-                    widget: "hidden",
-                    default: "chi-siamo",
-                  },
                 ],
             }
       - file: "markdown/vocabulary/servizi.md"
         label: "Servizi page Vocabulary"
         name: "serviziVocabulary"
+        pageKey: "servizi"
         fields:
           - {
               label: "Terms",
@@ -62,17 +53,12 @@ collections:
                 [
                   { label: "Key", name: "key", widget: "string" },
                   { label: "Label", name: "label", widget: "string" },
-                  {
-                    label: "Page",
-                    name: "pageKey",
-                    widget: "hidden",
-                    default: "servizi",
-                  },
                 ],
             }
       - file: "markdown/vocabulary/feste-ed-eventi.md"
         label: "Feste ed eventi page Vocabulary"
         name: "festeEdEventiVocabulary"
+        pageKey: "feste-ed-eventi"
         fields:
           - {
               label: "Terms",
@@ -82,12 +68,6 @@ collections:
                 [
                   { label: "Key", name: "key", widget: "string" },
                   { label: "Label", name: "label", widget: "string" },
-                  {
-                    label: "Page",
-                    name: "pageKey",
-                    widget: "hidden",
-                    default: "feste-ed-eventi",
-                  },
                 ],
             }
 

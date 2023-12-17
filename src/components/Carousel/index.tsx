@@ -1,14 +1,8 @@
 import React from "react";
-import { SectionProps } from "types/home";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const Carousel = ({
-  heading,
-  body,
-  callToActions,
-  headerImage,
-}: SectionProps) => {
+const Carousel = ({}) => {
   return (
     <>
       <section className="w-full px-28 py-20 bg-blue-200 flex-col justify-start items-center gap-20 inline-flex">

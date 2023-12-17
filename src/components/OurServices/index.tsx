@@ -1,37 +1,23 @@
 import React from "react";
-import { SectionProps } from "types/home";
 import Card from "./Card";
+import { useVocabulary } from "context/Vocabulary";
+import SectionHeading from "components/SectionHeading";
 
-const OurServices = ({
-  heading,
-  body,
-  callToActions,
-  headerImage,
-}: SectionProps) => {
+const OurServices = ({}) => {
   return (
     <section className="w-full px-28 py-20 bg-green-200 flex-col justify-start items-center gap-20 inline-flex">
       <div className="self-stretch  flex-col justify-center items-center gap-4 flex">
-        <h2 className="self-stretch text-center text-gray-900 text-6xl font-bold font-['Inter'] leading-10">
-          Qua ci va un heading
-        </h2>
-        <div className="self-stretch text-center  text-xl font-normal font-['Inter'] tracking-tight" />
-        <a
-          className="px-5 py-2.5 bg-gray-900 rounded-md justify-center items-center inline-flex text-white text-sm font-semibold font-['Inter'] leading-tight"
-          href={"/"}
-        >
-          {"Scopri di più"}
-        </a>
+        <SectionHeading
+          title={{ text: "our-services", tag: "h2" }}
+          cta={{ label: "hero-cta", href: "/" }}
+        />
       </div>
       <div className="flex justify-between w-full">
         <div className="flex-col justify-center items-start gap-7 inline-flex max-w-lg">
-          <h3 className="self-stretch text-gray-600 text-4xl font-bold font-['Ubuntu']">
-            Assistenza e cura personale
-          </h3>
-          <p className="self-stretch text-gray-400 text-base font-normal font-['Ubuntu'] leading-normal">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim.
-          </p>
+          <SectionHeading
+            title={{ text: "caregiving-heading", tag: "h3" }}
+            subtitle={{ text: "caregiving-description" }}
+          />
           <div className="self-stretch justify-start items-start gap-4 inline-flex">
             <Card
               text="Assistenza medica e infermieristica"
@@ -58,14 +44,10 @@ const OurServices = ({
           src="https://via.placeholder.com/68x56"
         />
         <div className="flex-col justify-center items-start gap-7 inline-flex max-w-lg">
-          <h3 className="self-stretch text-gray-600 text-4xl font-bold font-['Ubuntu']">
-            Comfort e servizi quotidiani
-          </h3>
-          <p className="self-stretch text-gray-400 text-base font-normal font-['Ubuntu'] leading-normal">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim.
-          </p>
+          <SectionHeading
+            title={{ text: "daily-services-heading", tag: "h3" }}
+            subtitle={{ text: "daily-services-description" }}
+          />
           <div className="self-stretch justify-start items-start gap-4 inline-flex">
             <Card
               text="Alimentazione Bilanciata e personale"

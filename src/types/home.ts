@@ -1,28 +1,29 @@
-export enum SECTION_KEYS {
-  HERO = "hero",
-  WHO_WE_ARE = "whoWeAre",
-  OUR_SERVICES = "ourServices",
-  FIND_US = "findUs",
-  THE_BUILDING = "theBuilding",
-  EVENTS = "events",
-}
-
 export type HomePageData = {
   homePageData: {
     edges: Array<{
       node: {
-        frontmatter: SectionProps;
+        frontmatter: {
+          lists: List[] | null;
+          terms: Terms[] | null;
+        };
         html: string;
       };
     }>;
   };
 };
 
-export type SectionProps = {
-  headerImage: {
-    image: string;
-    imageAlt: string;
-  };
+export type Terms = {
+  key: string;
+  label: string;
+};
+
+export type List = {
+  image: string;
+  imageAlt: string;
+  text: string;
+  pageKey: string;
+  sectionKey: string;
+  heading: string;
   callToActions: {
     firstCTA: {
       heading: string;
@@ -37,8 +38,4 @@ export type SectionProps = {
       linkURL: string;
     };
   };
-  pageKey: string;
-  sectionKey: string;
-  heading: string;
-  body: string;
 };

@@ -5,20 +5,22 @@ terms:
     label: Casa Mons. Michele Cosentino
   - pageKey: home
     key: hero-sub-heading
-    label: If you’re looking for the latest in wireless headphones, look no further.
+    label:
+      If you’re looking for the latest in wireless headphones, look no further.
       These are perfect for TV, stereo, home, and cell phone.
   - pageKey: home
     key: hero-cta
     label: Scopri di più
   - pageKey: home
-    key: second-section--heading
+    key: second-section-heading
     label: Chi siamo
   - pageKey: home
     key: our-mission
     label: La nostra mission
   - pageKey: home
     key: our-mission-description
-    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.
@@ -30,7 +32,8 @@ terms:
     label: Assistenza e cura personale
   - pageKey: home
     key: caregiving-description
-    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
   - pageKey: home
     key: daily-services-heading
@@ -51,7 +54,8 @@ terms:
     label: Momenti Speciali di Socializzazione
   - pageKey: home
     key: socialization-description
-    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat sed do eiusmod tempor incididunt ut labore et dolore
@@ -64,6 +68,7 @@ terms:
     label: We'd love to hear from you
   - pageKey: home
     key: contact-us-description
-    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
 ---

@@ -5,29 +5,28 @@ import Footer from "components/Footer";
 import Hero from "components/Hero";
 import WhoWeAre from "components/WhoWeAre";
 import OurServices from "components/OurServices";
-import { HomePageData, SECTION_KEYS, SectionProps } from "types/home";
+import { HomePageData } from "types/home";
 import Carousel from "components/Carousel";
+import { Vocabulary } from "context/Vocabulary";
 
 const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
-  console.log("🚀 ~ file: index.tsx:11 ~ data:", data);
-  const props: Record<string, SectionProps> = data.homePageData.edges.reduce(
-    (acc, { node: { frontmatter, html } }) => ({
-      ...acc,
-      [frontmatter.sectionKey]: { ...frontmatter, body: html },
-    }),
-    {}
-  );
+  console.log("🚀 ~ file: index.tsx:13 ~ data:", data);
+  const terms = data.homePageData.edges.find(
+    (edge) => !!edge.node.frontmatter.terms?.length
+  )?.node.frontmatter.terms;
+  console.log("🚀 ~ file: index.tsx:16 ~ terms:", terms);
+
   return (
-    <>
+    <Vocabulary terms={terms ?? []}>
       <Navbar />
       <main className="relative">
-        <Hero {...(props[SECTION_KEYS.HERO] || {})} />
-        <WhoWeAre {...(props[SECTION_KEYS.WHO_WE_ARE] || {})} />
-        <OurServices {...(props[SECTION_KEYS.OUR_SERVICES] || {})} />
-        <Carousel {...(props[SECTION_KEYS.OUR_SERVICES] || {})} />
+        <Hero />
+        <WhoWeAre />
+        <OurServices />
+        <Carousel />
       </main>
       <Footer />
-    </>
+    </Vocabulary>
   );
 };
 
@@ -36,12 +35,20 @@ export const Head: HeadFC = () => <title>Casa Cosentino</title>;
 export const query = graphql`
   query HomePageQuery {
     homePageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "home" } } }
+      filter: { frontmatter: { terms: {}, pageKey: { eq: "home" } } }
     ) {
       edges {
         node {
           frontmatter {
             pageKey
+            terms {
+              label
+              key
+            }
+            lsit {
+              text
+              image
+            }
           }
         }
       }
