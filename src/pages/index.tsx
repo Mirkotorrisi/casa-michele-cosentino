@@ -2,12 +2,14 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import Hero from "components/Hero";
-import WhoWeAre from "components/WhoWeAre";
-import OurServices from "components/OurServices";
+import Hero from "components/sections/Hero";
+import WhoWeAre from "components/sections/WhoWeAre";
+import OurServices from "components/sections/OurServices";
 import { HomePageData } from "types/home";
 import Carousel from "components/Carousel";
 import { Vocabulary } from "context/Vocabulary";
+import SpecialMoments from "components/sections/SpecialMoments";
+import ContactUs from "components/sections/ContactUs";
 
 const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
   console.log("🚀 ~ file: index.tsx:13 ~ data:", data);
@@ -24,6 +26,8 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
         <WhoWeAre />
         <OurServices />
         <Carousel />
+        <SpecialMoments />
+        <ContactUs />
       </main>
       <Footer />
     </Vocabulary>
@@ -35,7 +39,7 @@ export const Head: HeadFC = () => <title>Casa Cosentino</title>;
 export const query = graphql`
   query HomePageQuery {
     homePageData: allMarkdownRemark(
-      filter: { frontmatter: { terms: {}, pageKey: { eq: "home" } } }
+      filter: { frontmatter: { pageKey: { eq: "home" } } }
     ) {
       edges {
         node {

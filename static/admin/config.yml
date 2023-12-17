@@ -70,6 +70,94 @@ collections:
                   { label: "Label", name: "label", widget: "string" },
                 ],
             }
+  - name: "gallery"
+    label: "Images"
+    description: "Every image, needs a unique key (preferred kebab-case) and a pageKey"
+    files:
+      - file: "markdown/gallery/home.md"
+        label: "Home page Gallery"
+        name: "homeGallery"
+        pageKey: "home"
+        fields:
+          - {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  {
+                    label: "Image description",
+                    name: "description",
+                    widget: "string",
+                    required: false,
+                  },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+      - file: "markdown/gallery/chi-siamo.md"
+        label: "Chi siamo page Gallery"
+        name: "chiSiamoGallery"
+        pageKey: "chi-siamo"
+        fields:
+          - {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  {
+                    label: "Image description",
+                    name: "description",
+                    widget: "string",
+                    required: false,
+                  },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+      - file: "markdown/gallery/servizi.md"
+        label: "Servizi page Gallery"
+        name: "serviziGallery"
+        pageKey: "servizi"
+        fields:
+          - {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  {
+                    label: "Image description",
+                    name: "description",
+                    widget: "string",
+                    required: false,
+                  },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+      - file: "markdown/gallery/feste-ed-eventi.md"
+        label: "Feste ed eventi page Gallery"
+        name: "festeEdEventiGallery"
+        pageKey: "feste-ed-eventi"
+        fields:
+          - {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  {
+                    label: "Image description",
+                    name: "description",
+                    widget: "string",
+                    required: false,
+                  },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
 
   - name: "navbarAndFooter"
     label: "Navbar & Footer"

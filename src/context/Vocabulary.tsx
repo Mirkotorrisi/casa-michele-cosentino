@@ -10,7 +10,6 @@ type Props = {
   terms: Terms[];
 };
 export const Vocabulary = ({ children, terms = [] }: Props) => {
-  console.log("🚀 ~ file: Vocabulary.tsx:13 ~ Vocabulary ~ terms:", terms);
   const translate = (searchKey: string = "") =>
     terms.find(({ key }: Terms) => key.trim().toLowerCase() === searchKey)
       ?.label ?? searchKey;
