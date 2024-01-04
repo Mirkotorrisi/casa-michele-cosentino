@@ -47,6 +47,14 @@ const config: GatsbyConfig = {
         name: "static",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
   ],
 };
 

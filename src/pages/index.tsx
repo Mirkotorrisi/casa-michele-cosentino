@@ -10,26 +10,30 @@ import Carousel from "components/Carousel";
 import { Vocabulary } from "context/Vocabulary";
 import SpecialMoments from "components/sections/SpecialMoments";
 import ContactUs from "components/sections/ContactUs";
+import { Gallery } from "context/Gallery";
 
 const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
-  console.log("🚀 ~ file: index.tsx:13 ~ data:", data);
   const terms = data.homePageData.edges.find(
     (edge) => !!edge.node.frontmatter.terms?.length
   )?.node.frontmatter.terms;
-  console.log("🚀 ~ file: index.tsx:16 ~ terms:", terms);
+  const images = data.homePageData.edges.find(
+    (edge) => !!edge.node.frontmatter.images?.length
+  )?.node.frontmatter.images;
 
   return (
     <Vocabulary terms={terms ?? []}>
-      <Navbar />
-      <main className="relative">
-        <Hero />
-        <WhoWeAre />
-        <OurServices />
-        <Carousel />
-        <SpecialMoments />
-        <ContactUs />
-      </main>
-      <Footer />
+      <Gallery images={images ?? []}>
+        <Navbar />
+        <main className="relative">
+          <Hero />
+          <WhoWeAre />
+          <OurServices />
+          <Carousel />
+          <SpecialMoments />
+          <ContactUs />
+        </main>
+        <Footer />
+      </Gallery>
     </Vocabulary>
   );
 };
@@ -49,10 +53,16 @@ export const query = graphql`
               label
               key
             }
-            lsit {
+            images {
+              key
+              image
+              description
+            }
+            listItem {
               text
               image
             }
+            listKey
           }
         }
       }

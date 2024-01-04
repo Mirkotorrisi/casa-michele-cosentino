@@ -1,55 +1,37 @@
 import * as React from "react";
-import {
-  PHONE_NUMBER,
-  GOOGLE,
-  FACEBOOK,
-  WHATSAPP,
-  INSTAGRAM,
-  EMAIL,
-  ADDRESS,
-  VAT,
-  PRIVACY_URL,
-} from "resources";
+import { ADDRESS, VAT, PRIVACY_URL, FACEBOOK } from "resources";
 import "./index.scss";
 
-import { FaGoogle } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { StaticImage } from "gatsby-plugin-image";
+import routes from "components/Navbar/routes";
 import { FaFacebook } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => (
-  <footer className="py-10 bg-amber-300">
-    <div className="footer__columns flex justify-between align-center lg:w-1/2  m-auto ">
-      <a href={GOOGLE}>
-        <i className="fab fa-google" />
-        <FaGoogle />
-      </a>
-
-      <a href={PHONE_NUMBER}>
-        <FaPhoneAlt />
-      </a>
-
-      <a href={EMAIL}>
-        <FaEnvelope />
-      </a>
-      <a href={WHATSAPP}>
-        <FaWhatsapp />
-      </a>
-      <a href={FACEBOOK}>
-        <FaFacebook />
-      </a>
-      <a href={INSTAGRAM}>
-        <FaInstagram />
-      </a>
+  <footer className="flex flex-col">
+    <div className="px-6 py-8 lg:px-20 lg:py-10 border-t-[#E5E5E5] border-t border-solid flex flex-col lg:flex-row items-center lg:justify-between">
+      <StaticImage
+        src="../../images/logo.jpg"
+        alt="logo"
+        className="w-[97px] h-16 shrink-0 mb-8 lg:mb-0"
+      />
+      <div className="flex flex-col md:flex-row items-center gap-6">
+        {routes.map((r) => (
+          <a
+            href={r.href}
+            className="text-[#404040] text-base not-italic font-semibold leading-6"
+          >
+            {r.label}
+          </a>
+        ))}
+      </div>
     </div>
-    <div className="footer__credits mt-10 pt-10">
-      <p>Casa Michele Cosentino</p>
-      <p>P.Iva {VAT}</p>
-      <p>{ADDRESS}</p>
-      <a href={PRIVACY_URL} className="privacyPolicy">
-        Privacy policy
+    <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-6 py-8 px-6 lg:px-20 lg:py-10 border-t-[#E5E5E5] border-t border-solid ">
+      <p className="text-[#A3A3A3] text-sm not-italic font-semibold leading-5">
+        {" "}
+        Casa Michele Cosentino © 2024
+      </p>
+      <a href={FACEBOOK} className="text-[#A3A3A3] text-lg">
+        <FaFacebook size={24} />
       </a>
     </div>
   </footer>

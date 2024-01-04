@@ -5,6 +5,7 @@ export type HomePageData = {
         frontmatter: {
           lists: List[] | null;
           terms: Terms[] | null;
+          images: Images[] | null;
         };
         html: string;
       };
@@ -15,6 +16,11 @@ export type HomePageData = {
 export type Terms = {
   key: string;
   label: string;
+};
+export type Images = {
+  key: string;
+  image: string;
+  description?: string;
 };
 
 export type List = {

@@ -1,0 +1,21 @@
+.half-background {
+  background: linear-gradient(
+    to bottom,
+    #f0f9ff 0%,
+    #f0f9ff 87.5%,
+    white 87.5%,
+    white 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .half-background {
+    background: linear-gradient(
+      to bottom,
+      #f0f9ff 0%,
+      #f0f9ff 70%,
+      white 70%,
+      white 100%
+    );
+  }
+}

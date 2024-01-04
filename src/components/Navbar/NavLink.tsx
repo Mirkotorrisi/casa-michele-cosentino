@@ -1,5 +1,4 @@
-import React, { ReactNode, useContext } from "react";
-// import { NavContext } from "../../context/NavContext";
+import React, { ReactNode } from "react";
 
 type Props = {
   customActive?: boolean;
@@ -14,13 +13,8 @@ const NavLink = ({ customActive, link, children }: Props) => {
   // };
   // const isActive = activeNavLinkId === link || customActive;
   return (
-    <div className={`nav__item__block `}>
-      <a
-        href={link}
-        className={`block nav__item p-0 py-6 lg:p-6 lg:inline-block 
-        `}
-        id={link}
-      >
+    <div className="">
+      <a href={link} className="block" id={link}>
         {children}
       </a>
     </div>

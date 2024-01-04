@@ -1,5 +1,6 @@
 import SectionHeading from "components/SectionHeading";
 import { useVocabulary } from "context/Vocabulary";
+import Image from "components/Image";
 import React from "react";
 
 const SpecialMoments = ({ specialMomentsList = [] }) => {
@@ -15,10 +16,7 @@ const SpecialMoments = ({ specialMomentsList = [] }) => {
         }}
       />
       <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-4 w-full  h-96 max-w-6xl bg-orange-500">
-        <img
-          className="h-full max-w-xl"
-          src="https://via.placeholder.com/68x56"
-        />
+        <Image imageKey="socializing" className="" />
 
         <ul className="">
           {specialMomentsList.map((moment, index) => (

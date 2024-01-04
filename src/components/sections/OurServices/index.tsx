@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
-import { useVocabulary } from "context/Vocabulary";
 import SectionHeading from "components/SectionHeading";
+import Image from "components/Image";
 
 const OurServices = ({}) => {
   return (
@@ -33,16 +33,11 @@ const OurServices = ({}) => {
             />
           </div>
         </div>
-        <img
-          className="w-full h-full max-w-md rounded-md"
-          src="https://via.placeholder.com/68x56"
-        />
+        <Image imageKey="caregiving" />
       </div>
       <div className="flex justify-between w-full">
-        <img
-          className="w-full h-full max-w-md rounded-md"
-          src="https://via.placeholder.com/68x56"
-        />
+        <Image imageKey="caregiving" />
+
         <div className="flex-col justify-center items-start gap-7 inline-flex max-w-lg">
           <SectionHeading
             title={{ text: "daily-services-heading", tag: "h3" }}

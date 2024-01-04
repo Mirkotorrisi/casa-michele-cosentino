@@ -1,4 +1,5 @@
 ---
+pageKey: home
 images:
   - key: hero-image
     description: ""
