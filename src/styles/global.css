@@ -16,7 +16,7 @@
   }
 
   section {
-    @apply py-8 px-6 md:px-10  lg:p-20 flex flex-col;
+    @apply py-8 px-6 md:px-10 lg:p-20 flex flex-col;
   }
 
   img,
@@ -40,6 +40,17 @@
 
   .bold {
     @apply text-[#171717] text-center text-xl not-italic font-bold leading-7;
+  }
+  .bold-white {
+    @apply text-white text-center text-xl not-italic font-bold leading-7;
+  }
+
+  .body-1 {
+    @apply text-[#556987] text-center text-lg not-italic font-normal leading-7;
+  }
+
+  .body-3 {
+    @apply text-[#737373] text-center text-sm not-italic font-normal leading-5;
   }
 }
 

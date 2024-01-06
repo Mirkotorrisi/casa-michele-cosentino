@@ -3,6 +3,7 @@ import Address from "images/address.svg";
 import Phone from "images/phone.svg";
 import Email from "images/email.svg";
 import "./index.scss";
+import Card from "components/LinkCard";
 
 const contactCards = [
   {
@@ -37,13 +38,7 @@ const ContactUs = ({}) => {
       </div>
       <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
         {contactCards.map((card) => (
-          <div className="flex flex-col gap-6 items-center">
-            {card.image}
-            <span className="bold">{card.text}</span>
-            <a href={card.link} target="_blank">
-              {card.value}
-            </a>
-          </div>
+          <Card {...card} key={card.value} />
         ))}
       </div>
       <div className="m-auto w-full max-w-[960px]">
