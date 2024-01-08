@@ -2,18 +2,20 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import { HomePageData } from "types/home";
 import { Gallery } from "context/Gallery";
 import Image from "components/Image";
 import ContactUs from "components/ContactUs";
 import useTranslate from "hooks/useTranslate";
+import { PageData } from "types/pageData";
 
-const WhoWeArePage: React.FC<PageProps<HomePageData>> = ({ data }) => {
-  const images = data.homePageData.edges.find(
+const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
+  data,
+}) => {
+  const images = data.whoWeArePageData.edges.find(
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;
 
-  const translate = useTranslate(data.homePageData);
+  const translate = useTranslate(data.whoWeArePageData);
 
   return (
     <Gallery images={images ?? []}>
@@ -63,11 +65,13 @@ const WhoWeArePage: React.FC<PageProps<HomePageData>> = ({ data }) => {
   );
 };
 
-export const Head: HeadFC = () => <title>Casa Cosentino</title>;
+export const Head: HeadFC = () => (
+  <title>Chi Siamo | Casa Michele Cosentino</title>
+);
 
 export const query = graphql`
   query HomePageQuery {
-    homePageData: allMarkdownRemark(
+    whoWeArePageData: allMarkdownRemark(
       filter: { frontmatter: { pageKey: { eq: "home" } } }
     ) {
       edges {

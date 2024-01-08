@@ -1,5 +1,5 @@
 import React, { ReactNode, createContext, useContext } from "react";
-import { Images } from "types/home";
+import { Images } from "types/pageData";
 
 const GalleryContext = createContext<{
   getImageSrc: (k: string) => Images;

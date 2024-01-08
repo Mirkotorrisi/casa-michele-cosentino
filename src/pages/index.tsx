@@ -2,11 +2,13 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import { HomePageData } from "types/home";
 import { Gallery } from "context/Gallery";
 import useTranslate from "hooks/useTranslate";
+import { PageData } from "types/pageData";
 
-const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
+const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
+  data,
+}) => {
   const images = data.homePageData.edges.find(
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;
@@ -16,13 +18,21 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
   return (
     <Gallery images={images ?? []}>
       <Navbar />
-      <main className="relative"></main>
+      <main className="relative">
+        <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcasamichelecosentino&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=73794053396"
+          width="340"
+          height="500"
+          allowFullScreen
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+      </main>
       <Footer />
     </Gallery>
   );
 };
 
-export const Head: HeadFC = () => <title>Casa Cosentino</title>;
+export const Head: HeadFC = () => <title>Home | Casa Michele Cosentino</title>;
 
 export const query = graphql`
   query HomePageQuery {

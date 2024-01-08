@@ -2,12 +2,12 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import { HomePageData } from "types/home";
 import { Gallery } from "context/Gallery";
 import Image from "components/Image";
 import ContactUs from "components/ContactUs";
 import Card from "components/Card";
 import Email from "images/email.svg";
+import { PageData } from "types/pageData";
 
 const servicesCards = [
   {
@@ -56,8 +56,10 @@ const dailyLifeCards = [
   },
 ];
 
-const ServicesPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
-  const images = data.homePageData.edges.find(
+const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
+  data,
+}) => {
+  const images = data.servicesPageData.edges.find(
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;
 
@@ -127,12 +129,14 @@ const ServicesPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
   );
 };
 
-export const Head: HeadFC = () => <title>Casa Cosentino</title>;
+export const Head: HeadFC = () => (
+  <title>Servizi | Casa Michele Cosentino</title>
+);
 
 export const query = graphql`
-  query HomePageQuery {
-    homePageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "home" } } }
+  query ServicesPageQuery {
+    servicesPageData: allMarkdownRemark(
+      filter: { frontmatter: { pageKey: { eq: "servizi" } } }
     ) {
       edges {
         node {

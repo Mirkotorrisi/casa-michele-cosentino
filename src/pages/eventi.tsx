@@ -2,13 +2,13 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import { HomePageData } from "types/home";
 import { Gallery } from "context/Gallery";
 import Image from "components/Image";
 import ContactUs from "components/ContactUs";
 import Card from "components/Card";
 import Carousel from "components/Carousel";
 import useTranslate from "hooks/useTranslate";
+import { PageData } from "types/pageData";
 
 const eventCards = [
   {
@@ -43,12 +43,14 @@ const eventCards = [
   },
 ];
 
-const EventsPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
-  const images = data.homePageData.edges.find(
+const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
+  data,
+}) => {
+  const images = data.eventsPageData.edges.find(
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;
 
-  const translate = useTranslate(data.homePageData);
+  const translate = useTranslate(data.eventsPageData);
 
   return (
     <Gallery images={images ?? []}>
@@ -115,11 +117,13 @@ const EventsPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
   );
 };
 
-export const Head: HeadFC = () => <title>Casa Cosentino</title>;
+export const Head: HeadFC = () => (
+  <title>Eventi | Casa Michele Cosentino</title>
+);
 
 export const query = graphql`
   query HomePageQuery {
-    homePageData: allMarkdownRemark(
+    eventsPageData: allMarkdownRemark(
       filter: { frontmatter: { pageKey: { eq: "home" } } }
     ) {
       edges {
