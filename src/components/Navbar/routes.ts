@@ -13,7 +13,7 @@ export default [
   },
   {
     label: "Feste ed eventi",
-    href: "/feste-ed-eventi",
+    href: "/eventi",
   },
   {
     label: "Dove trovarci",

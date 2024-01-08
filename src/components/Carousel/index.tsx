@@ -1,60 +1,36 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Image from "components/Image";
 
-const Carousel = ({}) => {
+const images = [
+  "caregiving",
+  "caregiving",
+  "caregiving",
+  "caregiving",
+  "caregiving",
+  "caregiving",
+];
+
+type Props = {
+  className?: string;
+};
+
+const Carousel = ({ className }: Props) => {
   return (
-    <>
-      <section className="w-full px-28 py-20 bg-blue-200 flex-col justify-start items-center gap-20 inline-flex">
-        <div className="self-stretch  flex-col justify-center items-center gap-4 flex">
-          <h2 className="self-stretch text-center text-gray-900 text-6xl font-bold font-['Inter'] leading-10">
-            Qua ci va un heading
-          </h2>
-          <div className="self-stretch text-center  text-xl font-normal font-['Inter'] tracking-tight" />
-          <a
-            className="px-5 py-2.5 bg-gray-900 rounded-md justify-center items-center inline-flex text-white text-sm font-semibold font-['Inter'] leading-tight"
-            href={"/"}
-          >
-            {"Scopri di più"}
-          </a>
-        </div>
-      </section>
-
-      <div className="w-full flex justify-center bg-blue-600">
-        <Swiper spaceBetween={5} slidesPerView={5.5} loop>
-          <SwiperSlide>
-            <div className="border border-black w-[250px] h-[250px] bg-yellow-400">
-              1
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="border border-black w-[250px] h-[250px] bg-yellow-400">
-              2
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="border border-black w-[250px] h-[250px] bg-yellow-400">
-              3
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="border border-black w-[250px] h-[250px] bg-yellow-400">
-              4
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="border border-black w-[250px] h-[250px] bg-yellow-400">
-              5
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="border border-black w-[250px] h-[250px] bg-yellow-400">
-              6
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </>
+    <Swiper
+      className={className}
+      spaceBetween={20}
+      slidesPerView={1.4}
+      centeredSlides
+      loop
+    >
+      {images.map((imageKey, index) => (
+        <SwiperSlide key={index}>
+          <Image imageKey={imageKey} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

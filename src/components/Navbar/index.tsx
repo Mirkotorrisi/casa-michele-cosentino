@@ -3,18 +3,13 @@ import "./index.scss";
 import NavLink from "./NavLink";
 import routes, { contactRoute } from "./routes";
 import { StaticImage } from "gatsby-plugin-image";
-type Props = {
-  customActiveLink?: string;
-};
 
-const Navbar = ({ customActiveLink }: Props) => {
+const Navbar = () => {
   const [menuShow, setMenu] = useState(false);
-  const [logoHover, setLogoHover] = useState(false);
   const showMenu = () => setMenu(!menuShow);
-  // const { activeNavLinkId } = useContext(NavContext);
 
   return (
-    <nav className={`navbar flex items-center justify-between py-5 px-8`}>
+    <nav className={`flex items-center justify-between py-5 px-8`}>
       <StaticImage
         src="../../images/logo.jpg"
         alt="logo"
@@ -41,7 +36,7 @@ const Navbar = ({ customActiveLink }: Props) => {
         </button>
       </div>
 
-      <div className={` hidden lg:flex gap-8`}>
+      <div className="hidden lg:flex gap-8">
         {routes.map((link) => (
           <NavLink link={link.href} key={link.label}>
             {link.label}
