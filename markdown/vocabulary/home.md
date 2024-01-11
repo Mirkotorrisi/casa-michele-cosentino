@@ -49,6 +49,4 @@ terms:
   - key: contact-us-description
     label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
-  - key: ciao
-    label: ciao
 ---
