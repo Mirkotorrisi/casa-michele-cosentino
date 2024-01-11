@@ -17,4 +17,6 @@ terms:
       di               riflessione e servizi comunitari sono disponibili per chi
       cerca               serenità e conforto spirituale in un ambiente
       accogliente e               rispettoso."
+  - key: ciao
+    label: ciao
 ---
