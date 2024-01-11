@@ -1,4 +1,5 @@
 ---
+pageKey: servizi
 terms:
   - key: hero-title
     label: Scopri i nostri servizi
@@ -12,7 +13,8 @@ terms:
   - key: soul-wellness
     label: Benessere dell’anima
   - key: soul-wellness-sub
-    label: "              La nostra casa offre assistenza religiosa per rispondere
+    label:
+      "              La nostra casa offre assistenza religiosa per rispondere
       alle               diverse esigenze spirituali dei nostri ospiti. Momenti
       di               riflessione e servizi comunitari sono disponibili per chi
       cerca               serenità e conforto spirituale in un ambiente

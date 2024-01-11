@@ -297,7 +297,8 @@ collections:
           widget: list,
           fields:
             [
-              { label: Text, name: text, required: false, widget: markdown },
+              { label: Title, name: text, required: false, widget: string },
+              { label: Text, name: text, required: false, widget: string },
               { label: Image, name: image, required: false, widget: image },
               {
                 label: Links,

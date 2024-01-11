@@ -1,4 +1,5 @@
 ---
+pageKey: feste-ed-eventi
 terms:
   - key: hero-title
     label: Celebrazioni e momenti di convivialità
@@ -7,13 +8,15 @@ terms:
       socializzazione e             condividere momenti felici insieme."
   - label: Eventi durante l’anno
     key: yearly-events
-  - label: "              Da celebrazioni tradizionali a incontri culturali, ogni
+  - label:
+      "              Da celebrazioni tradizionali a incontri culturali, ogni
       evento è               un'occasione speciale per riunire la nostra
       comunità"
     key: yearly-events-sub
   - label: Incontri con Associazioni Culturali
     key: associations-title
-  - label: "                Collaborazioni con entità locali per arricchire la vita
+  - label:
+      "                Collaborazioni con entità locali per arricchire la vita
       sociale                 e culturale dei nostri ospiti."
     key: associations-subtitle
   - label: I Momenti dei Nostri Eventi
