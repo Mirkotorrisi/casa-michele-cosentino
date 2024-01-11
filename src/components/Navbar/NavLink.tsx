@@ -5,10 +5,16 @@ type Props = {
   children: ReactNode;
 };
 
+const isBrowser = typeof window !== "undefined";
+
 const NavLink = ({ link, children }: Props) => {
-  const route = window.location.pathname.replaceAll("/", "");
-  const path = link.replace("/", "");
-  const isActive = route === path;
+  let isActive = false;
+  if (isBrowser) {
+    const route = window.location.pathname.replaceAll("/", "");
+    const path = link.replace("/", "");
+    isActive = route === path;
+  }
+
   return (
     <a href={link} className={isActive ? " " : "inactive"} id={link}>
       {children}
