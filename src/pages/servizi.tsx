@@ -8,6 +8,7 @@ import ContactUs from "components/ContactUs";
 import Card from "components/Card";
 import Email from "images/email.svg";
 import { PageData } from "types/pageData";
+import useTranslate from "hooks/useTranslate";
 
 const servicesCards = [
   {
@@ -63,18 +64,17 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;
 
+  const translate = useTranslate(data.servicesPageData);
+
   return (
     <Gallery images={images ?? []}>
       <Navbar />
       <main className="relative">
         <section className="gap-6 items-center">
-          <h2 className="md:text-4xl lg:text-6xl">Scopri i nostri servizi</h2>
-          <p className="max-w-[600px]">
-            Dall'assistenza sanitaria alle attività ricreative, ogni servizio è
-            pensato per il benessere e la felicità dei nostri ospiti.
-          </p>
+          <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
+          <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
           <a href="" className="button-ghost mt-2">
-            Scopri di più
+            {translate("discover-more")}
           </a>
           <Image imageKey="caregiving" className="mt-2" />
         </section>
@@ -82,7 +82,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           <Image imageKey="caregiving" className="p-20" />
 
           <section className="gap-16">
-            <h2 className="lg:text-left">Benessere del corpo</h2>
+            <h2 className="lg:text-left">{translate("body-wellness")}</h2>
             <div className="flex flex-col gap-8 md:grid md:grid-cols-2">
               {servicesCards.map((card) => (
                 <Card
@@ -100,13 +100,9 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
         </div>
         <section className="gap-2 md:grid md:grid-cols-2">
           <div className="flex flex-col gap-2 justify-center">
-            <h2 className="md:text-left">Benessere dell’anima</h2>
+            <h2 className="md:text-left">{translate("soul-wellness")}</h2>
             <p className="body-1 md:text-left">
-              La nostra casa offre assistenza religiosa per rispondere alle
-              diverse esigenze spirituali dei nostri ospiti. Momenti di
-              riflessione e servizi comunitari sono disponibili per chi cerca
-              serenità e conforto spirituale in un ambiente accogliente e
-              rispettoso.
+              {translate("soul-wellness-sub")}
             </p>
           </div>
           <Image imageKey="caregiving" className="mt-6" />

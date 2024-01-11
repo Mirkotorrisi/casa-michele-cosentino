@@ -22,38 +22,25 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
       <Navbar />
       <main className="relative">
         <section className="gap-8 items-center">
-          <h2 className="md:text-4xl lg:text-6xl">Scopri la nostra storia</h2>
-          <p className="max-w-[600px]">
-            La Casa di Riposo 'Mons. Michele Cosentino' è più di una struttura
-            assistenziale: è un ambiente familiare e accogliente, dove
-            professionalità, cura e rispetto si uniscono per offrire una vita
-            serena agli anziani.
-          </p>
+          <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
+          <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
           <a href="" className="button-ghost">
-            Scopri di più
+            {translate("discover-more")}
           </a>
           <Image imageKey="caregiving" className="" />
         </section>
         <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
           <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-            <h2 className="md:text-left">La nostra missione</h2>
-            <p className="md:text-left">
-              Fornire assistenza e supporto di alta qualità agli anziani,
-              garantendo loro dignità, indipendenza e una vita ricca di momenti
-              felici e sereni.
-            </p>
+            <h2 className="md:text-left">{translate("our-mission")}</h2>
+            <p className="md:text-left">{translate("our-mission-sub")}</p>
           </div>
           <Image imageKey="caregiving" className="mt-6" />
         </section>
         <div className="blue-section">
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
             <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-              <h2 className="md:text-left">La nostra visione</h2>
-              <p className="md:text-left">
-                Essere riconosciuti come un punto di riferimento nell'assistenza
-                agli anziani, un luogo dove ogni ospite si sente valorizzato, e
-                parte di una famiglia.
-              </p>
+              <h2 className="md:text-left">{translate("our-vision")}</h2>
+              <p className="md:text-left">{translate("our-vision-sub")}</p>
             </div>
             <Image imageKey="caregiving" className="mt-6 md:order-[-1]" />
           </section>
@@ -70,9 +57,9 @@ export const Head: HeadFC = () => (
 );
 
 export const query = graphql`
-  query HomePageQuery {
+  query WhoWeArePageQuery {
     whoWeArePageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "home" } } }
+      filter: { frontmatter: { pageKey: { eq: "chi-siamo" } } }
     ) {
       edges {
         node {

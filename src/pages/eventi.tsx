@@ -57,22 +57,14 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
       <Navbar />
       <main className="relative">
         <section className="gap-8 items-center">
-          <h2 className="md:text-4xl lg:text-6xl">
-            Celebrazioni e momenti di convivialità
-          </h2>
-          <p className="max-w-[600px]">
-            Un calendario ricco di eventi per favorire la socializzazione e
-            condividere momenti felici insieme.
-          </p>
+          <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
+          <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
           <Image imageKey="caregiving" className="" />
         </section>
         <section className="gap-8 lg:gap-16 ">
           <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-            <h2>Eventi durante l’anno</h2>
-            <p className="body-2">
-              Da celebrazioni tradizionali a incontri culturali, ogni evento è
-              un'occasione speciale per riunire la nostra comunità
-            </p>
+            <h2>{translate("yearly-events")}</h2>
+            <p className="body-2">{translate("yearly-events-sub")}</p>
           </div>
           <div className="flex flex-col gap-8 md:grid md:grid-cols-3 lg:gap-y-16">
             {eventCards.map((c) => (
@@ -92,22 +84,18 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 ">
             <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
               <h2 className="md:text-left">
-                Incontri con Associazioni Culturali
+                {translate("associations-title")}
               </h2>
               <p className="md:text-left">
-                Collaborazioni con entità locali per arricchire la vita sociale
-                e culturale dei nostri ospiti.
+                {translate("associations-subtitle")}
               </p>
             </div>
             <Image imageKey="caregiving" className="mt-6 md:mt-0" />
           </section>
         </div>
         <section className="gap-3">
-          <h2>I Momenti dei Nostri Eventi</h2>
-          <p className="body-1">
-            Scorri la galleria per vedere i momenti felici e le celebrazioni
-            nella nostra casa.
-          </p>
+          <h2>{translate("our-events-moments")}</h2>
+          <p className="body-1">{translate("our-events-moments-sub")}</p>
         </section>
         <Carousel className="mb-8 md:mb-10 lg:mb-20" />
         <ContactUs />
@@ -122,9 +110,9 @@ export const Head: HeadFC = () => (
 );
 
 export const query = graphql`
-  query HomePageQuery {
+  query EventsPageQuery {
     eventsPageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "home" } } }
+      filter: { frontmatter: { pageKey: { eq: "feste-ed-eventi" } } }
     ) {
       edges {
         node {

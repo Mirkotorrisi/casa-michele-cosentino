@@ -13,8 +13,14 @@ collections:
       - file: "markdown/vocabulary/home.md"
         label: "Home page Vocabulary"
         name: "homeVocabulary"
-        pageKey: "home"
         fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "home",
+            }
+
           - {
               label: "Terms",
               name: "terms",
@@ -31,6 +37,12 @@ collections:
         pageKey: "chi-siamo"
         fields:
           - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "chi-siamo",
+            }
+          - {
               label: "Terms",
               name: "terms",
               widget: "list",
@@ -46,6 +58,12 @@ collections:
         pageKey: "servizi"
         fields:
           - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "servizi",
+            }
+          - {
               label: "Terms",
               name: "terms",
               widget: "list",
@@ -60,6 +78,12 @@ collections:
         name: "festeEdEventiVocabulary"
         pageKey: "feste-ed-eventi"
         fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "feste-ed-eventi",
+            }
           - {
               label: "Terms",
               name: "terms",
