@@ -21,6 +21,4 @@ terms:
   - label: "            Scorri la galleria per vedere i momenti felici e le
       celebrazioni             nella nostra casa."
     key: our-events-moments-sub
-  - key: ciao
-    label: ciao
 ---
