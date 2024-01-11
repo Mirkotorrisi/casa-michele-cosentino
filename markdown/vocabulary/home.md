@@ -4,8 +4,7 @@ terms:
   - key: hero-heading
     label: Casa Mons. Michele Cosentino
   - key: hero-sub-heading
-    label:
-      If you’re looking for the latest in wireless headphones, look no further.
+    label: If you’re looking for the latest in wireless headphones, look no further.
       These are perfect for TV, stereo, home, and cell phone.
   - key: hero-cta
     label: Scopri di più
@@ -14,8 +13,7 @@ terms:
   - key: our-mission
     label: La nostra mission
   - key: our-mission-description
-    label:
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.
@@ -24,8 +22,7 @@ terms:
   - key: caregiving-heading
     label: Assistenza e cura personale
   - key: caregiving-description
-    label:
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
   - key: daily-services-heading
     label: Comfort e servizi quotidiani
@@ -40,8 +37,7 @@ terms:
   - key: socialization-heading
     label: Momenti Speciali di Socializzazione
   - key: socialization-description
-    label:
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat sed do eiusmod tempor incididunt ut labore et dolore
@@ -51,7 +47,8 @@ terms:
   - key: contact-us-subheading
     label: We'd love to hear from you
   - key: contact-us-description
-    label:
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    label: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
+  - key: ciao
+    label: ciao
 ---
