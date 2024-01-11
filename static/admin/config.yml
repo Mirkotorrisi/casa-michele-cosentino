@@ -104,6 +104,12 @@ collections:
         pageKey: "home"
         fields:
           - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "home",
+            }
+          - {
               label: "Images",
               name: "images",
               widget: "list",
@@ -124,6 +130,12 @@ collections:
         name: "chiSiamoGallery"
         pageKey: "chi-siamo"
         fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "chi-siamo",
+            }
           - {
               label: "Images",
               name: "images",
@@ -146,6 +158,12 @@ collections:
         pageKey: "servizi"
         fields:
           - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "servizi",
+            }
+          - {
               label: "Images",
               name: "images",
               widget: "list",
@@ -166,6 +184,12 @@ collections:
         name: "festeEdEventiGallery"
         pageKey: "feste-ed-eventi"
         fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "feste-ed-eventi",
+            }
           - {
               label: "Images",
               name: "images",
