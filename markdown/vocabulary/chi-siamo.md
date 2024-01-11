@@ -21,6 +21,4 @@ terms:
     label: "                Essere riconosciuti come un punto di riferimento
       nell'assistenza                 agli anziani, un luogo dove ogni ospite si
       sente valorizzato, e                 parte di una famiglia."
-  - key: ciao
-    label: ciao
 ---
