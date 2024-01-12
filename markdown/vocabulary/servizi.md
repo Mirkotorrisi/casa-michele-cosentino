@@ -20,4 +20,10 @@ terms:
       accogliente e               rispettoso."
   - label: Vita quotidiana e tempo libero
     key: daily-life-title
+  - key: contact-title
+    label: Rimaniamo in contatto
+  - label: Vuoi saperne di più o hai qualche domanda? Siamo qui per
+      aiutarti!           Contattaci via email, telefono, o vieni a trovarci in
+      sede.
+    key: contact-subtitle
 ---
