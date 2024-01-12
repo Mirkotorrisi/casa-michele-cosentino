@@ -75,6 +75,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         <ContactUs
           title={translate("contact-title")}
           subtitle={translate("contact-subtitle")}
+          contactCards={getListItems(data.eventsPageData, "contact-cards")}
         />
       </main>
       <Footer />

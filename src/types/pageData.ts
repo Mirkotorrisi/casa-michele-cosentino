@@ -2,7 +2,7 @@ export type PageData = {
   edges: Array<{
     node: {
       frontmatter: {
-        listItem: List[] | null;
+        listItem: ListItem[] | null;
         terms: Terms[] | null;
         images: Images[] | null;
         pageKey: "home" | "feste-ed-eventi" | "servizi" | "chi-siamo";
@@ -23,7 +23,7 @@ export type Images = {
   description?: string;
 };
 
-export type List = {
+export type ListItem = {
   image: string;
   imageAlt: string;
   text: string;
@@ -31,18 +31,5 @@ export type List = {
   pageKey: string;
   sectionKey: string;
   heading: string;
-  callToActions: {
-    firstCTA: {
-      heading: string;
-      subHeading: string;
-      linkType: string;
-      linkURL: string;
-    };
-    secondCTA: {
-      heading: string;
-      subHeading: string;
-      linkType: string;
-      linkURL: string;
-    };
-  };
+  links: { linkText: string; linkURL: string }[];
 };

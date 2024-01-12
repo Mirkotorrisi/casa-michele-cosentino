@@ -1,8 +1,7 @@
-import React from "react";
+import Email from "images/email.svg";
 import Address from "images/address.svg";
 import Phone from "images/phone.svg";
-import Email from "images/email.svg";
-import "./index.scss";
+import React from "react";
 
 export const getSvgIcon = (key: string) => {
   switch (key) {

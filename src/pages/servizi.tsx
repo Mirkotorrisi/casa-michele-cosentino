@@ -8,12 +8,13 @@ import ContactUs from "components/ContactUs";
 import Card from "components/Card";
 import { PageData } from "types/pageData";
 import useTranslate from "hooks/useTranslate";
-import { getSvgIcon } from "resources/svgIcons";
+import { getSvgIcon } from "resources/getSvgIcon";
 import { getImages, getListItems } from "helpers";
 
 const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   data,
 }) => {
+  console.log("🚀 ~ data:", data);
   const images = getImages(data.servicesPageData);
   const servicesCards = getListItems(data.servicesPageData, "services-cards");
   const dailyLifeCards = getListItems(
@@ -86,6 +87,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
         <ContactUs
           title={translate("contact-title")}
           subtitle={translate("contact-subtitle")}
+          contactCards={getListItems(data.servicesPageData, "contact-cards")}
         />
       </main>
       <Footer />
@@ -115,11 +117,16 @@ export const query = graphql`
               image
               description
             }
+            listKey
             listItem {
               text
+              title
               image
+              links {
+                linkText
+                linkURL
+              }
             }
-            listKey
           }
         }
       }

@@ -7,7 +7,7 @@ import Image from "components/Image";
 import ContactUs from "components/ContactUs";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
-import { getImages } from "helpers";
+import { getImages, getListItems } from "helpers";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -47,6 +47,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
         <ContactUs
           title={translate("contact-title")}
           subtitle={translate("contact-subtitle")}
+          contactCards={getListItems(data.whoWeArePageData, "contact-cards")}
         />
       </main>
       <Footer />
@@ -75,6 +76,16 @@ export const query = graphql`
               key
               image
               description
+            }
+            listKey
+            listItem {
+              text
+              title
+              image
+              links {
+                linkText
+                linkURL
+              }
             }
           }
         }

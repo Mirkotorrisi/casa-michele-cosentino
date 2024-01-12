@@ -1,4 +1,5 @@
 ---
+pageKey: contattaci
 terms:
   - key: contact-title
     label: Rimaniamo in contatto
