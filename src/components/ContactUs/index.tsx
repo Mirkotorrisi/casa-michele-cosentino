@@ -26,15 +26,17 @@ const contactCards = [
   },
 ];
 
-const ContactUs = ({}) => {
+type Props = {
+  title: string;
+  subtitle: string;
+};
+
+const ContactUs = ({ title, subtitle }: Props) => {
   return (
     <section className="gap-8 lg:gap-16 half-background items-center">
       <div className="flex flex-col gap-6 ">
-        <h2>Rimaniamo in contatto</h2>
-        <p>
-          Vuoi saperne di più o hai qualche domanda? Siamo qui per aiutarti!
-          Contattaci via email, telefono, o vieni a trovarci in sede.{" "}
-        </p>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
       </div>
       <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
         {contactCards.map((card) => (

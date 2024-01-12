@@ -7,13 +7,12 @@ import Image from "components/Image";
 import ContactUs from "components/ContactUs";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
+import { getImages } from "helpers";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
 }) => {
-  const images = data.whoWeArePageData.edges.find(
-    (edge) => !!edge.node.frontmatter.images?.length
-  )?.node.frontmatter.images;
+  const images = getImages(data.whoWeArePageData);
 
   const translate = useTranslate(data.whoWeArePageData);
 
@@ -45,7 +44,10 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
             <Image imageKey="caregiving" className="mt-6 md:order-[-1]" />
           </section>
         </div>
-        <ContactUs />
+        <ContactUs
+          title={translate("contact-title")}
+          subtitle={translate("contact-subtitle")}
+        />
       </main>
       <Footer />
     </Gallery>
@@ -59,7 +61,7 @@ export const Head: HeadFC = () => (
 export const query = graphql`
   query WhoWeArePageQuery {
     whoWeArePageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "chi-siamo" } } }
+      filter: { frontmatter: { pageKey: { in: ["chi-siamo", "contattaci"] } } }
     ) {
       edges {
         node {

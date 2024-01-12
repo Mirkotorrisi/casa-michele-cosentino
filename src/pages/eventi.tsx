@@ -9,17 +9,13 @@ import Card from "components/Card";
 import Carousel from "components/Carousel";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
+import { getImages, getListItems } from "helpers";
 
 const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   data,
 }) => {
-  const images = data.eventsPageData.edges.find(
-    (edge) => !!edge.node.frontmatter.images?.length
-  )?.node.frontmatter.images;
-
-  const eventCards = data.eventsPageData.edges.find(
-    (edge) => edge.node.frontmatter.listKey === "events-cards"
-  )?.node?.frontmatter?.listItem;
+  const images = getImages(data.eventsPageData);
+  const eventCards = getListItems(data.eventsPageData, "events-cards");
 
   const translate = useTranslate(data.eventsPageData);
 
@@ -76,7 +72,10 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
           <p className="body-1">{translate("our-events-moments-sub")}</p>
         </section>
         <Carousel className="mb-8 md:mb-10 lg:mb-20" />
-        <ContactUs />
+        <ContactUs
+          title={translate("contact-title")}
+          subtitle={translate("contact-subtitle")}
+        />
       </main>
       <Footer />
     </Gallery>
@@ -90,7 +89,9 @@ export const Head: HeadFC = () => (
 export const query = graphql`
   query EventsPageQuery {
     eventsPageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "feste-ed-eventi" } } }
+      filter: {
+        frontmatter: { pageKey: { in: ["feste-ed-eventi", "contattaci"] } }
+      }
     ) {
       edges {
         node {

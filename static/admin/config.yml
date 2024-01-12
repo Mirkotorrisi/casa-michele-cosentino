@@ -94,6 +94,27 @@ collections:
                   { label: "Label", name: "label", widget: "string" },
                 ],
             }
+      - file: "markdown/vocabulary/contattaci.md"
+        label: "Contattaci page Vocabulary"
+        name: "contattaciVocabulary"
+        pageKey: "contattaci"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "contattaci",
+            }
+          - {
+              label: "Terms",
+              name: "terms",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  { label: "Label", name: "label", widget: "string" },
+                ],
+            }
   - name: "gallery"
     label: "Images"
     description: "Every image, needs a unique key (preferred kebab-case) and a pageKey"

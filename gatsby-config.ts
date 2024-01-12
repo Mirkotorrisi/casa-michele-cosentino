@@ -18,12 +18,12 @@ const config: GatsbyConfig = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   // options: {
-    //   //   icon: "src/images/icon.png",
-    //   // },
-    // },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon.png",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-root-import",
     "gatsby-transformer-sharp",

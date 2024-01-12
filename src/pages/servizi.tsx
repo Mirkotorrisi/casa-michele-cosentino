@@ -9,21 +9,17 @@ import Card from "components/Card";
 import { PageData } from "types/pageData";
 import useTranslate from "hooks/useTranslate";
 import { getSvgIcon } from "resources/svgIcons";
+import { getImages, getListItems } from "helpers";
 
 const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   data,
 }) => {
-  const images = data.servicesPageData.edges.find(
-    (edge) => !!edge.node.frontmatter.images?.length
-  )?.node.frontmatter.images;
-
-  const servicesCards = data.servicesPageData.edges.find(
-    (edge) => edge.node.frontmatter.listKey === "services-cards"
-  )?.node?.frontmatter?.listItem;
-
-  const dailyLifeCards = data.servicesPageData.edges.find(
-    (edge) => edge.node.frontmatter.listKey === "daily-life-cards"
-  )?.node?.frontmatter?.listItem;
+  const images = getImages(data.servicesPageData);
+  const servicesCards = getListItems(data.servicesPageData, "services-cards");
+  const dailyLifeCards = getListItems(
+    data.servicesPageData,
+    "daily-life-cards"
+  );
 
   const translate = useTranslate(data.servicesPageData);
 
@@ -72,7 +68,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
         </section>
         <div className="blue-section">
           <section className="gap-8">
-            <h2>Vita quotidiana e tempo libero</h2>
+            <h2>{translate("daily-life-title")}</h2>
             <Image imageKey="servizi-image-4" />
             <div className="flex flex-col md:flex-row gap-8">
               {dailyLifeCards?.map((card) => (
@@ -87,7 +83,10 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
             </div>
           </section>
         </div>
-        <ContactUs />
+        <ContactUs
+          title={translate("contact-title")}
+          subtitle={translate("contact-subtitle")}
+        />
       </main>
       <Footer />
     </Gallery>
@@ -101,7 +100,7 @@ export const Head: HeadFC = () => (
 export const query = graphql`
   query ServicesPageQuery {
     servicesPageData: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "servizi" } } }
+      filter: { frontmatter: { pageKey: { in: ["servizi", "contattaci"] } } }
     ) {
       edges {
         node {
