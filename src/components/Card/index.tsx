@@ -2,8 +2,8 @@ import React, { ReactNode } from "react";
 
 type Props = {
   image: ReactNode;
+  title: string;
   text: string;
-  value: string;
   invertColors?: boolean;
   classNames?: {
     card?: string;
@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-const Card = ({ image, text, invertColors, value, classNames }: Props) => (
+const Card = ({ image, title, invertColors, text, classNames }: Props) => (
   <div className={`flex flex-col gap-4 items-center ${classNames?.card}`}>
     {image}
     <div className={`flex flex-col gap-2 ${classNames?.textContainer}`}>
@@ -22,9 +22,9 @@ const Card = ({ image, text, invertColors, value, classNames }: Props) => (
           classNames?.title
         }`}
       >
-        {text}
+        {title}
       </span>
-      <p className={`body-3 ${classNames?.content}`}>{value}</p>
+      <p className={`body-3 ${classNames?.content}`}>{text}</p>
     </div>
   </div>
 );

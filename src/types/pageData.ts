@@ -2,9 +2,11 @@ export type PageData = {
   edges: Array<{
     node: {
       frontmatter: {
-        lists: List[] | null;
+        listItem: List[] | null;
         terms: Terms[] | null;
         images: Images[] | null;
+        pageKey: "home" | "feste-ed-eventi" | "servizi" | "chi-siamo";
+        listKey: string;
       };
       html: string;
     };
@@ -25,6 +27,7 @@ export type List = {
   image: string;
   imageAlt: string;
   text: string;
+  title: string;
   pageKey: string;
   sectionKey: string;
   heading: string;

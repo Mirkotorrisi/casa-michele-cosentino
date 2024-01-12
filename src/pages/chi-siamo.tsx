@@ -74,11 +74,6 @@ export const query = graphql`
               image
               description
             }
-            listItem {
-              text
-              image
-            }
-            listKey
           }
         }
       }

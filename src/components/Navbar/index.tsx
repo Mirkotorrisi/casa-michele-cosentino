@@ -44,7 +44,7 @@ const Navbar = () => {
         ))}
       </div>
       <a className="button-solid hidden lg:block" href={contactRoute.href}>
-        <div className="text-white text-sm font-semibold font-['Inter'] leading-tight">
+        <div className="text-white text-sm font-semibold leading-tight">
           {contactRoute.label}
         </div>
       </a>

@@ -2,17 +2,17 @@ import React, { ReactNode } from "react";
 
 type Props = {
   image: ReactNode;
-  text: string;
+  title: string;
   link: string;
-  value: string;
+  text: string;
 };
 
-const LinkCard = ({ image, text, link, value }: Props) => (
+const LinkCard = ({ image, title, link, text }: Props) => (
   <div className="flex flex-col gap-6 items-center">
     {image}
-    <span className="bold">{text}</span>
+    <span className="bold">{title}</span>
     <a href={link} target="_blank">
-      {value}
+      {text}
     </a>
   </div>
 );

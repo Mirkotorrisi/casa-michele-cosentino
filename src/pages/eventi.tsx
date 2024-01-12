@@ -10,45 +10,16 @@ import Carousel from "components/Carousel";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 
-const eventCards = [
-  {
-    image: <Image className="image-card" imageKey="caregiving" />,
-    text: "Complemese",
-    value: "Una festa mensile per tutti gli ospiti che festeggiano nel mese.",
-  },
-  {
-    image: <Image className="image-card" imageKey="caregiving" />,
-    text: "Festa della Mamma e del Papà",
-    value: "Celebrazioni dedicate per onorare i genitori.",
-  },
-  {
-    image: <Image className="image-card" imageKey="caregiving" />,
-    text: "Festa d’Estate",
-    value: "Un evento all'insegna del divertimento e del relax estivo.",
-  },
-  {
-    image: <Image className="image-card" imageKey="caregiving" />,
-    text: "Festa di Vendemmia",
-    value: "Una giornata per celebrare la natura e le tradizioni.",
-  },
-  {
-    image: <Image className="image-card" imageKey="caregiving" />,
-    text: "Festa di Natale e Befana",
-    value: "Magici momenti invernali di festa e allegria.",
-  },
-  {
-    image: <Image className="image-card" imageKey="caregiving" />,
-    text: "Festa di Carnevale",
-    value: "Colori e maschere per un divertimento senza età.",
-  },
-];
-
 const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   data,
 }) => {
   const images = data.eventsPageData.edges.find(
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;
+
+  const eventCards = data.eventsPageData.edges.find(
+    (edge) => edge.node.frontmatter.listKey === "events-cards"
+  )?.node?.frontmatter?.listItem;
 
   const translate = useTranslate(data.eventsPageData);
 
@@ -67,11 +38,18 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
             <p className="body-2">{translate("yearly-events-sub")}</p>
           </div>
           <div className="flex flex-col gap-8 md:grid md:grid-cols-3 lg:gap-y-16">
-            {eventCards.map((c) => (
+            {eventCards?.map((c) => (
               <Card
-                image={c.image}
+                key={c.title}
+                image={
+                  <img
+                    src={c.image}
+                    className="image-card rounded-md"
+                    alt={c.text}
+                  />
+                }
+                title={c.title}
                 text={c.text}
-                value={c.value}
                 classNames={{
                   title: "bold",
                   content: "body-3",
@@ -130,6 +108,7 @@ export const query = graphql`
             listItem {
               text
               image
+              title
             }
             listKey
           }

@@ -1,4 +1,5 @@
 ---
+pageKey: servizi
 images:
   - key: servizi-image-1
     description: First image for servizi
