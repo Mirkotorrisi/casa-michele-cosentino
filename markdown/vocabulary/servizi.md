@@ -19,4 +19,11 @@ terms:
       in un ambiente accogliente e rispettoso.
   - label: Vita quotidiana e tempo libero
     key: daily-life-title
+  - key: daily-life-sub
+    label: "              Ogni giorno alla Casa di Riposo Mons. Michele Cosentino
+      è               arricchito da pasti deliziosi e un'ampia gamma di
+      attività. Ci               dedichiamo a fornire esperienze che promuovano
+      il benessere e               offrano opportunità per nuove amicizie e
+      momenti di relax,               garantendo sempre un servizio attento e
+      personalizzato."
 ---
