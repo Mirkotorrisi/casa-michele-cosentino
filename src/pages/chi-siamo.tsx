@@ -8,6 +8,7 @@ import ContactUs from "components/ContactUs";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getImages, getListItems } from "helpers";
+import { getSvgIcon } from "resources/getSvgIcon";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -23,8 +24,8 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
-          <a href="" className="button-ghost">
-            {translate("discover-more")}
+          <a href="" className="button-ghost mt-2">
+            {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
           <Image imageKey="caregiving" className="" />
         </section>

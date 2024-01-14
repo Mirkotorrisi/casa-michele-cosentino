@@ -10,6 +10,7 @@ import Carousel from "components/Carousel";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getImages, getListItems } from "helpers";
+import { getSvgIcon } from "resources/getSvgIcon";
 
 const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   data,
@@ -26,6 +27,9 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
+          <a href="" className="button-ghost mt-2">
+            {translate("discover-more")} {getSvgIcon("arrow-down")}
+          </a>
           <Image imageKey="caregiving" className="" />
         </section>
         <section className="gap-8 lg:gap-16 ">

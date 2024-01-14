@@ -8,9 +8,10 @@ type Props = {
 };
 
 const LinkCard = ({ image, title, link, text }: Props) => (
-  <div className="flex flex-col gap-6 items-center">
-    {image}
-    <span className="bold">{title}</span>
+  <div className="flex flex-col gap-4 items-center">
+    <span className="bold flex gap-2">
+      {image} {title}
+    </span>
     <a href={link} target="_blank">
       {text}
     </a>

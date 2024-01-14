@@ -10,16 +10,20 @@ import { PageData } from "types/pageData";
 import useTranslate from "hooks/useTranslate";
 import { getSvgIcon } from "resources/getSvgIcon";
 import { getImages, getListItems } from "helpers";
+import CarouselMini from "components/CarouselMini";
 
 const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   data,
 }) => {
-  console.log("🚀 ~ data:", data);
   const images = getImages(data.servicesPageData);
   const servicesCards = getListItems(data.servicesPageData, "services-cards");
   const dailyLifeCards = getListItems(
     data.servicesPageData,
     "daily-life-cards"
+  );
+  const spiritualityCards = getListItems(
+    data.servicesPageData,
+    "spirituality-cards"
   );
 
   const translate = useTranslate(data.servicesPageData);
@@ -32,15 +36,15 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
           <a href="" className="button-ghost mt-2">
-            {translate("discover-more")}
+            {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
           <Image imageKey="servizi-image-1" className="mt-2" />
         </section>
         <div className="flex flex-col lg:grid lg:grid-cols-2">
-          <Image imageKey="servizi-image-2" className="p-20" />
-
-          <section className="gap-16">
-            <h2 className="lg:text-left">{translate("body-wellness")}</h2>
+          <section className="gap-16 ">
+            <h2 className="lg:text-left heading-2">
+              {translate("first-section-h2")}
+            </h2>
             <div className="flex flex-col gap-8 md:grid md:grid-cols-2">
               {servicesCards?.map((card) => (
                 <Card
@@ -57,19 +61,37 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
               ))}
             </div>
           </section>
-        </div>
-        <section className="gap-2 md:grid md:grid-cols-2">
-          <div className="flex flex-col gap-2 justify-center">
-            <h2 className="md:text-left">{translate("soul-wellness")}</h2>
-            <p className="body-1 md:text-left">
-              {translate("soul-wellness-sub")}
-            </p>
+          <div className="lg:order-[-1] lg:p-14">
+            <CarouselMini />
           </div>
-          <Image imageKey="servizi-image-3" className="mt-6" />
-        </section>
+        </div>
+        <div className="flex flex-col lg:grid lg:grid-cols-2">
+          <section className="gap-2 md:grid md:grid-cols-2 md:p-0 lg:p-10 lg:flex lg:flex-col">
+            <div className="flex flex-col gap-2 justify-center md:p-10 lg:pb-0">
+              <h2 className="md:text-left heading-2">
+                {translate("second-section-h2")}
+              </h2>
+              <p className="body-1 md:text-left">
+                {translate("second-section-paragraph")}
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 divide-y md:p-10 lg:pt-0">
+              {spiritualityCards.map(({ title, text }) => (
+                <div className="flex flex-col gap-2 pt-4">
+                  <p className="!text-left bold ">{title}</p>
+                  <p className="!text-left body-3 ">{text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+          <div className="lg:p-14">
+            <CarouselMini />
+          </div>
+        </div>
         <div className="blue-section">
           <section className="gap-8">
-            <h2>{translate("daily-life-title")}</h2>
+            <h2 className="heading-2">{translate("daily-life-title")}</h2>
+            <p>{translate("daily-life-sub")}</p>
             <Image imageKey="servizi-image-4" />
             <div className="flex flex-col md:flex-row gap-8">
               {dailyLifeCards?.map((card) => (
