@@ -34,7 +34,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         </section>
         <section className="gap-8 lg:gap-16 ">
           <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-            <h2>{translate("yearly-events")}</h2>
+            <h2 className="heading-2">{translate("yearly-events")}</h2>
             <p className="body-2">{translate("yearly-events-sub")}</p>
           </div>
           <div className="flex flex-col gap-8 md:grid md:grid-cols-3 lg:gap-y-16">
@@ -61,7 +61,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         <div className="blue-section">
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 ">
             <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-              <h2 className="md:text-left">
+              <h2 className="heading-2 md:text-left">
                 {translate("associations-title")}
               </h2>
               <p className="md:text-left">
@@ -72,7 +72,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
           </section>
         </div>
         <section className="gap-3">
-          <h2>{translate("our-events-moments")}</h2>
+          <h2 className="heading-2">{translate("our-events-moments")}</h2>
           <p className="body-1">{translate("our-events-moments-sub")}</p>
         </section>
         <Carousel className="mb-8 md:mb-10 lg:mb-20" />

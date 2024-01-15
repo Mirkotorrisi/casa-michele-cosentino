@@ -3,6 +3,7 @@ import "./index.scss";
 import NavLink from "./NavLink";
 import routes, { contactRoute } from "./routes";
 import { StaticImage } from "gatsby-plugin-image";
+import { getSvgIcon } from "resources/getSvgIcon";
 
 const Navbar = () => {
   const [menuShow, setMenu] = useState(false);
@@ -44,8 +45,8 @@ const Navbar = () => {
         ))}
       </div>
       <a className="button-solid hidden lg:block" href={contactRoute.href}>
-        <div className="text-white text-sm font-semibold leading-tight">
-          {contactRoute.label}
+        <div className="text-neutral-50 text-sm font-semibold leading-tight flex gap-3">
+          {getSvgIcon("white-email")} {contactRoute.label}
         </div>
       </a>
     </nav>

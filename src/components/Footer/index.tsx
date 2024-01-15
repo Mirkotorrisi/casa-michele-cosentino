@@ -4,6 +4,7 @@ import { FACEBOOK } from "resources";
 import { StaticImage } from "gatsby-plugin-image";
 import routes from "components/Navbar/routes";
 import { FaFacebook } from "react-icons/fa";
+import cartaDeiServizi from "assets/carta-dei-servizi.pdf";
 
 const Footer = () => (
   <footer className="flex flex-col">
@@ -17,11 +18,27 @@ const Footer = () => (
         {routes.map((r) => (
           <a
             href={r.href}
-            className="text-[#404040] text-base not-italic font-semibold leading-6"
+            className="text-neutral-700 text-base not-italic font-semibold leading-6"
           >
             {r.label}
           </a>
         ))}
+        <a
+          href={cartaDeiServizi}
+          rel="noreferrer"
+          target="_blank"
+          className="text-neutral-700 text-base not-italic font-semibold leading-6"
+        >
+          Carta dei servizi
+        </a>
+        <a
+          href="bilancio-sociale.pdf"
+          rel="noreferrer"
+          target="_blank"
+          className="text-neutral-700 text-base not-italic font-semibold leading-6"
+        >
+          Bilancio sociale
+        </a>
       </div>
     </div>
     <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-6 py-8 px-6 lg:px-20 lg:py-10 border-t-[#E5E5E5] border-t border-solid ">

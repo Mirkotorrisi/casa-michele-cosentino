@@ -16,8 +16,8 @@ export default [
     href: "/eventi",
   },
   {
-    label: "Dove trovarci",
-    href: "/dove-trovarci",
+    label: "La struttura",
+    href: "/la-struttura",
   },
 ];
 

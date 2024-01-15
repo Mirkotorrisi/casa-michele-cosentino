@@ -31,7 +31,9 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
         </section>
         <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
           <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-            <h2 className="md:text-left">{translate("our-mission")}</h2>
+            <h2 className="heading-2 md:text-left">
+              {translate("our-mission")}
+            </h2>
             <p className="md:text-left">{translate("our-mission-sub")}</p>
           </div>
           <Image imageKey="caregiving" className="mt-6" />
@@ -39,10 +41,15 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
         <div className="blue-section">
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
             <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-              <h2 className="md:text-left">{translate("our-vision")}</h2>
+              <h2 className="heading-2 md:text-left">
+                {translate("our-vision")}
+              </h2>
               <p className="md:text-left">{translate("our-vision-sub")}</p>
             </div>
-            <Image imageKey="caregiving" className="mt-6 md:order-[-1]" />
+            <Image
+              imageKey="caregiving"
+              className="mt-6 md:mt-0 md:order-[-1]"
+            />
           </section>
         </div>
         <ContactUs

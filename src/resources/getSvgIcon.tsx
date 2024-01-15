@@ -1,4 +1,5 @@
 import Email from "images/email.svg";
+import WhiteEmail from "images/white-email.svg";
 import Address from "images/address.svg";
 import Phone from "images/phone.svg";
 import Arrow from "images/arrow.svg";
@@ -40,6 +41,8 @@ export const getSvgIcon = (key: string) => {
       return <Arrow style={{ rotate: "180deg" }} />;
     case "arrow-down":
       return <ArrowDown />;
+    case "white-email":
+      return <WhiteEmail />;
     default:
       return <Email />;
   }
