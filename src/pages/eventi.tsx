@@ -30,7 +30,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
           <a href="" className="button-ghost mt-2">
             {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
-          <Image imageKey="caregiving" className="" />
+          <Image imageKey="eventi-1" className="" />
         </section>
         <section className="gap-8 lg:gap-16 ">
           <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
@@ -68,7 +68,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
                 {translate("associations-subtitle")}
               </p>
             </div>
-            <Image imageKey="caregiving" className="mt-6 md:mt-0" />
+            <Image imageKey="eventi-2" className="mt-6 md:mt-0" />
           </section>
         </div>
         <section className="gap-3">
