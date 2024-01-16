@@ -1,6 +1,6 @@
 ---
-pageKey: services-cards
-listKey: home
+pageKey: home
+listKey: services-cards
 listItem:
   - title: Assistenza medica e infermieristica
     text: Medici ed infermieri qualificati attenti alla salute dei nostri ospiti.
