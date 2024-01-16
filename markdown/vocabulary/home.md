@@ -1,14 +1,14 @@
 ---
 pageKey: home
 terms:
-  - key: hero-heading
+  - key: hero-title
     label: Scopri la nostra storia
-  - key: hero-sub-heading
+  - key: hero-subtitle
     label: "La Casa di Riposo 'Mons. Michele Cosentino' è più di una struttura
       assistenziale: è un ambiente familiare e accogliente, dove
       professionalità, cura e rispetto si uniscono per offrire una vita serena
       agli anziani. "
-  - key: hero-cta
+  - key: discover-more
     label: Scopri di più
   - key: second-section-heading
     label: Chi siamo
