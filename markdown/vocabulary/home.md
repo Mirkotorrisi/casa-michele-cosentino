@@ -27,4 +27,19 @@ terms:
       personalizzato.
   - key: our-services-cta
     label: Scopri i nostri servizi
+  - key: fourth-section-title
+    label: L’ambiente ideale per il Benessere dei nostri ospiti
+  - key: fourth-section-subtitle
+    label: La nostra casa di riposo offre un equilibrio perfetto tra assistenza
+      qualificata e comfort quotidiano, immersa in un ambiente tranquillo e
+      naturale.
+  - key: fourth-section-cta
+    label: Esplora la struttura
+  - key: fifth-section-title
+    label: Momenti speciali di socializzazione
+  - key: fifth-section-subtitle
+    label: Fornire assistenza e supporto di alta qualità agli anziani, garantendo
+      loro dignità, indipendenza e una vita ricca di momenti felici e sereni.
+  - key: fifth-section-cta
+    label: Scopri tutti gli eventi
 ---
