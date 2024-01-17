@@ -1,4 +1,5 @@
 ---
+pageKey: chi-siamo
 images:
   - key: hero-image
     image: /img/img-38.webp

@@ -38,7 +38,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           <a href="" className="button-ghost mt-2">
             {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
-          <Image imageKey="servizi-image-1" className="mt-2" />
+          <Image imageKey="hero-image" className="mt-2 hero-image" />
         </section>
         <div className="flex flex-col lg:grid lg:grid-cols-2">
           <section className="gap-16 ">
@@ -92,7 +92,10 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           <section className="gap-8">
             <h2 className="heading-2">{translate("daily-life-title")}</h2>
             <p>{translate("daily-life-sub")}</p>
-            <Image imageKey="servizi-image-4" />
+            <Image
+              imageKey="servizi-2"
+              className="hero-image mx-auto my-10 lg:my-20"
+            />
             <div className="flex flex-col md:flex-row gap-8">
               {dailyLifeCards?.map((card) => (
                 <Card

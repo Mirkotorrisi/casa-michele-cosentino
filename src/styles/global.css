@@ -77,21 +77,27 @@
 
 @layer components {
   .button-solid {
-    @apply flex-initial px-4 py-2 lg:px-6 lg:py-3 flex justify-center items-center gap-2 rounded-lg bg-orange-600 text-white;
+    @apply px-4 py-2 lg:px-6 lg:py-3 flex justify-center items-center gap-2 rounded-lg bg-orange-500 hover:bg-orange-600 ease-in duration-300 text-white;
   }
+
   .button-ghost {
-    @apply flex-initial flex p-2 lg:p-3 justify-center items-center gap-2 lg:gap-3 self-stretch text-orange-500 text-base not-italic font-semibold leading-6 lg:text-lg lg:leading-7;
+    @apply flex p-2 lg:p-3 justify-center items-center gap-2 lg:gap-3 self-stretch text-orange-500 text-base not-italic font-semibold leading-6 lg:text-lg lg:leading-7;
   }
+
   .button-outline {
-    @apply flex-initial rounded-lg border border-solid border-orange-600;
+    @apply rounded-lg border border-solid border-orange-500 hover:bg-orange-600 ease-in duration-300;
   }
 
   .button-solid-blue {
-    @apply button-solid bg-sky-500;
+    @apply button-solid bg-sky-500 hover:bg-sky-600;
   }
 
   .image-card {
     @apply w-[113.778px] lg:w-[142.222px] h-16 lg:h-20 max-w-screen-md rounded-lg;
+  }
+
+  .hero-image {
+    @apply max-w-[624px] lg:max-w-[1120px];
   }
 
   .bullet-inactive {

@@ -14,7 +14,7 @@ const Image = ({ imageKey, className }: Props) => {
       src={image.image}
       className={`${
         className ?? ""
-      } aspect-[4/3] w-full h-full object-cover rounded-md`}
+      } aspect-video w-full h-full object-cover rounded-md`}
       alt={image.key}
     />
   );

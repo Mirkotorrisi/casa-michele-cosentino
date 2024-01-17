@@ -16,7 +16,6 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
 }) => {
   const images = getImages(data.homePageData);
   const servicesCards = getListItems(data.homePageData, "services-cards");
-  console.log("🚀 ~ servicesCards:", servicesCards);
 
   const translate = useTranslate(data.homePageData);
 
@@ -30,7 +29,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
           <a href="" className="button-ghost mt-2 ">
             {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
-          <Image imageKey="eventi-1" className="" />
+          <Image imageKey="hero-image" className="hero-image" />
         </section>
         <section className="gap-8 items-center md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <div className="flex flex-col gap-8">
@@ -44,7 +43,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
               {translate("second-section-cta")}
             </a>
           </div>
-          <Image imageKey="eventi-1" className="" />
+          <Image imageKey="home-2" className="" />
         </section>
         <div className="blue-section">
           <section className="gap-8 items-center md:gap-16">
@@ -52,7 +51,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
               <h2 className="heading-2 md:text-4xl lg:text-6xl">
                 {translate("our-services")}
               </h2>
-              <p className="max-w-[600px]">
+              <p className="max-w-[800px]">
                 {translate("our-services-description")}
               </p>
               <a href="" className="button-solid-blue mt-2">
@@ -92,14 +91,29 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
           </div>
         </section>
         <Carousel />
-        <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcasamichelecosentino&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=73794053396"
-          width="340"
-          height="500"
-          title="Pagina Facebook - Casa Mons Michele Cosentino"
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        ></iframe>
+        <section className="gap-8 items-center md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
+          <div className="flex flex-col gap-8">
+            <h2 className="heading-2 md:text-left md:text-4xl lg:text-6xl">
+              {translate("fifth-section-title")}
+            </h2>
+            <p className="md:text-left max-w-[600px]">
+              {translate("fifth-section-subtitle")}
+            </p>
+            <a href="" className="button-solid mt-2 mx-auto md:mx-0 md:mr-auto">
+              {translate("fifth-section-cta")}
+            </a>
+          </div>
+          <Image imageKey="home-3" className="" />
+        </section>
+        <div className="mx-auto max-w-lg min-h-[840px]">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcasamichelecosentino&tabs=timeline&width=640&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=73794053396"
+            width="640"
+            title="Pagina Facebook - Casa Mons Michele Cosentino"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+        </div>
       </main>
       <Footer />
     </Gallery>
