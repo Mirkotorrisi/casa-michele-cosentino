@@ -32,7 +32,6 @@ const CarouselMini = ({ className }: Props) => {
   return (
     <div className="w-full h-full flex items-center justify-center ">
       <Swiper
-        // spaceBetween={20}
         slidesPerView={1}
         centeredSlides
         loop

@@ -115,6 +115,27 @@ collections:
                   { label: "Label", name: "label", widget: "string" },
                 ],
             }
+      - file: "markdown/vocabulary/la-struttura.md"
+        label: "La struttura page Vocabulary"
+        name: "lastrutturaVocabulary"
+        pageKey: "la-struttura"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "la-struttura",
+            }
+          - {
+              label: "Terms",
+              name: "terms",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  { label: "Label", name: "label", widget: "string" },
+                ],
+            }
   - name: "gallery"
     label: "Images"
     description: "Every image, needs a unique key (preferred kebab-case) and a pageKey"
@@ -210,6 +231,33 @@ collections:
               name: "pageKey",
               widget: "hidden",
               default: "feste-ed-eventi",
+            }
+          - {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              fields:
+                [
+                  { label: "Key", name: "key", widget: "string" },
+                  {
+                    label: "Image description",
+                    name: "description",
+                    widget: "string",
+                    required: false,
+                  },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+      - file: "markdown/gallery/la-struttura.md"
+        label: "La struttura page Gallery"
+        name: "lastrutturaGallery"
+        pageKey: "la-struttura"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "la-struttura",
             }
           - {
               label: "Images",

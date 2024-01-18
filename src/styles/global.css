@@ -25,11 +25,18 @@
   }
 
   a {
-    @apply overflow-hidden text-orange-600 text-center text-ellipsis text-sm not-italic font-semibold leading-5;
+    @apply overflow-hidden text-orange-600 text-center text-ellipsis text-sm not-italic font-semibold leading-5 ease-in duration-300;
   }
 
   a.inactive {
     @apply text-neutral-700;
+  }
+
+  nav a,
+  footer a {
+    &:hover {
+      @apply text-orange-600;
+    }
   }
 
   section {
@@ -81,11 +88,10 @@
   }
 
   .button-ghost {
-    @apply flex p-2 lg:p-3 justify-center items-center gap-2 lg:gap-3 self-stretch text-orange-500 text-base not-italic font-semibold leading-6 lg:text-lg lg:leading-7;
-  }
-
-  .button-outline {
-    @apply rounded-lg border border-solid border-orange-500 hover:bg-orange-600 ease-in duration-300;
+    @apply button-solid bg-transparent text-orange-500 font-semibold leading-6 lg:text-lg lg:leading-7;
+    &:hover {
+      @apply bg-orange-100;
+    }
   }
 
   .button-solid-blue {

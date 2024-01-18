@@ -2,14 +2,17 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "components/Image";
+import { getSvgIcon } from "resources/getSvgIcon";
+import { Navigation } from "swiper/modules";
+import useIsMobile from "hooks/useIsMobile";
 
 const images = [
-  "caregiving",
-  "caregiving",
-  "caregiving",
-  "caregiving",
-  "caregiving",
-  "caregiving",
+  "hero-image",
+  "hero-image",
+  "hero-image",
+  "hero-image",
+  "hero-image",
+  "hero-image",
 ];
 
 type Props = {
@@ -17,19 +20,35 @@ type Props = {
 };
 
 const Carousel = ({ className }: Props) => {
+  const isMobile = useIsMobile();
   return (
     <Swiper
       className={className}
-      spaceBetween={20}
-      slidesPerView={1.4}
+      spaceBetween={16}
+      slidesPerView={isMobile ? 1.2 : 1.8}
       centeredSlides
       loop
+      navigation={{
+        nextEl: ".button-next",
+        prevEl: ".button-prev",
+      }}
+      modules={[Navigation]}
     >
       {images.map((imageKey, index) => (
         <SwiperSlide key={index}>
-          <Image imageKey={imageKey} />
+          <Image imageKey={imageKey} className="rounded-xl lg:rounded-3xl" />
         </SwiperSlide>
       ))}
+      <div className="px-6 md:px-10 lg:px-20 flex justify-end items-center mt-4">
+        <div className="flex gap-8 items-center">
+          <div className="button-prev  hover:cursor-pointer">
+            {getSvgIcon("arrow-left")}
+          </div>
+          <div className="button-next flex-1 hover:cursor-pointer">
+            {getSvgIcon("arrow-right")}
+          </div>
+        </div>
+      </div>
     </Swiper>
   );
 };
