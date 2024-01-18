@@ -28,12 +28,17 @@
     @apply overflow-hidden text-orange-600 text-center text-ellipsis text-base not-italic font-semibold leading-5 ease-in duration-300;
   }
 
+  .contact-us {
+    @apply text-orange-500;
+  }
+
   a.inactive {
     @apply text-neutral-700;
   }
 
   nav a,
-  footer a {
+  footer a,
+  .contact-us {
     &:hover {
       @apply text-orange-600;
     }

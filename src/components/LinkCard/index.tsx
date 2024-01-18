@@ -12,7 +12,7 @@ const LinkCard = ({ image, title, link, text }: Props) => (
     <span className="bold flex gap-2">
       {image} {title}
     </span>
-    <a href={link} target="_blank">
+    <a className="contact-us" href={link} target="_blank">
       {text}
     </a>
   </div>
