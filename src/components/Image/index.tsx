@@ -12,9 +12,7 @@ const Image = ({ imageKey, className }: Props) => {
   return (
     <img
       src={image.image}
-      className={`${
-        className ?? ""
-      } aspect-video w-full h-full object-cover rounded-md`}
+      className={`${className ?? ""} aspect-video w-full h-full object-cover`}
       alt={image.key}
     />
   );

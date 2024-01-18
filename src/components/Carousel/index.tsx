@@ -20,36 +20,38 @@ type Props = {
 };
 
 const Carousel = ({ className }: Props) => {
-  const isMobile = useIsMobile();
+  const { isMobile, isMounted } = useIsMobile();
   return (
-    <Swiper
-      className={className}
-      spaceBetween={16}
-      slidesPerView={isMobile ? 1.2 : 1.8}
-      centeredSlides
-      loop
-      navigation={{
-        nextEl: ".button-next",
-        prevEl: ".button-prev",
-      }}
-      modules={[Navigation]}
-    >
-      {images.map((imageKey, index) => (
-        <SwiperSlide key={index}>
-          <Image imageKey={imageKey} className="rounded-xl lg:rounded-3xl" />
-        </SwiperSlide>
-      ))}
-      <div className="px-6 md:px-10 lg:px-20 flex justify-end items-center mt-4">
-        <div className="flex gap-8 items-center">
-          <div className="button-prev  hover:cursor-pointer">
-            {getSvgIcon("arrow-left")}
-          </div>
-          <div className="button-next flex-1 hover:cursor-pointer">
-            {getSvgIcon("arrow-right")}
+    isMounted && (
+      <Swiper
+        className={className}
+        spaceBetween={16}
+        slidesPerView={isMobile ? 1.2 : 1.8}
+        centeredSlides
+        loop
+        navigation={{
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        }}
+        modules={[Navigation]}
+      >
+        {images.map((imageKey, index) => (
+          <SwiperSlide key={index}>
+            <Image imageKey={imageKey} className="rounded-xl lg:rounded-3xl" />
+          </SwiperSlide>
+        ))}
+        <div className="px-6 md:px-10 lg:px-20 flex justify-end items-center mt-4">
+          <div className="flex gap-8 items-center">
+            <div className="button-prev  hover:cursor-pointer">
+              {getSvgIcon("arrow-left")}
+            </div>
+            <div className="button-next flex-1 hover:cursor-pointer">
+              {getSvgIcon("arrow-right")}
+            </div>
           </div>
         </div>
-      </div>
-    </Swiper>
+      </Swiper>
+    )
   );
 };
 

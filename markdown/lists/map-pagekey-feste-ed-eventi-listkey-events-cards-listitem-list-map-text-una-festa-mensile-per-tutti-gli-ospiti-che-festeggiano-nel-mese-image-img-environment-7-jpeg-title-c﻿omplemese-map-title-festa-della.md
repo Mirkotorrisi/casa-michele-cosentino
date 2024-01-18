@@ -1,5 +1,5 @@
 ---
-pageKey: feste-ed-eventi
+pageKey: eventi
 listKey: events-cards
 listItem:
   - text: Una festa mensile per tutti gli ospiti che festeggiano nel mese.

@@ -17,6 +17,7 @@ const Footer = () => (
         {routes.map((r) => (
           <a
             href={r.href}
+            key={r.label}
             className="text-neutral-700 text-base not-italic font-semibold leading-6"
           >
             {r.label}

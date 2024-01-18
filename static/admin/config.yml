@@ -73,16 +73,16 @@ collections:
                   { label: "Label", name: "label", widget: "string" },
                 ],
             }
-      - file: "markdown/vocabulary/feste-ed-eventi.md"
+      - file: "markdown/vocabulary/eventi.md"
         label: "Feste ed eventi page Vocabulary"
         name: "festeEdEventiVocabulary"
-        pageKey: "feste-ed-eventi"
+        pageKey: "eventi"
         fields:
           - {
               label: "Page Key",
               name: "pageKey",
               widget: "hidden",
-              default: "feste-ed-eventi",
+              default: "eventi",
             }
           - {
               label: "Terms",
@@ -221,16 +221,16 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
-      - file: "markdown/gallery/feste-ed-eventi.md"
+      - file: "markdown/gallery/eventi.md"
         label: "Feste ed eventi page Gallery"
         name: "festeEdEventiGallery"
-        pageKey: "feste-ed-eventi"
+        pageKey: "eventi"
         fields:
           - {
               label: "Page Key",
               name: "pageKey",
               widget: "hidden",
-              default: "feste-ed-eventi",
+              default: "eventi",
             }
           - {
               label: "Images",

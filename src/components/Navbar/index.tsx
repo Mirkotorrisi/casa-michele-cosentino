@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import NavLink from "./NavLink";
 import routes, { contactRoute } from "./routes";
@@ -14,7 +14,14 @@ const Navbar = ({ currentPage }: Props) => {
   const [menuClass, setMenuClass] = useState<"" | "is-open" | "is-closed">("");
   const showMenu = () =>
     setMenuClass((prev) => (prev === "is-open" ? "is-closed" : "is-open"));
-
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (menuClass === "is-open") {
+      window.document.body.classList.add("overflow-hidden");
+    } else {
+      window.document.body.classList.remove("overflow-hidden");
+    }
+  }, [menuClass]);
   return (
     <nav
       className={`fixed lg:static w-full  z-10 bg-white flex flex-col ${
@@ -65,13 +72,12 @@ const Navbar = ({ currentPage }: Props) => {
       </div>
       {/* MOBILE */}
       {menuClass === "is-open" && (
-        <div className="flex flex-col justify-between z-10 w-full h-full bg-white lg:hidden">
+        <div className="flex flex-col justify-between z-10 w-full h-full  lg:hidden">
           <div className="py-10 flex flex-col ">
             {routes.map((link) => (
-              <div className="w-full py-3 px-6">
+              <div className="w-full py-3 px-6" key={link.label}>
                 <NavLink
                   link={link.href}
-                  key={link.label}
                   className="!text-2xl"
                   currentPage={currentPage}
                 >

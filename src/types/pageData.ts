@@ -5,7 +5,7 @@ export type PageData = {
         listItem: ListItem[] | null;
         terms: Terms[] | null;
         images: Images[] | null;
-        pageKey: "home" | "feste-ed-eventi" | "servizi" | "chi-siamo";
+        pageKey: "home" | "eventi" | "servizi" | "chi-siamo";
         listKey: string;
       };
       html: string;

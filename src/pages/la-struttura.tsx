@@ -10,7 +10,6 @@ import { getSvgIcon } from "resources/getSvgIcon";
 import { getImages, getListItems } from "helpers";
 import Card from "components/Card";
 import Carousel from "components/Carousel";
-import useIsMobile from "hooks/useIsMobile";
 import ContactUs from "components/ContactUs";
 import CarouselMini from "components/CarouselMini";
 

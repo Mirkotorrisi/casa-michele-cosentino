@@ -21,7 +21,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
 
   const translate = useTranslate(data.homePageData);
 
-  const isMobile = useIsMobile();
+  const { isMobile, isMounted } = useIsMobile();
   const iframeWidth = isMobile ? "320" : "500";
 
   return (
@@ -117,17 +117,19 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
           <Image imageKey="home-3" className="" />
         </section>
 
-        <div className="py-8 md:py-10 lg:py-20 mx-auto max-w-xs md:max-w-lg min-h-[700px]">
-          <iframe
-            className="facebook-iframe"
-            src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcasamichelecosentino&tabs=timeline&width=${iframeWidth}&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=73794053396`}
-            width={iframeWidth}
-            height={700}
-            title="Pagina Facebook - Casa Mons Michele Cosentino"
-            allowFullScreen
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-        </div>
+        {isMounted && (
+          <div className="py-8 md:py-10 lg:py-20 mx-auto max-w-xs md:max-w-lg min-h-[700px]">
+            <iframe
+              className="facebook-iframe"
+              src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcasamichelecosentino&tabs=timeline&width=${iframeWidth}&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=73794053396`}
+              width={iframeWidth}
+              height={700}
+              title="Pagina Facebook - Casa Mons Michele Cosentino"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        )}
         <ContactUs
           title={translate("contact-title")}
           subtitle={translate("contact-subtitle")}

@@ -17,7 +17,6 @@ const ContactUs = ({
   contactCards,
   isContactPage = false,
 }: Props) => {
-  console.log("🚀 ~ contactCards:", contactCards);
   return (
     <section className="gap-8 lg:gap-16 half-background items-center">
       <div className="flex flex-col gap-6  max-w-[800px]">

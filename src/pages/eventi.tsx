@@ -22,7 +22,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
 
   return (
     <Gallery images={images ?? []}>
-      <Navbar />
+      <Navbar currentPage="eventi" />
       <main className="relative pt-[104px] lg:pt-0">
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
@@ -94,9 +94,7 @@ export const Head: HeadFC = () => (
 export const query = graphql`
   query EventsPageQuery {
     eventsPageData: allMarkdownRemark(
-      filter: {
-        frontmatter: { pageKey: { in: ["feste-ed-eventi", "contattaci"] } }
-      }
+      filter: { frontmatter: { pageKey: { in: ["eventi", "contattaci"] } } }
     ) {
       edges {
         node {
