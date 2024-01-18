@@ -27,7 +27,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="home" />
-      <main className="relative pt-[104px] lg:pt-0">
+      <main className="relative lg:pt-0">
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
@@ -81,7 +81,6 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
                   title={c.title}
                   text={c.text}
                   classNames={{
-                    title: "bold",
                     content: "body-3",
                   }}
                 />
@@ -116,6 +115,11 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
           </div>
           <Image imageKey="home-3" className="" />
         </section>
+        <ContactUs
+          title={translate("contact-title")}
+          subtitle={translate("contact-subtitle")}
+          contactCards={getListItems(data.homePageData, "contact-cards")}
+        />
 
         {isMounted && (
           <div className="py-8 md:py-10 lg:py-20 mx-auto max-w-xs md:max-w-lg min-h-[700px]">
@@ -130,11 +134,6 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             ></iframe>
           </div>
         )}
-        <ContactUs
-          title={translate("contact-title")}
-          subtitle={translate("contact-subtitle")}
-          contactCards={getListItems(data.homePageData, "contact-cards")}
-        />
       </main>
       <Footer />
     </Gallery>

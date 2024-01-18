@@ -14,17 +14,21 @@ type Props = {
 };
 
 const Card = ({ image, title, invertColors, text, classNames }: Props) => (
-  <div className={`flex flex-col gap-4 items-center ${classNames?.card}`}>
+  <div className={`flex flex-col gap-4 items-center ${classNames?.card ?? ""}`}>
     {image}
-    <div className={`flex flex-col gap-2 ${classNames?.textContainer}`}>
+    <div
+      className={`flex flex-col gap-1 lg:gap-2 ${
+        classNames?.textContainer ?? ""
+      }`}
+    >
       <span
         className={`${invertColors ? "bold-white" : "bold"} ${
-          classNames?.title
+          classNames?.title ?? ""
         }`}
       >
         {title}
       </span>
-      <p className={`body-3 ${classNames?.content}`}>{text}</p>
+      <p className={`body-3 ${classNames?.content ?? ""}`}>{text}</p>
     </div>
   </div>
 );

@@ -10,7 +10,7 @@ const FooterSocials = ({ changeLayout = false }: Props) => {
     <div
       className={`flex ${
         changeLayout ? "justify-between" : "flex-col lg:flex-row"
-      } items-center lg:justify-between gap-6 py-8 px-6 lg:px-20 lg:py-10 border-t-[#E5E5E5] border-t border-solid`}
+      } items-center lg:justify-between gap-6 py-8 lg:py-10 border-t-[#E5E5E5] border-t border-solid`}
     >
       <p className="text-[#A3A3A3] text-sm not-italic font-semibold leading-5">
         Casa Michele Cosentino © 2024

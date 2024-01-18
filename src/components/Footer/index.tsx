@@ -6,8 +6,8 @@ import cartaDeiServizi from "assets/carta-dei-servizi.pdf";
 import FooterSocials from "./FooterSocials";
 
 const Footer = () => (
-  <footer className="flex flex-col">
-    <div className="px-6 py-8 lg:px-20 lg:py-10 border-t-[#E5E5E5] border-t border-solid flex flex-col lg:flex-row items-center lg:justify-between">
+  <footer className="px-6 lg:px-20 flex flex-col">
+    <div className="py-8  lg:py-10  flex flex-col lg:flex-row items-center lg:justify-between">
       <StaticImage
         src="../../images/logo.jpg"
         alt="logo"

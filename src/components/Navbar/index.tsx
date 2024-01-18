@@ -24,16 +24,18 @@ const Navbar = ({ currentPage }: Props) => {
   }, [menuClass]);
   return (
     <nav
-      className={`fixed lg:static w-full  z-10 bg-white flex flex-col ${
-        menuClass === "is-open" ? `h-full` : ""
+      className={`w-full  z-10 bg-white flex flex-col ${
+        menuClass === "is-open" ? `h-screen` : ""
       }`}
     >
       <div className="flex items-center justify-between py-5 px-8">
-        <StaticImage
-          src="../../images/logo.jpg"
-          alt="logo"
-          className="w-[97px] h-16 shrink-0"
-        />
+        <a href="/">
+          <StaticImage
+            src="../../images/logo.jpg"
+            alt="logo"
+            className="w-[97px] h-16 shrink-0"
+          />
+        </a>
         <div className="flex align-center justify-between lg:hidden">
           <button aria-label="menu" className="mr-10 w-0" onClick={showMenu}>
             <div id="hamburger" className={"hamburglar " + menuClass}>
@@ -93,7 +95,9 @@ const Navbar = ({ currentPage }: Props) => {
               </a>
             </div>
           </div>
-          <FooterSocials changeLayout />
+          <div className="px-6 ">
+            <FooterSocials changeLayout />
+          </div>
         </div>
       )}
     </nav>

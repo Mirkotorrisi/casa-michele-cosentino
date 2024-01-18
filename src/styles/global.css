@@ -25,7 +25,7 @@
   }
 
   a {
-    @apply overflow-hidden text-orange-600 text-center text-ellipsis text-sm not-italic font-semibold leading-5 ease-in duration-300;
+    @apply overflow-hidden text-orange-600 text-center text-ellipsis text-base not-italic font-semibold leading-5 ease-in duration-300;
   }
 
   a.inactive {
@@ -63,14 +63,14 @@
   }
 
   .bold {
-    @apply text-neutral-900 text-center text-xl not-italic font-bold leading-7;
+    @apply text-neutral-900 text-center text-lg lg:text-xl not-italic font-bold leading-7;
   }
   .bold-white {
-    @apply text-neutral-50 text-center text-xl not-italic font-bold leading-7;
+    @apply bold !text-neutral-50;
   }
 
   .body-1 {
-    @apply text-neutral-500 text-center text-lg not-italic font-normal leading-7;
+    @apply text-neutral-300 text-center text-lg not-italic font-normal leading-7;
   }
 
   .body-2 {
@@ -84,7 +84,7 @@
 
 @layer components {
   .button-solid {
-    @apply px-4 py-2 lg:px-6 lg:py-3 flex justify-center items-center gap-2 rounded-lg bg-orange-500 hover:bg-orange-600 ease-in duration-300 text-white;
+    @apply lg:text-lg px-4 py-2 lg:px-6 lg:py-3 flex justify-center items-center gap-2 rounded-lg bg-orange-500 hover:bg-orange-600 ease-in duration-300 text-white;
   }
 
   .button-ghost {

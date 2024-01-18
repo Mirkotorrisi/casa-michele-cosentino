@@ -8,13 +8,13 @@ listItem:
   - title: Festa della Mamma e del Papà
     text: Celebrazioni dedicate per onorare i genitori.
     image: /img/environment-6.jpeg
-  - title: Festa d’Estate
-    text: Un evento all'insegna del divertimento e del relax estivo.
+  - title: Festa dell’assunta
+    text: Un giorno di festa che unisce tradizione e comunità sotto il segno della condivisione.
     image: /img/environment-8.jpeg
-  - title: Festa di Vendemmia
-    text: Una giornata per celebrare la natura e le tradizioni.
+  - title: Festività Pasquali
+    text: Celebriamo la rinascita e la gioia pasquale.
     image: /img/environment-4.jpeg
-  - title: Festa di Natale e Befana
+  - title: Festività Natalizie
     text: Magici momenti invernali di festa e allegria.
     image: /img/environment-1.jpeg
   - title: Festa di Carnevale
