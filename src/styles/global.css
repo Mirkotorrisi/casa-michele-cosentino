@@ -83,7 +83,7 @@
   }
 
   .body-3 {
-    @apply text-neutral-500 text-center text-sm not-italic font-normal leading-5;
+    @apply text-neutral-500 text-center text-sm lg:text-base not-italic font-normal leading-5;
   }
 }
 
