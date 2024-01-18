@@ -36,7 +36,10 @@ const ContactUs = ({
         ))}
       </div>
       <div className="m-auto w-full max-w-[960px]">
-        <iframe src="https://www.google.com/maps/embed/v1/search?q=Casa+Michele+Cosentino,+Via+Marchese+di+Casalotto,+Aci+Sant'Antonio,+CT,+Italia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        <iframe
+          title="google maps - casa michele cosentino"
+          src="https://www.google.com/maps/embed/v1/search?q=Casa+Michele+Cosentino,+Via+Marchese+di+Casalotto,+Aci+Sant'Antonio,+CT,+Italia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        ></iframe>
       </div>
     </section>
   );

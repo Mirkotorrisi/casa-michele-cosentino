@@ -7,13 +7,14 @@ import { getSvgIcon } from "resources/getSvgIcon";
 import FooterSocials from "components/Footer/FooterSocials";
 
 const Navbar = () => {
-  const [menuShow, setMenu] = useState(false);
-  const showMenu = () => setMenu(!menuShow);
+  const [menuClass, setMenuClass] = useState<"" | "is-open" | "is-closed">("");
+  const showMenu = () =>
+    setMenuClass((prev) => (prev === "is-open" ? "is-closed" : "is-open"));
 
   return (
     <nav
       className={`fixed lg:static w-full  z-10 bg-white flex flex-col ${
-        menuShow ? `h-full` : ""
+        menuClass === "is-open" ? `h-full` : ""
       }`}
     >
       <div className="flex items-center justify-between py-5 px-8">
@@ -24,10 +25,7 @@ const Navbar = () => {
         />
         <div className="flex align-center justify-between lg:hidden">
           <button aria-label="menu" className="mr-10 w-0" onClick={showMenu}>
-            <div
-              id="hamburger"
-              className={"hamburglar " + (menuShow ? "is-open" : "is-closed")}
-            >
+            <div id="hamburger" className={"hamburglar " + menuClass}>
               <div className="burger-icon">
                 <div className="burger-container">
                   <span className="burger-bun-top"></span>
@@ -58,7 +56,7 @@ const Navbar = () => {
         </a>
       </div>
       {/* MOBILE */}
-      {menuShow && (
+      {menuClass === "is-open" && (
         <div className="flex flex-col justify-between z-10 w-full h-full bg-white lg:hidden">
           <div className="py-10 flex flex-col ">
             {routes.map((link) => (

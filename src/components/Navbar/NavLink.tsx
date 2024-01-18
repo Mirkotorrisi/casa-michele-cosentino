@@ -12,7 +12,9 @@ const NavLink = ({ link, children, className = "" }: Props) => {
   let isActive = false;
   if (isBrowser) {
     const route = window.location.pathname.replaceAll("/", "");
+    console.log("🚀 ~ NavLink ~ route:", route);
     const path = link.replace("/", "");
+    console.log("🚀 ~ NavLink ~ path:", path);
     isActive = route === path;
   }
 

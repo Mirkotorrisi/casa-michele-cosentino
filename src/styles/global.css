@@ -48,7 +48,7 @@
     @apply rounded-3xl;
   }
 
-  iframe {
+  iframe:not(.facebook-iframe) {
     @apply h-48 md:h-96 w-full self-stretch;
   }
 
