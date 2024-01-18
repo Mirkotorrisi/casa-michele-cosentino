@@ -31,7 +31,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   return (
     <Gallery images={images ?? []}>
       <Navbar />
-      <main className="relative">
+      <main className="relative pt-[104px] lg:pt-0">
         <section className="gap-6 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
@@ -148,7 +148,6 @@ export const query = graphql`
               title
               image
               links {
-                linkText
                 linkURL
               }
             }

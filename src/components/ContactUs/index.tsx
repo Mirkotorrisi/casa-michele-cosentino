@@ -8,13 +8,20 @@ type Props = {
   title: string;
   subtitle: string;
   contactCards: ListItem[];
+  isContactPage?: boolean;
 };
 
-const ContactUs = ({ title, subtitle, contactCards }: Props) => {
+const ContactUs = ({
+  title,
+  subtitle,
+  contactCards,
+  isContactPage = false,
+}: Props) => {
+  console.log("🚀 ~ contactCards:", contactCards);
   return (
     <section className="gap-8 lg:gap-16 half-background items-center">
-      <div className="flex flex-col gap-6 ">
-        <h2>{title}</h2>
+      <div className="flex flex-col gap-6  max-w-[800px]">
+        <h2 className={isContactPage ? "" : "heading-2"}>{title}</h2>
         <p>{subtitle}</p>
       </div>
       <div className="flex flex-col gap-8 md:grid md:grid-cols-3">

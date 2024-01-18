@@ -1,10 +1,9 @@
 import * as React from "react";
-import { FACEBOOK } from "resources";
 
 import { StaticImage } from "gatsby-plugin-image";
 import routes from "components/Navbar/routes";
-import { FaFacebook } from "react-icons/fa";
 import cartaDeiServizi from "assets/carta-dei-servizi.pdf";
+import FooterSocials from "./FooterSocials";
 
 const Footer = () => (
   <footer className="flex flex-col">
@@ -41,14 +40,7 @@ const Footer = () => (
         </a>
       </div>
     </div>
-    <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-6 py-8 px-6 lg:px-20 lg:py-10 border-t-[#E5E5E5] border-t border-solid ">
-      <p className="text-[#A3A3A3] text-sm not-italic font-semibold leading-5">
-        Casa Michele Cosentino © 2024
-      </p>
-      <a href={FACEBOOK} className="text-[#A3A3A3] text-lg">
-        <FaFacebook size={24} />
-      </a>
-    </div>
+    <FooterSocials />
   </footer>
 );
 

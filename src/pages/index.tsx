@@ -27,7 +27,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   return (
     <Gallery images={images ?? []}>
       <Navbar />
-      <main className="relative">
+      <main className="relative pt-[104px] lg:pt-0">
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
@@ -44,7 +44,10 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             <p className="md:text-left max-w-[600px]">
               {translate("second-section-sub")}
             </p>
-            <a href="" className="button-solid mt-2 mx-auto md:mx-0 md:mr-auto">
+            <a
+              href="/chi-siamo"
+              className="button-solid mt-2 mx-auto md:mx-0 md:mr-auto"
+            >
               {translate("second-section-cta")}
             </a>
           </div>
@@ -59,7 +62,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
               <p className="max-w-[800px]">
                 {translate("our-services-description")}
               </p>
-              <a href="" className="button-solid-blue mt-2">
+              <a href="/servizi" className="button-solid-blue mt-2">
                 {translate("our-services-cta")}
               </a>
             </div>
@@ -90,7 +93,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
           <div className="flex flex-col items-center gap-4 max-w-[800px]">
             <h2 className="heading-2">{translate("fourth-section-title")}</h2>
             <p className="">{translate("fourth-section-subtitle")}</p>
-            <a href="" className="button-solid mt-2 mx-auto ">
+            <a href="/la-struttura" className="button-solid mt-2 mx-auto ">
               {translate("fourth-section-cta")}
             </a>
           </div>
@@ -104,7 +107,10 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             <p className="md:text-left max-w-[600px]">
               {translate("fifth-section-subtitle")}
             </p>
-            <a href="" className="button-solid mt-2 mx-auto md:mx-0 md:mr-auto">
+            <a
+              href="/eventi"
+              className="button-solid mt-2 mx-auto md:mx-0 md:mr-auto"
+            >
               {translate("fifth-section-cta")}
             </a>
           </div>
@@ -155,6 +161,9 @@ export const query = graphql`
               text
               image
               title
+              links {
+                linkURL
+              }
             }
             listKey
           }

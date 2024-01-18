@@ -28,7 +28,7 @@ const TheBuildingPage: React.FC<
   return (
     <Gallery images={images ?? []}>
       <Navbar />
-      <main className="relative">
+      <main className="relative pt-[104px] lg:pt-0">
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
@@ -58,10 +58,10 @@ const TheBuildingPage: React.FC<
         <section className="gap-8 items-center md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <div className="flex flex-col gap-8">
             <h2 className="heading-2 md:text-left md:text-4xl lg:text-6xl">
-              {translate("fifth-section-title")}
+              {translate("fourth-section-title")}
             </h2>
             <p className="md:text-left max-w-[600px]">
-              {translate("fifth-section-subtitle")}
+              {translate("fourth-section-subtitle")}
             </p>
           </div>
           <CarouselMini />
@@ -75,7 +75,7 @@ const TheBuildingPage: React.FC<
               <p className="max-w-[800px]">
                 {translate("our-services-description")}
               </p>
-              <a href="" className="button-solid-blue mt-2">
+              <a href="/servizi" className="button-solid-blue mt-2">
                 {translate("our-services-cta")}
               </a>
             </div>
@@ -141,6 +141,9 @@ export const query = graphql`
               text
               image
               title
+              links {
+                linkURL
+              }
             }
             listKey
           }
