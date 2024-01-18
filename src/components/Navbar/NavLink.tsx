@@ -3,20 +3,13 @@ import React, { ReactNode } from "react";
 type Props = {
   link: string;
   children: ReactNode;
+  currentPage: string;
   className?: string;
 };
 
-const isBrowser = typeof window !== "undefined";
-
-const NavLink = ({ link, children, className = "" }: Props) => {
-  let isActive = false;
-  if (isBrowser) {
-    const route = window.location.pathname.replaceAll("/", "");
-    console.log("🚀 ~ NavLink ~ route:", route);
-    const path = link.replace("/", "");
-    console.log("🚀 ~ NavLink ~ path:", path);
-    isActive = route === path;
-  }
+const NavLink = ({ link, children, currentPage, className = "" }: Props) => {
+  const isHomeActive = currentPage === "home" && link === "/";
+  const isActive = isHomeActive || link.includes(currentPage);
 
   return (
     <a

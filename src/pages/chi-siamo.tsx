@@ -19,7 +19,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
 
   return (
     <Gallery images={images ?? []}>
-      <Navbar />
+      <Navbar currentPage="chi-siamo" />
       <main className="relative pt-[104px] lg:pt-0">
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>

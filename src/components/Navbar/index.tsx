@@ -6,7 +6,11 @@ import { StaticImage } from "gatsby-plugin-image";
 import { getSvgIcon } from "resources/getSvgIcon";
 import FooterSocials from "components/Footer/FooterSocials";
 
-const Navbar = () => {
+type Props = {
+  currentPage: string;
+};
+
+const Navbar = ({ currentPage }: Props) => {
   const [menuClass, setMenuClass] = useState<"" | "is-open" | "is-closed">("");
   const showMenu = () =>
     setMenuClass((prev) => (prev === "is-open" ? "is-closed" : "is-open"));
@@ -44,7 +48,11 @@ const Navbar = () => {
         {/* DESKTOP */}
         <div className="hidden lg:flex gap-8">
           {routes.map((link) => (
-            <NavLink link={link.href} key={link.label}>
+            <NavLink
+              link={link.href}
+              key={link.label}
+              currentPage={currentPage}
+            >
               {link.label}
             </NavLink>
           ))}
@@ -65,6 +73,7 @@ const Navbar = () => {
                   link={link.href}
                   key={link.label}
                   className="!text-2xl"
+                  currentPage={currentPage}
                 >
                   {link.label}
                 </NavLink>
