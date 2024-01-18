@@ -31,10 +31,10 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
-          <a href="" className="button-ghost mt-2 ">
+          <a href="" className="button-ghost mt-2  ">
             {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
-          <Image imageKey="hero-image" className="hero-image" />
+          <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
         </section>
         <section className="gap-8 items-center md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <div className="flex flex-col gap-8">
@@ -59,9 +59,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
               <h2 className="heading-2 md:text-4xl lg:text-6xl">
                 {translate("our-services")}
               </h2>
-              <p className="max-w-[800px]">
-                {translate("our-services-description")}
-              </p>
+              <p>{translate("our-services-description")}</p>
               <a href="/servizi" className="button-solid-blue mt-2">
                 {translate("our-services-cta")}
               </a>

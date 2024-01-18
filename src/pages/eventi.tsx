@@ -27,10 +27,10 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         <section className="gap-8 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
-          <a href="" className="button-ghost mt-2">
+          <a href="" className="button-ghost mt-2 ">
             {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
-          <Image imageKey="hero-image" className="hero-image" />
+          <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
         </section>
         <section className="gap-8 lg:gap-16 ">
           <div className="flex flex-col md:justify-center gap-2 lg:gap-6">

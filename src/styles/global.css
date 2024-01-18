@@ -16,12 +16,12 @@
 
   h2.heading-2 {
     /* Heading/2 */
-    @apply text-3xl leading-9 lg:text-5xl lg:leading-[48px];
+    @apply text-3xl leading-9 lg:text-5xl lg:leading-[48px] max-w-[800px];
   }
 
   p {
     /* Body/1 */
-    @apply text-neutral-700  text-center text-lg lg:text-xl not-italic font-normal leading-7;
+    @apply text-neutral-700 text-center text-lg lg:text-xl not-italic font-normal leading-7 max-w-[800px];
   }
 
   a {

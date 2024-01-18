@@ -35,10 +35,10 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
         <section className="gap-6 items-center">
           <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
           <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
-          <a href="" className="button-ghost mt-2">
+          <a href="" className="button-ghost mt-2 ">
             {translate("discover-more")} {getSvgIcon("arrow-down")}
           </a>
-          <Image imageKey="hero-image" className="mt-2 hero-image" />
+          <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
         </section>
         <div className="flex flex-col lg:grid lg:grid-cols-2">
           <section className="gap-16 ">
@@ -89,7 +89,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           </div>
         </div>
         <div className="blue-section">
-          <section className="gap-8">
+          <section className="gap-8 items-center">
             <h2 className="heading-2">{translate("daily-life-title")}</h2>
             <p>{translate("daily-life-sub")}</p>
             <Image
