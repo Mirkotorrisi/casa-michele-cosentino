@@ -24,6 +24,16 @@
     @apply text-neutral-600 text-center text-lg lg:text-xl not-italic font-normal leading-7 max-w-[800px];
   }
 
+  .bold {
+    /* /BodyBold/1 */
+    @apply text-center text-neutral-800 text-lg lg:text-xl not-italic font-bold leading-7;
+  }
+
+  .body-3 {
+    /* Body/3 */
+    @apply text-center text-neutral-600  text-sm lg:text-base not-italic font-normal leading-5 lg:leading-6;
+  }
+
   a {
     @apply overflow-hidden text-orange-600 text-center text-ellipsis text-base not-italic font-semibold leading-5 ease-in duration-300;
   }
@@ -65,15 +75,18 @@
     p {
       @apply text-neutral-100;
     }
+
+    .bold {
+      @apply text-white;
+    }
+
+    .body-3 {
+      @apply text-neutral-100;
+    }
+
     .button-solid {
       @apply bg-sky-500 hover:bg-sky-600;
     }
-  }
-  .bold {
-    @apply text-lg lg:text-xl text-center font-bold;
-  }
-  .bold-white {
-    @apply bold !text-neutral-50;
   }
 }
 

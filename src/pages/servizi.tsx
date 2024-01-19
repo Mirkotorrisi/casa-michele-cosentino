@@ -61,7 +61,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
                   classNames={{
                     card: "lg:items-start",
                     title: "lg:text-left",
-                    content: "lg:text-left",
+                    content: "body-3 lg:text-left",
                   }}
                 />
               ))}
@@ -81,8 +81,8 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
             <div className="flex flex-col gap-4 divide-y">
               {spiritualityCards.map(({ title, text }) => (
                 <div className="flex flex-col gap-2 pt-4">
-                  <p className="md:!text-left bold ">{title}</p>
-                  <p className="md:!text-left">{text}</p>
+                  <p className="md:!text-left bold">{title}</p>
+                  <p className="md:!text-left body-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -108,7 +108,9 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
                   text={card.text}
                   image={getSvgIcon(card.title)}
                   key={card.title}
-                  invertColors
+                  classNames={{
+                    content: "body-3",
+                  }}
                 />
               ))}
             </div>

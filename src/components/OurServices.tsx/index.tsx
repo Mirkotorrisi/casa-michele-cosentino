@@ -31,7 +31,6 @@ const OurServices = ({
           {servicesCards?.map((c) => (
             <Card
               key={c.title}
-              invertColors
               image={
                 <img
                   src={c.image}

@@ -4,7 +4,6 @@ type Props = {
   image: ReactNode;
   title: string;
   text: string;
-  invertColors?: boolean;
   classNames?: {
     card?: string;
     textContainer?: string;
@@ -13,7 +12,7 @@ type Props = {
   };
 };
 
-const Card = ({ image, title, invertColors, text, classNames }: Props) => (
+const Card = ({ image, title, text, classNames }: Props) => (
   <div className={`flex flex-col gap-4 items-center ${classNames?.card ?? ""}`}>
     {image}
     <div
@@ -21,13 +20,7 @@ const Card = ({ image, title, invertColors, text, classNames }: Props) => (
         classNames?.textContainer ?? ""
       }`}
     >
-      <span
-        className={`${invertColors ? "bold-white" : "bold"} ${
-          classNames?.title ?? ""
-        }`}
-      >
-        {title}
-      </span>
+      <span className={`bold ${classNames?.title ?? ""}`}>{title}</span>
       <p className={classNames?.content ?? ""}>{text}</p>
     </div>
   </div>
