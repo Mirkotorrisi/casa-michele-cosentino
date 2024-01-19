@@ -12,6 +12,9 @@ import Card from "components/Card";
 import Carousel from "components/Carousel";
 import ContactUs from "components/ContactUs";
 import CarouselMini from "components/CarouselMini";
+import Hero from "components/Hero";
+import OurServices from "components/OurServices.tsx";
+import SectionHeadings from "components/SectionHeadings";
 
 const TheBuildingPage: React.FC<
   PageProps<{ theBuildingPageData: PageData }>
@@ -28,76 +31,42 @@ const TheBuildingPage: React.FC<
     <Gallery images={images ?? []}>
       <Navbar currentPage="la-struttura" />
       <main className="relative lg:pt-0">
-        <section className="gap-8 items-center">
-          <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
-          <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
-          <a href="" className="button-ghost mt-2  ">
-            {translate("discover-more")} {getSvgIcon("arrow-down")}
-          </a>
-          <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
-        </section>
-        <section className="gap-8 items-center md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
-          <div className="flex flex-col gap-8">
-            <h2 className="heading-2 md:text-left md:text-4xl lg:text-6xl">
-              {translate("second-section-heading")}
-            </h2>
-            <p className="md:text-left max-w-[600px]">
-              {translate("second-section-sub")}
-            </p>
-          </div>
+        <Hero
+          title={translate("hero-title")}
+          subtitle={translate("hero-subtitle")}
+          link="/"
+          linkText={translate("discover-more")}
+        />
+        <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
+          <SectionHeadings
+            goesToLeft
+            title={translate("second-section-heading")}
+            subtitle={translate("second-section-sub")}
+          />
           <CarouselMini />
         </section>
-        <section className="items-center gap-6">
-          <div className="flex flex-col items-center gap-4 max-w-[800px]">
-            <h2 className="heading-2">{translate("fourth-section-title")}</h2>
-            <p className="">{translate("fourth-section-subtitle")}</p>
-          </div>
+        <section className="pb-8 lg:pb-16">
+          <SectionHeadings
+            title={translate("carousel-title")}
+            subtitle={translate("fourth-section-subtitle")}
+          />
         </section>
         <Carousel />
-        <section className="gap-8 items-center md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
-          <div className="flex flex-col gap-8">
-            <h2 className="heading-2 md:text-left md:text-4xl lg:text-6xl">
-              {translate("fourth-section-title")}
-            </h2>
-            <p className="md:text-left max-w-[600px]">
-              {translate("fourth-section-subtitle")}
-            </p>
-          </div>
+        <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
+          <SectionHeadings
+            goesToLeft
+            title={translate("fourth-section-title")}
+            subtitle={translate("fourth-section-subtitle")}
+          />
           <CarouselMini />
         </section>
-        <div className="blue-section">
-          <section className="gap-8 items-center md:gap-16">
-            <div className="flex flex-col items-center gap-8">
-              <h2 className="heading-2 md:text-4xl lg:text-6xl">
-                {translate("our-services")}
-              </h2>
-              <p>{translate("our-services-description")}</p>
-              <a href="/servizi" className="button-solid-blue mt-2">
-                {translate("our-services-cta")}
-              </a>
-            </div>
-            <div className="flex flex-col gap-8 md:grid md:grid-cols-3 lg:gap-y-16">
-              {servicesCards?.map((c) => (
-                <Card
-                  key={c.title}
-                  invertColors
-                  image={
-                    <img
-                      src={c.image}
-                      className="aspect-square rounded-md"
-                      alt={c.text}
-                    />
-                  }
-                  title={c.title}
-                  text={c.text}
-                  classNames={{
-                    content: "body-3",
-                  }}
-                />
-              ))}
-            </div>
-          </section>
-        </div>
+        <OurServices
+          title={translate("our-services")}
+          subtitle={translate("our-services-description")}
+          link="/servizi"
+          linkText={translate("our-services-cta")}
+          servicesCards={servicesCards}
+        />
         <ContactUs
           title={translate("contact-title")}
           subtitle={translate("contact-subtitle")}

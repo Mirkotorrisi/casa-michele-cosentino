@@ -15,7 +15,7 @@ terms:
       evento è               un'occasione speciale per riunire la nostra
       comunità"
     key: yearly-events-sub
-  - label: Incontri con Associazioni Culturali
+  - label: Animazione culturale e musicoterapia
     key: associations-title
   - label:
       "                Collaborazioni con entità locali per arricchire la vita

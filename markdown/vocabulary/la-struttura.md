@@ -19,6 +19,10 @@ terms:
     label: Comfort e Privacy
   - key: fourth-section-subtitle
     label: Le nostre camere, sia singole che doppie, sono progettate per garantire privacy e comfort. Ogni camera è dotata di servizi essenziali e arredi funzionali, rispettando le esigenze individuali degli ospiti.
+  - key: carousel-title
+    label: Spazi di vita e socializzazione
+  - key: carousel-subtitle
+    label: I nostri spazi comuni e la biblioteca sono fulcri di vita sociale e culturale. Sale comuni luminose accolgono attività di gruppo e momenti di relax, mentre la biblioteca e la sala convegni sono spazi dedicati all'apprendimento e agli eventi culturali.
   - key: our-services
     label: I nostri servizi
   - key: our-services-description

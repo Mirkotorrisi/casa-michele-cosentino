@@ -11,17 +11,17 @@
 
   h2 {
     /* Heading/1 */
-    @apply text-neutral-900 text-center text-4xl not-italic font-bold leading-10 lg:text-6xl  lg:leading-[60px];
+    @apply text-neutral-900 text-center text-4xl not-italic font-bold leading-10 lg:text-6xl  lg:leading-[60px] max-w-[800px];
   }
 
   h2.heading-2 {
     /* Heading/2 */
-    @apply text-3xl leading-9 lg:text-5xl lg:leading-[48px] max-w-[800px];
+    @apply text-3xl leading-9 lg:text-5xl lg:leading-[48px];
   }
 
   p {
     /* Body/1 */
-    @apply text-neutral-700 text-center text-lg lg:text-xl not-italic font-normal leading-7 max-w-[800px];
+    @apply text-neutral-600 text-center text-lg lg:text-xl not-italic font-normal leading-7 max-w-[800px];
   }
 
   a {
@@ -45,7 +45,7 @@
   }
 
   section {
-    @apply py-8 px-6 md:px-10 lg:p-20 flex flex-col;
+    @apply py-8 px-6 md:px-10 lg:p-20 flex flex-col items-center;
   }
 
   img,
@@ -60,30 +60,20 @@
   .blue-section {
     @apply bg-sky-900;
     h2 {
-      @apply text-neutral-50;
+      @apply text-white;
     }
     p {
-      @apply text-neutral-200;
+      @apply text-neutral-100;
+    }
+    .button-solid {
+      @apply bg-sky-500 hover:bg-sky-600;
     }
   }
-
   .bold {
-    @apply text-neutral-900 text-center text-lg lg:text-xl not-italic font-bold leading-7;
+    @apply text-center font-bold;
   }
   .bold-white {
     @apply bold !text-neutral-50;
-  }
-
-  .body-1 {
-    @apply text-neutral-300 text-center text-lg not-italic font-normal leading-7;
-  }
-
-  .body-2 {
-    @apply text-neutral-500 text-center text-base not-italic font-normal leading-6;
-  }
-
-  .body-3 {
-    @apply text-neutral-500 text-center text-sm lg:text-base not-italic font-normal leading-5;
   }
 }
 
@@ -97,10 +87,6 @@
     &:hover {
       @apply bg-orange-100;
     }
-  }
-
-  .button-solid-blue {
-    @apply button-solid bg-sky-500 hover:bg-sky-600;
   }
 
   .image-card {

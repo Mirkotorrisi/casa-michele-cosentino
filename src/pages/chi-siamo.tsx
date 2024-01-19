@@ -9,6 +9,8 @@ import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getImages, getListItems } from "helpers";
 import { getSvgIcon } from "resources/getSvgIcon";
+import Hero from "components/Hero";
+import SectionHeadings from "components/SectionHeadings";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -21,31 +23,27 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
     <Gallery images={images ?? []}>
       <Navbar currentPage="chi-siamo" />
       <main className="relative lg:pt-0">
-        <section className="gap-8 items-center">
-          <h2 className="md:text-4xl lg:text-6xl">{translate("hero-title")}</h2>
-          <p className="max-w-[600px]">{translate("hero-subtitle")}</p>
-          <a href="" className="button-ghost mt-2 ">
-            {translate("discover-more")} {getSvgIcon("arrow-down")}
-          </a>
-          <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
-        </section>
+        <Hero
+          title={translate("hero-title")}
+          subtitle={translate("hero-subtitle")}
+          link="/"
+          linkText={translate("discover-more")}
+        />
         <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
-          <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-            <h2 className="heading-2 md:text-left">
-              {translate("our-mission")}
-            </h2>
-            <p className="md:text-left">{translate("our-mission-sub")}</p>
-          </div>
+          <SectionHeadings
+            goesToLeft
+            title={translate("our-mission")}
+            subtitle={translate("our-mission-sub")}
+          />
           <Image imageKey="chi-siamo-1" className="mt-6" />
         </section>
         <div className="blue-section">
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
-            <div className="flex flex-col md:justify-center gap-2 lg:gap-6">
-              <h2 className="heading-2 md:text-left">
-                {translate("our-vision")}
-              </h2>
-              <p className="md:text-left">{translate("our-vision-sub")}</p>
-            </div>
+            <SectionHeadings
+              goesToLeft
+              title={translate("our-vision")}
+              subtitle={translate("our-vision-sub")}
+            />
             <Image
               imageKey="chi-siamo-2"
               className="mt-6 md:mt-0 md:order-[-1]"

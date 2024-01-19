@@ -28,7 +28,7 @@ const Card = ({ image, title, invertColors, text, classNames }: Props) => (
       >
         {title}
       </span>
-      <p className={`body-3 ${classNames?.content ?? ""}`}>{text}</p>
+      <p className={classNames?.content ?? ""}>{text}</p>
     </div>
   </div>
 );

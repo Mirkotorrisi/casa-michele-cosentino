@@ -18,7 +18,7 @@ const ContactUs = ({
   isContactPage = false,
 }: Props) => {
   return (
-    <section className="gap-8 lg:gap-16 half-background items-center">
+    <section className="gap-8 lg:gap-16 half-background">
       <div className="flex flex-col gap-6  max-w-[800px]">
         <h2 className={isContactPage ? "" : "heading-2"}>{title}</h2>
         <p>{subtitle}</p>
