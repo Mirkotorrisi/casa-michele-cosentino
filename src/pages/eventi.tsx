@@ -10,9 +10,9 @@ import Carousel from "components/Carousel";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getImages, getListItems } from "helpers";
-import { getSvgIcon } from "resources/getSvgIcon";
 import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
+import useScrollToTop from "hooks/useScrollToTop";
 
 const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   data,
@@ -22,6 +22,8 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
 
   const translate = useTranslate(data.eventsPageData);
 
+  useScrollToTop();
+
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="eventi" />
@@ -29,10 +31,10 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="/"
+          link="#events-first-section"
           linkText={translate("discover-more")}
         />
-        <section className="gap-8 lg:gap-16">
+        <section className="gap-8 lg:gap-16" id="events-first-section">
           <SectionHeadings
             title={translate("yearly-events")}
             subtitle={translate("yearly-events-sub")}

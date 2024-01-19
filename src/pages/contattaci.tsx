@@ -6,11 +6,14 @@ import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getListItems } from "helpers";
 import ContactUs from "components/ContactUs";
+import useScrollToTop from "hooks/useScrollToTop";
 
 const ContactUsPage: React.FC<PageProps<{ contactUsPageData: PageData }>> = ({
   data,
 }) => {
   const translate = useTranslate(data.contactUsPageData);
+
+  useScrollToTop();
 
   return (
     <>

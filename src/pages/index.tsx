@@ -7,13 +7,13 @@ import { Gallery } from "context/Gallery";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getImages, getListItems } from "helpers";
-import Card from "components/Card";
 import Carousel from "components/Carousel";
 import useIsMobile from "hooks/useIsMobile";
 import ContactUs from "components/ContactUs";
 import Hero from "components/Hero";
 import OurServices from "components/OurServices.tsx";
 import SectionHeadings from "components/SectionHeadings";
+import useScrollToTop from "hooks/useScrollToTop";
 
 const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   data,
@@ -26,6 +26,8 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   const { isMobile, isMounted } = useIsMobile();
   const iframeWidth = isMobile ? "320" : "500";
 
+  useScrollToTop();
+
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="home" />
@@ -33,10 +35,13 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="/"
+          link="#home-first-section"
           linkText={translate("discover-more")}
         />
-        <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
+        <section
+          className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40"
+          id="home-first-section"
+        >
           <SectionHeadings
             goesToLeft
             title={translate("second-section-heading")}

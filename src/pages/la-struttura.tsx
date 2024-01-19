@@ -2,19 +2,17 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import Image from "components/Image";
 import { Gallery } from "context/Gallery";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
-import { getSvgIcon } from "resources/getSvgIcon";
 import { getImages, getListItems } from "helpers";
-import Card from "components/Card";
 import Carousel from "components/Carousel";
 import ContactUs from "components/ContactUs";
 import CarouselMini from "components/CarouselMini";
 import Hero from "components/Hero";
 import OurServices from "components/OurServices.tsx";
 import SectionHeadings from "components/SectionHeadings";
+import useScrollToTop from "hooks/useScrollToTop";
 
 const TheBuildingPage: React.FC<
   PageProps<{ theBuildingPageData: PageData }>
@@ -27,6 +25,8 @@ const TheBuildingPage: React.FC<
 
   const translate = useTranslate(data.theBuildingPageData);
 
+  useScrollToTop();
+
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="la-struttura" />
@@ -34,10 +34,13 @@ const TheBuildingPage: React.FC<
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="/"
+          link="#the-building-first-section"
           linkText={translate("discover-more")}
         />
-        <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
+        <section
+          className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40"
+          id="the-building-first-section"
+        >
           <SectionHeadings
             goesToLeft
             title={translate("second-section-heading")}

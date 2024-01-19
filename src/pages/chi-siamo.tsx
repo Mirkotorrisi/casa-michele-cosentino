@@ -8,9 +8,9 @@ import ContactUs from "components/ContactUs";
 import useTranslate from "hooks/useTranslate";
 import { PageData } from "types/pageData";
 import { getImages, getListItems } from "helpers";
-import { getSvgIcon } from "resources/getSvgIcon";
 import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
+import useScrollToTop from "hooks/useScrollToTop";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -19,6 +19,8 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
 
   const translate = useTranslate(data.whoWeArePageData);
 
+  useScrollToTop();
+
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="chi-siamo" />
@@ -26,10 +28,13 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="/"
+          link="#who-we-are-first-section"
           linkText={translate("discover-more")}
         />
-        <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
+        <section
+          className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40"
+          id="who-we-are-first-section"
+        >
           <SectionHeadings
             goesToLeft
             title={translate("our-mission")}

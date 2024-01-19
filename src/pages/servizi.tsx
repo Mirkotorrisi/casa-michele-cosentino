@@ -13,6 +13,7 @@ import { getImages, getListItems } from "helpers";
 import CarouselMini from "components/CarouselMini";
 import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
+import useScrollToTop from "hooks/useScrollToTop";
 
 const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   data,
@@ -30,6 +31,8 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
 
   const translate = useTranslate(data.servicesPageData);
 
+  useScrollToTop();
+
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="servizi" />
@@ -37,11 +40,14 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="/"
+          link="#services-first-section"
           linkText={translate("discover-more")}
         />
-        <div className="flex flex-col lg:grid lg:grid-cols-2">
-          <section className="gap-16">
+        <div
+          className="flex flex-col lg:grid lg:grid-cols-2"
+          id="services-first-section"
+        >
+          <section className="gap-16 lg:items-start">
             <h2 className="lg:text-left heading-2">
               {translate("first-section-h2")}
             </h2>

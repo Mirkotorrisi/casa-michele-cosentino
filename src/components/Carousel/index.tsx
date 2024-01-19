@@ -42,12 +42,12 @@ const Carousel = ({ className }: Props) => {
         ))}
         <div className="px-6 md:px-10 lg:px-20 flex justify-end items-center mt-4">
           <div className="flex gap-8 items-center">
-            <div className="button-prev  hover:cursor-pointer">
+            <button className="button-prev hover:cursor-pointer">
               {getSvgIcon("arrow-left")}
-            </div>
-            <div className="button-next flex-1 hover:cursor-pointer">
+            </button>
+            <button className="button-next flex-1 hover:cursor-pointer">
               {getSvgIcon("arrow-right")}
-            </div>
+            </button>
           </div>
         </div>
       </Swiper>
