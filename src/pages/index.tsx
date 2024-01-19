@@ -29,7 +29,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="home" />
-      <main className="relative lg:pt-0">
+      <main className="relative pt-[104px]">
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}

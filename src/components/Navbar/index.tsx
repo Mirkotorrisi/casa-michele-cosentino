@@ -24,7 +24,7 @@ const Navbar = ({ currentPage }: Props) => {
   }, [menuClass]);
   return (
     <nav
-      className={`w-full  z-10 bg-white flex flex-col ${
+      className={`fixed w-full  z-10 bg-white flex flex-col ${
         menuClass === "is-open" ? `h-screen` : ""
       }`}
     >

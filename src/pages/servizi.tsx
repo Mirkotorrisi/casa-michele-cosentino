@@ -33,7 +33,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   return (
     <Gallery images={images ?? []}>
       <Navbar currentPage="servizi" />
-      <main className="relative lg:pt-0">
+      <main className="relative pt-[104px]">
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
