@@ -13,6 +13,7 @@ import { getImages, getListItems } from "helpers";
 import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
+import useScrollToRef from "hooks/useScrollToRef";
 
 const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   data,
@@ -21,6 +22,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   const eventCards = getListItems(data.eventsPageData, "events-cards");
 
   const translate = useTranslate(data.eventsPageData);
+  const { ref, scrollToSection } = useScrollToRef();
 
   useScrollToTop();
 
@@ -31,10 +33,10 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="#events-first-section"
-          linkText={translate("discover-more")}
+          onCtaClick={scrollToSection}
+          ctaText={translate("discover-more")}
         />
-        <section className="gap-8 lg:gap-16" id="events-first-section">
+        <section className="gap-8 lg:gap-16" ref={ref}>
           <SectionHeadings
             title={translate("yearly-events")}
             subtitle={translate("yearly-events-sub")}

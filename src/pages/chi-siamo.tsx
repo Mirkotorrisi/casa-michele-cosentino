@@ -11,6 +11,7 @@ import { getImages, getListItems } from "helpers";
 import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
+import useScrollToRef from "hooks/useScrollToRef";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -18,6 +19,8 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   const images = getImages(data.whoWeArePageData);
 
   const translate = useTranslate(data.whoWeArePageData);
+
+  const { ref, scrollToSection } = useScrollToRef();
 
   useScrollToTop();
 
@@ -28,12 +31,12 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="#who-we-are-first-section"
-          linkText={translate("discover-more")}
+          onCtaClick={scrollToSection}
+          ctaText={translate("discover-more")}
         />
         <section
           className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40"
-          id="who-we-are-first-section"
+          ref={ref}
         >
           <SectionHeadings
             goesToLeft

@@ -13,6 +13,7 @@ import Hero from "components/Hero";
 import OurServices from "components/OurServices.tsx";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
+import useScrollToRef from "hooks/useScrollToRef";
 
 const TheBuildingPage: React.FC<
   PageProps<{ theBuildingPageData: PageData }>
@@ -24,6 +25,7 @@ const TheBuildingPage: React.FC<
   );
 
   const translate = useTranslate(data.theBuildingPageData);
+  const { ref, scrollToSection } = useScrollToRef();
 
   useScrollToTop();
 
@@ -34,12 +36,12 @@ const TheBuildingPage: React.FC<
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="#the-building-first-section"
-          linkText={translate("discover-more")}
+          onCtaClick={scrollToSection}
+          ctaText={translate("discover-more")}
         />
         <section
           className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40"
-          id="the-building-first-section"
+          ref={ref}
         >
           <SectionHeadings
             goesToLeft

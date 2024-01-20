@@ -17,7 +17,7 @@ const ContactUsPage: React.FC<PageProps<{ contactUsPageData: PageData }>> = ({
 
   return (
     <>
-      <Navbar currentPage="eventi" />
+      <Navbar currentPage="contattaci" />
       <main className="relative pt-[104px]">
         <ContactUs
           title={translate("contact-page-title")}

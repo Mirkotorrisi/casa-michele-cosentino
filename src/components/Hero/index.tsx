@@ -5,18 +5,18 @@ import Image from "components/Image";
 type Props = {
   title: string;
   subtitle: string;
-  link: string;
-  linkText: string;
+  onCtaClick: VoidFunction;
+  ctaText: string;
 };
 
-const Hero = ({ title, subtitle, link, linkText }: Props) => {
+const Hero = ({ title, subtitle, onCtaClick, ctaText }: Props) => {
   return (
     <section className="gap-6">
       <h2 className="md:text-4xl lg:text-6xl">{title}</h2>
       <p>{subtitle}</p>
-      <a href={link} className="button-ghost mt-2">
-        {linkText} {getSvgIcon("arrow-down")}
-      </a>
+      <button onClick={onCtaClick} className="button-ghost mt-2">
+        {ctaText} {getSvgIcon("arrow-down")}
+      </button>
       <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
     </section>
   );

@@ -14,6 +14,7 @@ import Hero from "components/Hero";
 import OurServices from "components/OurServices.tsx";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
+import useScrollToRef from "hooks/useScrollToRef";
 
 const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   data,
@@ -26,6 +27,8 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   const { isMobile, isMounted } = useIsMobile();
   const iframeWidth = isMobile ? "320" : "500";
 
+  const { ref, scrollToSection } = useScrollToRef();
+
   useScrollToTop();
 
   return (
@@ -35,12 +38,12 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
         <Hero
           title={translate("hero-title")}
           subtitle={translate("hero-subtitle")}
-          link="#home-first-section"
-          linkText={translate("discover-more")}
+          onCtaClick={scrollToSection}
+          ctaText={translate("discover-more")}
         />
         <section
           className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40"
-          id="home-first-section"
+          ref={ref}
         >
           <SectionHeadings
             goesToLeft
