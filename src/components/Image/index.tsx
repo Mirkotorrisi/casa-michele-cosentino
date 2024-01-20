@@ -7,12 +7,16 @@ type Props = {
   imageKey?: string;
   className?: string;
   hasShadow?: boolean;
+  width?: number;
+  height?: number;
 };
 const Image = ({
   imageData,
   imageKey = "",
   className,
   hasShadow = false,
+  width,
+  height,
 }: Props) => {
   const { getImageSrc } = useGallery();
 
@@ -20,8 +24,8 @@ const Image = ({
   return (
     <img
       src={image.image}
-      width={1120}
-      height={630}
+      width={width ?? 1120}
+      height={height ?? 630}
       className={`${className ?? ""} ${
         hasShadow ? "shadow-xl" : ""
       } aspect-video w-full h-full object-cover `}

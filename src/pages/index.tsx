@@ -56,7 +56,13 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             link="/chi-siamo"
             linkText={translate("second-section-cta")}
           />
-          <Image imageKey="home-2" className="" hasShadow />
+          <Image
+            imageKey="home-2"
+            className=""
+            hasShadow
+            width={560}
+            height={315}
+          />
         </section>
         <OurServices
           title={translate("our-services")}
@@ -83,7 +89,13 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             link="/eventi"
             linkText={translate("fifth-section-cta")}
           />
-          <Image imageKey="home-3" className="" hasShadow />
+          <Image
+            imageKey="home-3"
+            className=""
+            hasShadow
+            width={560}
+            height={315}
+          />
         </section>
         <ContactUs
           title={translate("contact-title")}

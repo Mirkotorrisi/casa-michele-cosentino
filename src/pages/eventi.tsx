@@ -69,7 +69,13 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
               title={translate("associations-title")}
               subtitle={translate("associations-subtitle")}
             />
-            <Image imageKey="eventi-2" className="mt-6 md:mt-0" hasShadow />
+            <Image
+              imageKey="eventi-2"
+              className="mt-6 md:mt-0"
+              hasShadow
+              width={560}
+              height={315}
+            />
           </section>
         </div>
         <section className="pb-8 lg:pb-16">
