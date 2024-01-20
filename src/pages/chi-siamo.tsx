@@ -99,6 +99,7 @@ export const query = graphql`
               image
               links {
                 linkURL
+                linkText
               }
             }
           }

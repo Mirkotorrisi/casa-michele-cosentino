@@ -1,6 +1,7 @@
 import Card from "components/Card";
 import SectionHeadings from "components/SectionHeadings";
 import React from "react";
+import { getSvgIcon } from "resources/getSvgIcon";
 import { ListItem } from "types/pageData";
 
 type Props = {
@@ -31,13 +32,7 @@ const OurServices = ({
           {servicesCards?.map((c) => (
             <Card
               key={c.title}
-              image={
-                <img
-                  src={c.image}
-                  className="aspect-square rounded-md"
-                  alt={c.text}
-                />
-              }
+              image={getSvgIcon(c.links?.[0].linkText)}
               title={c.title}
               text={c.text}
               classNames={{

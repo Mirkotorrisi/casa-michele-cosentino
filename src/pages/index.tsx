@@ -21,6 +21,10 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
 }) => {
   const images = getImages(data.homePageData);
   const servicesCards = getListItems(data.homePageData, "services-cards");
+  const theBuildingCarousel = getListItems(
+    data.homePageData,
+    "carousel-home-1"
+  );
 
   const translate = useTranslate(data.homePageData);
 
@@ -69,7 +73,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             linkText={translate("fourth-section-cta")}
           />
         </section>
-        <Carousel />
+        <Carousel images={theBuildingCarousel} />
 
         <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <SectionHeadings
@@ -132,6 +136,7 @@ export const query = graphql`
               title
               links {
                 linkURL
+                linkText
               }
             }
             listKey

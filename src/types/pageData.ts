@@ -4,7 +4,7 @@ export type PageData = {
       frontmatter: {
         listItem: ListItem[] | null;
         terms: Terms[] | null;
-        images: Images[] | null;
+        images: ImageItem[] | null;
         pageKey: "home" | "eventi" | "servizi" | "chi-siamo";
         listKey: string;
       };
@@ -17,7 +17,7 @@ export type Terms = {
   key: string;
   label: string;
 };
-export type Images = {
+export type ImageItem = {
   key: string;
   image: string;
   description?: string;

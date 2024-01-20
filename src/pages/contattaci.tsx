@@ -54,6 +54,7 @@ export const query = graphql`
               title
               links {
                 linkURL
+                linkText
               }
             }
             listKey

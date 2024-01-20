@@ -29,7 +29,7 @@ const ContactUs = ({
             text={card.text}
             title={card.title}
             link={card.links?.[0]?.linkURL}
-            image={getSvgIcon(card.title)}
+            image={getSvgIcon(card.links?.[0].linkText)}
             key={card.title}
           />
         ))}

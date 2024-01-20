@@ -1,8 +1,8 @@
-import { Images, PageData } from "types/pageData";
+import { ImageItem, PageData } from "types/pageData";
 
 export const getImages = (pageData: PageData) =>
   pageData.edges.reduce(
-    (acc: Images[], curr) => [
+    (acc: ImageItem[], curr) => [
       ...acc,
       ...(curr.node?.frontmatter?.images || []),
     ],

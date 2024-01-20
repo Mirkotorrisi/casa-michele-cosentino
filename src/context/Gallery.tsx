@@ -1,18 +1,18 @@
 import React, { ReactNode, createContext, useContext } from "react";
-import { Images } from "types/pageData";
+import { ImageItem } from "types/pageData";
 
 const GalleryContext = createContext<{
-  getImageSrc: (k: string) => Images;
+  getImageSrc: (k: string) => ImageItem;
 }>({ getImageSrc: (k: string) => ({ key: "", image: "" }) });
 
 type Props = {
   children: ReactNode;
-  images: Images[];
+  images: ImageItem[];
 };
 export const Gallery = ({ children, images = [] }: Props) => {
   const getImageSrc = (searchKey: string = "") =>
     images.find(
-      ({ key }: Images) =>
+      ({ key }: ImageItem) =>
         key.trim().toLowerCase() === searchKey.trim().toLowerCase()
     ) ?? { key: "", image: "" };
   return (

@@ -5,19 +5,13 @@ import Image from "components/Image";
 import { Pagination, Navigation, EffectCreative } from "swiper/modules";
 import { PaginationOptions } from "swiper/types";
 import { getSvgIcon } from "resources/getSvgIcon";
-
-const images = [
-  "servizi-image-1",
-  "servizi-image-2",
-  "servizi-image-3",
-  "servizi-image-4",
-];
+import { ListItem } from "types/pageData";
 
 type Props = {
-  className?: string;
+  images: ListItem[];
 };
 
-const CarouselMini = ({ className }: Props) => {
+const CarouselMini = ({ images = [] }: Props) => {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   const customPagination = (slides: number): PaginationOptions => ({
@@ -62,9 +56,15 @@ const CarouselMini = ({ className }: Props) => {
           },
         }}
       >
-        {images.map((imageKey, index) => (
+        {images.map((listItem, index) => (
           <SwiperSlide key={index}>
-            <Image imageKey={imageKey} />
+            <Image
+              imageData={{
+                image: listItem.image,
+                key: listItem.title,
+                description: listItem.title,
+              }}
+            />
           </SwiperSlide>
         ))}
 

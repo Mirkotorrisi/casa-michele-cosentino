@@ -20,6 +20,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
 }) => {
   const images = getImages(data.eventsPageData);
   const eventCards = getListItems(data.eventsPageData, "events-cards");
+  const eventCarousel = getListItems(data.eventsPageData, "carousel-eventi-1");
 
   const translate = useTranslate(data.eventsPageData);
   const { ref, scrollToSection } = useScrollToRef();
@@ -77,7 +78,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
             subtitle={translate("our-events-moments-sub")}
           />
         </section>
-        <Carousel className="mb-8 md:mb-10 lg:mb-20" />
+        <Carousel className="mb-8 md:mb-10 lg:mb-20" images={eventCarousel} />
         <ContactUs
           title={translate("contact-title")}
           subtitle={translate("contact-subtitle")}
@@ -117,6 +118,7 @@ export const query = graphql`
               title
               links {
                 linkURL
+                linkText
               }
             }
             listKey

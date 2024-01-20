@@ -21,6 +21,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
 }) => {
   const images = getImages(data.servicesPageData);
   const servicesCards = getListItems(data.servicesPageData, "services-cards");
+  console.log("🚀 ~ servicesCards:", servicesCards);
   const dailyLifeCards = getListItems(
     data.servicesPageData,
     "daily-life-cards"
@@ -28,6 +29,14 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   const spiritualityCards = getListItems(
     data.servicesPageData,
     "spirituality-cards"
+  );
+  const servicesFirstCarousel = getListItems(
+    data.servicesPageData,
+    "carousel-servizi-1"
+  );
+  const servicesSecondCarousel = getListItems(
+    data.servicesPageData,
+    "carousel-servizi-2"
   );
 
   const translate = useTranslate(data.servicesPageData);
@@ -55,7 +64,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
                 <Card
                   title={card.title}
                   text={card.text}
-                  image={getSvgIcon(card.title)}
+                  image={getSvgIcon(card.links?.[0]?.linkText)}
                   key={card.title}
                   classNames={{
                     card: "lg:items-start",
@@ -67,7 +76,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
             </div>
           </section>
           <div className="lg:order-[-1] md:p-4 lg:p-14">
-            <CarouselMini />
+            <CarouselMini images={servicesFirstCarousel} />
           </div>
         </div>
         <div className="flex flex-col lg:grid lg:grid-cols-2">
@@ -79,7 +88,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
             />
             <div className="flex flex-col gap-4 divide-y">
               {spiritualityCards.map(({ title, text }) => (
-                <div className="flex flex-col gap-2 pt-4">
+                <div className="flex flex-col gap-2 pt-4" key={title}>
                   <p className="md:!text-left bold">{title}</p>
                   <p className="md:!text-left body-3">{text}</p>
                 </div>
@@ -87,7 +96,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
             </div>
           </section>
           <div className="md:p-4 lg:p-14">
-            <CarouselMini />
+            <CarouselMini images={servicesSecondCarousel} />
           </div>
         </div>
         <div className="blue-section">
@@ -106,7 +115,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
                 <Card
                   title={card.title}
                   text={card.text}
-                  image={getSvgIcon(card.title)}
+                  image={getSvgIcon(card.links?.[0]?.linkText)}
                   key={card.title}
                   classNames={{
                     content: "body-3",
@@ -156,6 +165,7 @@ export const query = graphql`
               image
               links {
                 linkURL
+                linkText
               }
             }
           }

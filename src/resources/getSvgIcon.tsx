@@ -11,29 +11,35 @@ import Rehabilitation from "images/rehabilitation.svg";
 import Activities from "images/activities.svg";
 import Treatment from "images/treatment.svg";
 import ArrowDown from "images/arrow-down.svg";
+import DietBlue from "images/diet-blue.svg";
+import SpiritualBlue from "images/spiritual-blue.svg";
+import DailyBlue from "images/daily-blue.svg";
+import BookBlue from "images/book-blue.svg";
+import MedicalBlue from "images/medical-blue.svg";
+import SmileBlue from "images/smile-blue.svg";
 import React from "react";
 
 export const getSvgIcon = (key: string) => {
   switch (key) {
-    case "Medica":
+    case "medical":
       return <Medical />;
-    case "Alimentazione":
+    case "diet":
       return <Diet />;
-    case "Cura personale":
+    case "treatment":
       return <Treatment />;
-    case "Attività":
+    case "activities":
       return <Activities />;
-    case "Infermieristica":
+    case "nursing":
       return <Nursing />;
-    case "Quotidiana":
+    case "daily":
       return <Daily />;
-    case "Riabilitativa":
+    case "rehabilitation":
       return <Rehabilitation />;
-    case "Email":
+    case "email":
       return <Email />;
-    case "Indirizzo":
+    case "address":
       return <Address />;
-    case "Telefono":
+    case "phone":
       return <Phone />;
     case "arrow-left":
       return <Arrow />;
@@ -43,6 +49,18 @@ export const getSvgIcon = (key: string) => {
       return <ArrowDown />;
     case "white-email":
       return <WhiteEmail />;
+    case "diet-blue":
+      return <DietBlue />;
+    case "book-blue":
+      return <BookBlue />;
+    case "daily-blue":
+      return <DailyBlue />;
+    case "medical-blue":
+      return <MedicalBlue />;
+    case "smile-blue":
+      return <SmileBlue />;
+    case "spiritual-blue":
+      return <SpiritualBlue />;
     default:
       return <Email />;
   }

@@ -5,21 +5,14 @@ import Image from "components/Image";
 import { getSvgIcon } from "resources/getSvgIcon";
 import { Navigation } from "swiper/modules";
 import useIsMobile from "hooks/useIsMobile";
-
-const images = [
-  "hero-image",
-  "hero-image",
-  "hero-image",
-  "hero-image",
-  "hero-image",
-  "hero-image",
-];
+import { ListItem } from "types/pageData";
 
 type Props = {
   className?: string;
+  images: ListItem[];
 };
 
-const Carousel = ({ className }: Props) => {
+const Carousel = ({ className, images = [] }: Props) => {
   const { isMobile, isMounted } = useIsMobile();
   return (
     isMounted && (
@@ -35,9 +28,16 @@ const Carousel = ({ className }: Props) => {
         }}
         modules={[Navigation]}
       >
-        {images.map((imageKey, index) => (
+        {images.map((listItem, index) => (
           <SwiperSlide key={index}>
-            <Image imageKey={imageKey} className="rounded-xl lg:rounded-3xl" />
+            <Image
+              imageData={{
+                key: listItem.title,
+                image: listItem.image,
+                description: listItem.title,
+              }}
+              className="rounded-xl lg:rounded-3xl"
+            />
           </SwiperSlide>
         ))}
         <div className="px-6 md:px-10 lg:px-20 flex justify-end items-center mt-4">

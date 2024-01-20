@@ -23,6 +23,18 @@ const TheBuildingPage: React.FC<
     data.theBuildingPageData,
     "services-cards"
   );
+  const theBuildingFirstCarousel = getListItems(
+    data.theBuildingPageData,
+    "carousel-la-struttura-1"
+  );
+  const theBuildingSecondCarousel = getListItems(
+    data.theBuildingPageData,
+    "carousel-la-struttura-2"
+  );
+  const theBuildingThirdCarousel = getListItems(
+    data.theBuildingPageData,
+    "carousel-la-struttura-3"
+  );
 
   const translate = useTranslate(data.theBuildingPageData);
   const { ref, scrollToSection } = useScrollToRef();
@@ -48,7 +60,7 @@ const TheBuildingPage: React.FC<
             title={translate("second-section-heading")}
             subtitle={translate("second-section-sub")}
           />
-          <CarouselMini />
+          <CarouselMini images={theBuildingFirstCarousel} />
         </section>
         <section className="pb-8 lg:pb-16">
           <SectionHeadings
@@ -56,14 +68,14 @@ const TheBuildingPage: React.FC<
             subtitle={translate("fourth-section-subtitle")}
           />
         </section>
-        <Carousel />
+        <Carousel images={theBuildingSecondCarousel} />
         <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <SectionHeadings
             goesToLeft
             title={translate("fourth-section-title")}
             subtitle={translate("fourth-section-subtitle")}
           />
-          <CarouselMini />
+          <CarouselMini images={theBuildingThirdCarousel} />
         </section>
         <OurServices
           title={translate("our-services")}
@@ -113,6 +125,7 @@ export const query = graphql`
               title
               links {
                 linkURL
+                linkText
               }
             }
             listKey
