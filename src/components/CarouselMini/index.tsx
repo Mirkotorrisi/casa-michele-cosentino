@@ -64,6 +64,7 @@ const CarouselMini = ({ images = [] }: Props) => {
                 key: listItem.title,
                 description: listItem.title,
               }}
+              className="!aspect-[4/3]"
             />
           </SwiperSlide>
         ))}

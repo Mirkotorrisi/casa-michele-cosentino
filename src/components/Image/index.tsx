@@ -20,6 +20,8 @@ const Image = ({
   return (
     <img
       src={image.image}
+      width={1120}
+      height={630}
       className={`${className ?? ""} ${
         hasShadow ? "shadow-xl" : ""
       } aspect-video w-full h-full object-cover `}

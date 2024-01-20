@@ -21,7 +21,6 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
 }) => {
   const images = getImages(data.servicesPageData);
   const servicesCards = getListItems(data.servicesPageData, "services-cards");
-  console.log("🚀 ~ servicesCards:", servicesCards);
   const dailyLifeCards = getListItems(
     data.servicesPageData,
     "daily-life-cards"
@@ -80,7 +79,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           </div>
         </div>
         <div className="flex flex-col lg:grid lg:grid-cols-2">
-          <section className="md:grid md:grid-cols-2 md:gap-x-20 md:p-10 lg:p-20 lg:flex lg:flex-col gap-6 lg:gap-8">
+          <section className="md:grid md:grid-cols-2 md:gap-x-20 md:p-10 lg:p-20 lg:flex lg:flex-col lg:items-start gap-6 lg:gap-8">
             <SectionHeadings
               goesToLeft
               title={translate("second-section-h2")}
