@@ -26,6 +26,7 @@ const Image = ({
       src={image.image}
       width={width ?? 1120}
       height={height ?? 630}
+      loading="lazy"
       className={`${className ?? ""} ${
         hasShadow ? "shadow-xl" : ""
       } aspect-video w-full h-full object-cover `}
