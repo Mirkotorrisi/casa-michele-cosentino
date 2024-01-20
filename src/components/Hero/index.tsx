@@ -21,6 +21,7 @@ const Hero = ({ title, subtitle, onCtaClick, ctaText }: Props) => {
         imageKey="hero-image"
         className="mt-2 lg:mt-8 hero-image"
         hasShadow
+        isHero
       />
     </section>
   );

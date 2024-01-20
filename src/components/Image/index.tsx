@@ -7,6 +7,7 @@ type Props = {
   imageKey?: string;
   className?: string;
   hasShadow?: boolean;
+  isHero?: boolean;
   width?: number;
   height?: number;
 };
@@ -15,6 +16,7 @@ const Image = ({
   imageKey = "",
   className,
   hasShadow = false,
+  isHero = false,
   width,
   height,
 }: Props) => {
@@ -26,7 +28,7 @@ const Image = ({
       src={image.image}
       width={width ?? 1120}
       height={height ?? 630}
-      loading="lazy"
+      loading={isHero ? "eager" : "lazy"}
       className={`${className ?? ""} ${
         hasShadow ? "shadow-xl" : ""
       } aspect-video w-full h-full object-cover `}
