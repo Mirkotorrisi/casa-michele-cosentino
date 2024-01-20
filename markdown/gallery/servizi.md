@@ -2,8 +2,9 @@
 pageKey: servizi
 images:
   - key: hero-image
-    description: ""
-    image: /img/img-2.webp
+    description: "Primo piano di alcune sedie"
+    image: /img/sedie.webp
   - key: servizi-2
-    image: /img/img-6.webp
+    description: "Un anziano e un infermiere che lo assiste"
+    image: /img/anziano-con-bastone.webp
 ---

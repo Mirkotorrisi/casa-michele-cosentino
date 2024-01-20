@@ -2,6 +2,6 @@
 pageKey: la-struttura
 images:
   - key: hero-image
-    description: ""
-    image: /img/img-37.webp
+    description: "Una stanza con divanetti e tavolini"
+    image: /img/interni.webp
 ---

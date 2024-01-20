@@ -2,11 +2,12 @@
 pageKey: home
 images:
   - key: hero-image
-    description: ""
-    image: /img/img-26.webp
+    description: "La sede vista dal retro, con il giardino in primo piano"
+    image: /img/oasi-retro.webp
   - key: home-2
-    description: ""
-    image: /img/img-38.webp
+    image: /img/oasi-palazzo.webp
+    description: "La sede dell'oasi, un moderno palazzo"
   - key: home-3
-    image: /img/img-35.webp
+    description: "Violinista"
+    image: /img/violino.webp
 ---

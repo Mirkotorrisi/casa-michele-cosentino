@@ -2,8 +2,9 @@
 pageKey: eventi
 images:
   - key: hero-image
-    description: ""
-    image: /img/img-37.webp
+    description: "Anziana con un sonaglio"
+    image: /img/sonaglio.webp
   - key: eventi-2
-    image: /img/img-35.webp
+    description: "Violinista"
+    image: /img/violino.webp
 ---

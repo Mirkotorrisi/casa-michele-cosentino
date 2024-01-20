@@ -99,6 +99,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
             <Image
               imageKey="servizi-2"
               className="hero-image mx-auto my-10 lg:my-20"
+              hasShadow
             />
             <div className="flex flex-col md:flex-row gap-8">
               {dailyLifeCards?.map((card) => (

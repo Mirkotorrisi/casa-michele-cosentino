@@ -43,7 +43,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
             title={translate("our-mission")}
             subtitle={translate("our-mission-sub")}
           />
-          <Image imageKey="chi-siamo-1" className="mt-6" />
+          <Image imageKey="chi-siamo-1" className="mt-6" hasShadow />
         </section>
         <div className="blue-section">
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
@@ -55,6 +55,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
             <Image
               imageKey="chi-siamo-2"
               className="mt-6 md:mt-0 md:order-[-1]"
+              hasShadow
             />
           </section>
         </div>

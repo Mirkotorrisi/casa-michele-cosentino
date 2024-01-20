@@ -17,7 +17,11 @@ const Hero = ({ title, subtitle, onCtaClick, ctaText }: Props) => {
       <button onClick={onCtaClick} className="button-ghost mt-2">
         {ctaText} {getSvgIcon("arrow-down")}
       </button>
-      <Image imageKey="hero-image" className="mt-2 lg:mt-8 hero-image" />
+      <Image
+        imageKey="hero-image"
+        className="mt-2 lg:mt-8 hero-image"
+        hasShadow
+      />
     </section>
   );
 };
