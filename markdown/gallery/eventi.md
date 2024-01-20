@@ -6,5 +6,5 @@ images:
     image: /img/sonaglio.jpeg
   - key: eventi-2
     description: "Violinista"
-    image: /img/violino.webp
+    image: /img/violino.jpeg
 ---

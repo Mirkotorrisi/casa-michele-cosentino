@@ -3,11 +3,11 @@ pageKey: la-struttura
 listKey: carousel-la-struttura-3
 listItem:
   - title: Stanza con letto
-    image: /img/struttura-4-carousel-1.webp
+    image: /img/struttura-4-carousel-1.jpeg
   - title: Stanza con letto e bastone
-    image: /img/struttura-4-carousel-2.webp
+    image: /img/struttura-4-carousel-2.jpeg
   - title: Un bagno
-    image: /img/struttura-4-carousel-3.webp
+    image: /img/struttura-4-carousel-3.jpeg
   - title: Stanza con letto rosso
-    image: /img/struttura-4-carousel-4.webp
+    image: /img/struttura-4-carousel-4.jpeg
 ---
