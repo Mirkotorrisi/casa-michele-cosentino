@@ -12,6 +12,7 @@ import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
 import useScrollToRef from "hooks/useScrollToRef";
+import { whoWeAreFirstFloatings } from "resources/floatingsData";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -22,7 +23,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
 
   const { ref, scrollToSection } = useScrollToRef();
 
-  useScrollToTop();
+  // useScrollToTop();
 
   return (
     <Gallery images={images ?? []}>
@@ -33,6 +34,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
           subtitle={translate("hero-subtitle")}
           onCtaClick={scrollToSection}
           ctaText={translate("discover-more")}
+          floatings={whoWeAreFirstFloatings}
         />
         <section
           className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40"
