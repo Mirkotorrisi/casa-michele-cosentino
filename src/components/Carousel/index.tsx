@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "components/Image";
 import { getSvgIcon } from "resources/getSvgIcon";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import useIsMobile from "hooks/useIsMobile";
 import { ListItem } from "types/pageData";
 
@@ -22,11 +22,12 @@ const Carousel = ({ className, images = [] }: Props) => {
         slidesPerView={isMobile ? 1.2 : 1.8}
         centeredSlides
         loop
+        autoplay
         navigation={{
           nextEl: ".button-next",
           prevEl: ".button-prev",
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
       >
         {images.map((listItem, index) => (
           <SwiperSlide key={index}>

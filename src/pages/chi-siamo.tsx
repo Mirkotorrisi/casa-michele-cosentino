@@ -27,7 +27,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
 
   const { ref, scrollToSection } = useScrollToRef();
 
-  // useScrollToTop();
+  useScrollToTop();
 
   return (
     <Gallery images={images ?? []}>

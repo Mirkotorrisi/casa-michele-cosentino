@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "components/Image";
-import { Pagination, Navigation, EffectCreative } from "swiper/modules";
+import {
+  Pagination,
+  Navigation,
+  EffectCreative,
+  Autoplay,
+} from "swiper/modules";
 import { PaginationOptions } from "swiper/types";
 import { getSvgIcon } from "resources/getSvgIcon";
 import { ListItem } from "types/pageData";
@@ -27,7 +32,7 @@ const CarouselMini = ({ images = [] }: Props) => {
     <div className="w-full h-full flex items-center justify-center ">
       <Swiper
         slidesPerView={1}
-        centeredSlides
+        autoplay
         loop
         style={{
           padding: "1.5rem",
@@ -38,7 +43,7 @@ const CarouselMini = ({ images = [] }: Props) => {
         onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
         spaceBetween={20}
         speed={1000}
-        modules={[Pagination, Navigation, EffectCreative]}
+        modules={[Pagination, Navigation, EffectCreative, Autoplay]}
         pagination={customPagination(images.length)}
         navigation={{
           nextEl: ".button-next",

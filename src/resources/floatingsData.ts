@@ -205,7 +205,7 @@ const whoWeAreThirdFloatings: FloatingType[] = [
     key: "triangle-stroke",
     style: {
       zIndex: "1",
-      inset: "-15% -5%", // top left
+      inset: "-5% -5%", // top left
       width: "20%",
       rotate: "40deg",
     },

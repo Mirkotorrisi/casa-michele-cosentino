@@ -6,6 +6,7 @@ import Circle from "images/circle.svg";
 import CircleStroke from "images/circle-stroke.svg";
 import Triangle from "images/triangle.svg";
 import TriangleStroke from "images/triangle-stroke.svg";
+import useScrollPosition from "hooks/useScrollPosition";
 
 type Props = {
   keyName: string;
@@ -13,23 +14,28 @@ type Props = {
 };
 
 const Floating = ({ keyName, style = {} }: Props) => {
-  switch (keyName) {
-    case "square":
-      return <Square className="floating" style={style} />;
-    case "square-stroke":
-      return <SquareStroke className="floating" style={style} />;
-    case "circle":
-      return <Circle className="floating" style={style} />;
-    case "circle-stroke":
-      return <CircleStroke className="floating" style={style} />;
-    case "triangle":
-      return <Triangle className="floating" style={style} />;
-    case "triangle-stroke":
-      return <TriangleStroke className="floating" style={style} />;
-      break;
-    default:
-      return <></>;
-  }
+  const className = "floating ease-out";
+  const { scrollPosition, ref } = useScrollPosition();
+  const props = {
+    className,
+    style: {
+      ...style,
+      transform: `translateY(${scrollPosition * 0.4}%)`,
+    },
+  };
+  return (
+    <>
+      <div className="floating" style={style} ref={ref} />
+      {{
+        square: <Square {...props} />,
+        "square-stroke": <SquareStroke {...props} />,
+        circle: <Circle {...props} />,
+        "circle-stroke": <CircleStroke {...props} />,
+        triangle: <Triangle {...props} />,
+        "triangle-stroke": <TriangleStroke {...props} />,
+      }[keyName] || <></>}
+    </>
+  );
 };
 
 export default Floating;

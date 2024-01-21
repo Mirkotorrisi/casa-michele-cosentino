@@ -39,8 +39,12 @@ const Image = ({
         } aspect-video w-full h-full object-cover z-10 mx-auto`}
         alt={image.description ?? image.key}
       />
-      {floatings?.map((f) => (
-        <Floating key={f.key + image.key} keyName={f.key} style={f.style} />
+      {floatings?.map((f, index) => (
+        <Floating
+          key={f.key + image.key + index}
+          keyName={f.key}
+          style={f.style}
+        />
       ))}
     </div>
   );

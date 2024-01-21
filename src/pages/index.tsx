@@ -38,7 +38,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
 
   const { ref, scrollToSection } = useScrollToRef();
 
-  // useScrollToTop();
+  useScrollToTop();
 
   return (
     <Gallery images={images ?? []}>
