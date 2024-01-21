@@ -8,7 +8,9 @@
   * {
     font-family: Inter;
   }
-
+  main {
+    @apply overflow-hidden;
+  }
   h2 {
     /* Heading/1 */
     @apply text-neutral-900 text-center text-4xl not-italic font-bold leading-10 lg:text-6xl  lg:leading-[60px] max-w-[800px];

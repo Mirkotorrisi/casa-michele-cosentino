@@ -15,6 +15,10 @@ import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
 import useScrollToRef from "hooks/useScrollToRef";
+import {
+  servicesHeroFloatings,
+  servicesSecondFloatings,
+} from "resources/floatingsData";
 
 const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   data,
@@ -52,6 +56,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
           subtitle={translate("hero-subtitle")}
           onCtaClick={scrollToSection}
           ctaText={translate("discover-more")}
+          floatings={servicesHeroFloatings}
         />
         <div className="flex flex-col lg:grid lg:grid-cols-2">
           <section className="gap-16 lg:items-start" ref={ref}>
@@ -108,6 +113,7 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
               imageKey="servizi-2"
               className="hero-image mx-auto my-10 lg:my-20"
               hasShadow
+              floatings={servicesSecondFloatings}
             />
             <div className="flex flex-col md:flex-row gap-8">
               {dailyLifeCards?.map((card) => (

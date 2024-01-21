@@ -14,6 +14,10 @@ import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
 import useScrollToRef from "hooks/useScrollToRef";
+import {
+  eventsHeroFloatings,
+  eventsSecondFloatings,
+} from "resources/floatingsData";
 
 const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   data,
@@ -36,6 +40,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
           subtitle={translate("hero-subtitle")}
           onCtaClick={scrollToSection}
           ctaText={translate("discover-more")}
+          floatings={eventsHeroFloatings}
         />
         <section className="gap-8 lg:gap-16" ref={ref}>
           <SectionHeadings
@@ -75,6 +80,7 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
               hasShadow
               width={560}
               height={315}
+              floatings={eventsSecondFloatings}
             />
           </section>
         </div>

@@ -20,7 +20,7 @@ import {
   homeSecondFloatings,
   homeThirdFloatings,
 } from "resources/floatingsData";
-import Floating from "components/Floating";
+
 const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   data,
 }) => {
@@ -38,7 +38,7 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
 
   const { ref, scrollToSection } = useScrollToRef();
 
-  useScrollToTop();
+  // useScrollToTop();
 
   return (
     <Gallery images={images ?? []}>
@@ -62,23 +62,14 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             link="/chi-siamo"
             linkText={translate("second-section-cta")}
           />
-          <div className="relative w-full max-w-[560px]">
-            <Image
-              imageKey="home-2"
-              className=""
-              hasShadow
-              width={560}
-              height={315}
-            />
-            {homeSecondFloatings?.map((f) => (
-              <Floating
-                key={f.key + f.className}
-                keyName={f.key}
-                className={f.className}
-                style={f.style}
-              />
-            ))}
-          </div>
+          <Image
+            imageKey="home-2"
+            className="mx-auto"
+            hasShadow
+            width={560}
+            height={315}
+            floatings={homeSecondFloatings}
+          />
         </section>
         <OurServices
           title={translate("our-services")}
@@ -105,23 +96,14 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
             link="/eventi"
             linkText={translate("fifth-section-cta")}
           />
-          <div className="relative w-full h-full max-w-[560px]">
-            <Image
-              imageKey="home-3"
-              className=""
-              hasShadow
-              width={560}
-              height={315}
-            />
-            {homeThirdFloatings?.map((f) => (
-              <Floating
-                key={f.key + f.className}
-                keyName={f.key}
-                className={f.className}
-                style={f.style}
-              />
-            ))}
-          </div>
+          <Image
+            imageKey="home-3"
+            className=""
+            hasShadow
+            width={560}
+            height={315}
+            floatings={homeThirdFloatings}
+          />
         </section>
         <ContactUs
           title={translate("contact-title")}

@@ -12,7 +12,11 @@ import Hero from "components/Hero";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
 import useScrollToRef from "hooks/useScrollToRef";
-import { whoWeAreFirstFloatings } from "resources/floatingsData";
+import {
+  whoWeAreHeroFloatings,
+  whoWeAreSecondFloatings,
+  whoWeAreThirdFloatings,
+} from "resources/floatingsData";
 
 const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   data,
@@ -34,7 +38,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
           subtitle={translate("hero-subtitle")}
           onCtaClick={scrollToSection}
           ctaText={translate("discover-more")}
-          floatings={whoWeAreFirstFloatings}
+          floatings={whoWeAreHeroFloatings}
         />
         <section
           className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40"
@@ -51,6 +55,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
             hasShadow
             width={560}
             height={315}
+            floatings={whoWeAreSecondFloatings}
           />
         </section>
         <div className="blue-section">
@@ -66,6 +71,7 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
               hasShadow
               width={560}
               height={315}
+              floatings={whoWeAreThirdFloatings}
             />
           </section>
         </div>

@@ -14,6 +14,7 @@ import OurServices from "components/OurServices.tsx";
 import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
 import useScrollToRef from "hooks/useScrollToRef";
+import { theBuildingHeroFloatings } from "resources/floatingsData";
 
 const TheBuildingPage: React.FC<
   PageProps<{ theBuildingPageData: PageData }>
@@ -50,6 +51,7 @@ const TheBuildingPage: React.FC<
           subtitle={translate("hero-subtitle")}
           onCtaClick={scrollToSection}
           ctaText={translate("discover-more")}
+          floatings={theBuildingHeroFloatings}
         />
         <section
           className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40"

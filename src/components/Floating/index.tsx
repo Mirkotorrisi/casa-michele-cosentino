@@ -9,28 +9,23 @@ import TriangleStroke from "images/triangle-stroke.svg";
 
 type Props = {
   keyName: string;
-  className: string;
   style?: Record<string, string | number | undefined>;
 };
 
-const Floating = ({ keyName, className, style = {} }: Props) => {
+const Floating = ({ keyName, style = {} }: Props) => {
   switch (keyName) {
     case "square":
-      return <Square className={"floating " + className} style={style} />;
+      return <Square className="floating" style={style} />;
     case "square-stroke":
-      return <SquareStroke className={"floating " + className} style={style} />;
+      return <SquareStroke className="floating" style={style} />;
     case "circle":
-      return <Circle className={"floating " + className} style={style} />;
+      return <Circle className="floating" style={style} />;
     case "circle-stroke":
-      return <CircleStroke className={"floating " + className} style={style} />;
-
+      return <CircleStroke className="floating" style={style} />;
     case "triangle":
-      return <Triangle className={"floating " + className} style={style} />;
+      return <Triangle className="floating" style={style} />;
     case "triangle-stroke":
-      return (
-        <TriangleStroke className={"floating " + className} style={style} />
-      );
-
+      return <TriangleStroke className="floating" style={style} />;
       break;
     default:
       return <></>;
