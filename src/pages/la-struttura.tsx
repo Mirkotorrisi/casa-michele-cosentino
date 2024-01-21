@@ -15,10 +15,11 @@ import SectionHeadings from "components/SectionHeadings";
 import useScrollToTop from "hooks/useScrollToTop";
 import useScrollToRef from "hooks/useScrollToRef";
 import { theBuildingHeroFloatings } from "resources/floatingsData";
+import HeadContent from "components/HeadContent";
 
-const TheBuildingPage: React.FC<
-  PageProps<{ theBuildingPageData: PageData }>
-> = ({ data }) => {
+type PagePropsData = { theBuildingPageData: PageData };
+
+const TheBuildingPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
   const images = getImages(data.theBuildingPageData);
   const servicesCards = getListItems(
     data.theBuildingPageData,
@@ -97,8 +98,12 @@ const TheBuildingPage: React.FC<
   );
 };
 
-export const Head: HeadFC = () => (
-  <title>La struttura | Casa Michele Cosentino</title>
+export const Head: HeadFC = ({ data }) => (
+  <HeadContent
+    title="La struttura | Casa Michele Cosentino"
+    data={(data as PagePropsData).theBuildingPageData}
+    description="L'accogliente struttura, moderna e immersa nel verde, in cui gli ospiti della casa di riposo Michele Cosentino trascorrono le loro giornate."
+  />
 );
 
 export const query = graphql`

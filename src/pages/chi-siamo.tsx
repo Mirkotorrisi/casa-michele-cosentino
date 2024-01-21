@@ -17,10 +17,11 @@ import {
   whoWeAreSecondFloatings,
   whoWeAreThirdFloatings,
 } from "resources/floatingsData";
+import HeadContent from "components/HeadContent";
 
-const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
-  data,
-}) => {
+type PagePropsData = { whoWeArePageData: PageData };
+
+const WhoWeArePage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
   const images = getImages(data.whoWeArePageData);
 
   const translate = useTranslate(data.whoWeArePageData);
@@ -86,8 +87,12 @@ const WhoWeArePage: React.FC<PageProps<{ whoWeArePageData: PageData }>> = ({
   );
 };
 
-export const Head: HeadFC = () => (
-  <title>Chi Siamo | Casa Michele Cosentino</title>
+export const Head: HeadFC = ({ data }) => (
+  <HeadContent
+    title="Chi siamo | Casa Michele Cosentino"
+    data={(data as PagePropsData).whoWeArePageData}
+    description="Pagina dedicata alla storia, alla mission e alla vision della casa di riposo Michele Cosentino."
+  />
 );
 
 export const query = graphql`

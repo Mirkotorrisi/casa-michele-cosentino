@@ -77,8 +77,8 @@ const CarouselMini = ({ images = [] }: Props) => {
         ))}
 
         <div className="flex justify-between items-center mt-4">
-          <span className="text-[#A3A3A3] text-lg not-italic font-semibold leading-7">
-            <span className="text-[#F97316]">{currentSlide}</span>/
+          <span className="text-neutral-400 text-lg not-italic font-semibold leading-7">
+            <span className="text-orange-500">{currentSlide}</span>/
             {images.length}
           </span>
           <div className="flex justify-end items-center">

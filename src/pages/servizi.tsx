@@ -19,10 +19,11 @@ import {
   servicesHeroFloatings,
   servicesSecondFloatings,
 } from "resources/floatingsData";
+import HeadContent from "components/HeadContent";
 
-const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
-  data,
-}) => {
+type PagePropsData = { servicesPageData: PageData };
+
+const ServicesPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
   const images = getImages(data.servicesPageData);
   const servicesCards = getListItems(data.servicesPageData, "services-cards");
   const dailyLifeCards = getListItems(
@@ -141,8 +142,12 @@ const ServicesPage: React.FC<PageProps<{ servicesPageData: PageData }>> = ({
   );
 };
 
-export const Head: HeadFC = () => (
-  <title>Servizi | Casa Michele Cosentino</title>
+export const Head: HeadFC = ({ data }) => (
+  <HeadContent
+    title="I nostri servizi | Casa Michele Cosentino"
+    data={(data as PagePropsData).servicesPageData}
+    description="Pagina che illustra tutti i servizi offerti agli ospiti della casa di riposo Michele Cosentino."
+  />
 );
 
 export const query = graphql`

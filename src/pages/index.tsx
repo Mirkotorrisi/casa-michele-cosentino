@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { graphql, HeadProps, type HeadFC, type PageProps } from "gatsby";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import Image from "components/Image";
@@ -20,10 +20,11 @@ import {
   homeSecondFloatings,
   homeThirdFloatings,
 } from "resources/floatingsData";
+import HeadContent from "components/HeadContent";
 
-const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
-  data,
-}) => {
+type PagePropsData = { homePageData: PageData };
+
+const IndexPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
   const images = getImages(data.homePageData);
   const servicesCards = getListItems(data.homePageData, "services-cards");
   const theBuildingCarousel = getListItems(
@@ -130,7 +131,13 @@ const IndexPage: React.FC<PageProps<{ homePageData: PageData }>> = ({
   );
 };
 
-export const Head: HeadFC = () => <title>Home | Casa Michele Cosentino</title>;
+export const Head: HeadFC = ({ data }) => (
+  <HeadContent
+    title="Home | Casa Michele Cosentino"
+    data={(data as PagePropsData).homePageData}
+    description="Home page dedicata alla casa di riposo Michele Cosentino, un luogo di cura e serenità dove i nostri ospiti possono sentirsi a casa."
+  />
+);
 
 export const query = graphql`
   query HomePageQuery {

@@ -24,8 +24,8 @@ const Navbar = ({ currentPage }: Props) => {
   }, [menuClass]);
   return (
     <nav
-      className={`fixed w-full  z-50 bg-white flex flex-col ${
-        menuClass === "is-open" ? `h-screen` : ""
+      className={`fixed w-full z-50 bg-white flex flex-col ${
+        menuClass === "is-open" ? `h-full` : ""
       }`}
     >
       <div className="flex items-center justify-between py-5 px-8">

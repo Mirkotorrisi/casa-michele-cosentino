@@ -7,10 +7,10 @@ import { PageData } from "types/pageData";
 import { getListItems } from "helpers";
 import ContactUs from "components/ContactUs";
 import useScrollToTop from "hooks/useScrollToTop";
+import HeadContent from "components/HeadContent";
 
-const ContactUsPage: React.FC<PageProps<{ contactUsPageData: PageData }>> = ({
-  data,
-}) => {
+type PagePropsData = { contactUsPageData: PageData };
+const ContactUsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
   const translate = useTranslate(data.contactUsPageData);
 
   useScrollToTop();
@@ -31,8 +31,12 @@ const ContactUsPage: React.FC<PageProps<{ contactUsPageData: PageData }>> = ({
   );
 };
 
-export const Head: HeadFC = () => (
-  <title>Contattaci | Casa Michele Cosentino</title>
+export const Head: HeadFC = ({ data }) => (
+  <HeadContent
+    title="Contattaci | Casa Michele Cosentino"
+    data={(data as PagePropsData).contactUsPageData}
+    description="Pagina contente i contatti utili per poter comunicare con l'amministrazione della casa di riposo Michele Cosentino"
+  />
 );
 
 export const query = graphql`

@@ -18,10 +18,11 @@ import {
   eventsHeroFloatings,
   eventsSecondFloatings,
 } from "resources/floatingsData";
+import HeadContent from "components/HeadContent";
 
-const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
-  data,
-}) => {
+type PagePropsData = { eventsPageData: PageData };
+
+const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
   const images = getImages(data.eventsPageData);
   const eventCards = getListItems(data.eventsPageData, "events-cards");
   const eventCarousel = getListItems(data.eventsPageData, "carousel-eventi-1");
@@ -102,8 +103,12 @@ const EventsPage: React.FC<PageProps<{ eventsPageData: PageData }>> = ({
   );
 };
 
-export const Head: HeadFC = () => (
-  <title>Eventi | Casa Michele Cosentino</title>
+export const Head: HeadFC = ({ data }) => (
+  <HeadContent
+    title="Feste ed eventi | Casa Michele Cosentino"
+    data={(data as PagePropsData).eventsPageData}
+    description="Le feste e gli eventi che allietano le giornate degli ospiti della casa di riposo Michele Cosentino."
+  />
 );
 
 export const query = graphql`

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { FACEBOOK } from "resources";
+import { FACEBOOK, VAT } from "resources";
 
 type Props = {
   changeLayout?: boolean;
@@ -10,12 +10,17 @@ const FooterSocials = ({ changeLayout = false }: Props) => {
     <div
       className={`flex ${
         changeLayout ? "justify-between" : "flex-col lg:flex-row"
-      } items-center lg:justify-between gap-6 py-8 lg:py-10 border-t-[#E5E5E5] border-t border-solid`}
+      } items-center lg:justify-between gap-6 py-8 lg:py-10 border-t-neutral-200 border-t border-solid`}
     >
-      <p className="text-[#A3A3A3] text-sm not-italic font-semibold leading-5">
-        Casa Michele Cosentino © 2024
-      </p>
-      <a href={FACEBOOK} className="text-[#A3A3A3] text-lg">
+      <div className="flex flex-col gap-2 items-start">
+        <p className="text-neutral-400 text-sm not-italic font-semibold leading-5">
+          Casa Michele Cosentino © 2024
+        </p>
+        <p className="text-neutral-400 text-sm not-italic font-semibold leading-5">
+          Partita IVA: {VAT}
+        </p>
+      </div>
+      <a href={FACEBOOK} className="text-neutral-400 text-lg">
         <FaFacebook size={24} />
       </a>
     </div>
