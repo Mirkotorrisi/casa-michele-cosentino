@@ -47,8 +47,8 @@ const WhoWeArePage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         >
           <SectionHeadings
             goesToLeft
-            title={translate("our-mission")}
-            subtitle={translate("our-mission-sub")}
+            title={translate("chi-siamo-2-h")}
+            subtitle={translate("chi-siamo-2-p")}
           />
           <Image
             imageKey="chi-siamo-1"
@@ -63,8 +63,8 @@ const WhoWeArePage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 lg:gap-40">
             <SectionHeadings
               goesToLeft
-              title={translate("our-vision")}
-              subtitle={translate("our-vision-sub")}
+              title={translate("chi-siamo-3-h")}
+              subtitle={translate("chi-siamo-3-p")}
             />
             <Image
               imageKey="chi-siamo-2"
@@ -77,8 +77,8 @@ const WhoWeArePage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           </section>
         </div>
         <ContactUs
-          title={translate("contact-title")}
-          subtitle={translate("contact-subtitle")}
+          title={translate("contact-h")}
+          subtitle={translate("contact-p")}
           contactCards={getListItems(data.whoWeArePageData, "contact-cards")}
         />
       </main>

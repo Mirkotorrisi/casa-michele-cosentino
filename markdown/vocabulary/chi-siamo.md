@@ -10,15 +10,15 @@ terms:
       per offrire una vita             serena agli anziani."
   - label: Scopri di più
     key: discover-more
-  - key: our-mission
+  - key: chi-siamo-2-h
     label: La nostra missione
   - label: "              Fornire assistenza e supporto di alta qualità agli
       anziani,               garantendo loro dignità, indipendenza e una vita
       ricca di momenti               felici e sereni."
-    key: our-mission-sub
-  - key: our-vision
+    key: chi-siamo-2-p
+  - key: chi-siamo-3-h
     label: La nostra visione
-  - key: our-vision-sub
+  - key: chi-siamo-3-p
     label: "                Essere riconosciuti come un punto di riferimento
       nell'assistenza                 agli anziani, un luogo dove ogni ospite si
       sente valorizzato, e                 parte di una famiglia."

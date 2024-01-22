@@ -58,10 +58,10 @@ const IndexPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         >
           <SectionHeadings
             goesToLeft
-            title={translate("second-section-heading")}
-            subtitle={translate("second-section-sub")}
+            title={translate("home-2-h")}
+            subtitle={translate("home-2-p")}
             link="/chi-siamo"
-            linkText={translate("second-section-cta")}
+            linkText={translate("home-2-cta")}
           />
           <Image
             imageKey="home-2"
@@ -73,18 +73,18 @@ const IndexPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           />
         </section>
         <OurServices
-          title={translate("our-services")}
-          subtitle={translate("our-services-description")}
+          title={translate("home-3-h")}
+          subtitle={translate("home-3-p")}
           link="/servizi"
-          linkText={translate("our-services-cta")}
+          linkText={translate("home-3-cta")}
           servicesCards={servicesCards}
         />
         <section className="pb-8 lg:pb-16">
           <SectionHeadings
-            title={translate("fourth-section-title")}
-            subtitle={translate("fourth-section-subtitle")}
+            title={translate("home-4-h")}
+            subtitle={translate("home-4-p")}
             link="/la-struttura"
-            linkText={translate("fourth-section-cta")}
+            linkText={translate("home-4-cta")}
           />
         </section>
         <Carousel images={theBuildingCarousel} />
@@ -92,10 +92,10 @@ const IndexPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <SectionHeadings
             goesToLeft
-            title={translate("fifth-section-title")}
-            subtitle={translate("fifth-section-subtitle")}
+            title={translate("home-5-h")}
+            subtitle={translate("home-5-p")}
             link="/eventi"
-            linkText={translate("fifth-section-cta")}
+            linkText={translate("home-5-cta")}
           />
           <Image
             imageKey="home-3"
@@ -107,8 +107,8 @@ const IndexPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           />
         </section>
         <ContactUs
-          title={translate("contact-title")}
-          subtitle={translate("contact-subtitle")}
+          title={translate("contact-h")}
+          subtitle={translate("contact-p")}
           contactCards={getListItems(data.homePageData, "contact-cards")}
         />
 

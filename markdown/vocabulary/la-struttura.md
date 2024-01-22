@@ -7,22 +7,18 @@ terms:
     label: "Immersa in un ambiente sereno e accogliente, la nostra struttura è pensata per offrire comfort, sicurezza e qualità di vita ai nostri ospiti."
   - key: discover-more
     label: Scopri di più
-  - key: second-section-heading
+  - key: la-struttura-2-h
     label: La struttura
-  - key: second-section-sub
+  - key: la-struttura-2-p
     label: La nostra struttura è progettata per offrire il massimo comfort e sicurezza, garantendo spazi luminosi e arredi funzionali per un'esperienza di soggiorno piacevole e rilassante.
-  - key: third-section-title
+  - key: la-struttura-3-h
     label: Spazi di vita e socializzazione
-  - key: third-section-sub
+  - key: la-struttura-3-p
     label: I nostri spazi comuni e la biblioteca sono fulcri di vita sociale e culturale. Sale comuni luminose accolgono attività di gruppo e momenti di relax, mentre la biblioteca e la sala convegni sono spazi dedicati all'apprendimento e agli eventi culturali.
-  - key: fourth-section-title
+  - key: la-struttura-4-h
     label: Comfort e Privacy
-  - key: fourth-section-subtitle
+  - key: la-struttura-4-p
     label: Le nostre camere, sia singole che doppie, sono progettate per garantire privacy e comfort. Ogni camera è dotata di servizi essenziali e arredi funzionali, rispettando le esigenze individuali degli ospiti.
-  - key: carousel-title
-    label: Spazi di vita e socializzazione
-  - key: carousel-subtitle
-    label: I nostri spazi comuni e la biblioteca sono fulcri di vita sociale e culturale. Sale comuni luminose accolgono attività di gruppo e momenti di relax, mentre la biblioteca e la sala convegni sono spazi dedicati all'apprendimento e agli eventi culturali.
   - key: our-services
     label: I nostri servizi
   - key: our-services-description

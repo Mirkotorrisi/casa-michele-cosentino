@@ -45,8 +45,8 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         />
         <section className="gap-8 lg:gap-16" ref={ref}>
           <SectionHeadings
-            title={translate("yearly-events")}
-            subtitle={translate("yearly-events-sub")}
+            title={translate("eventi-2-h")}
+            subtitle={translate("eventi-2-p")}
           />
           <div className="flex flex-col gap-8 md:grid md:grid-cols-3 lg:gap-y-16">
             {eventCards?.map((c) => (
@@ -72,8 +72,8 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 ">
             <SectionHeadings
               goesToLeft
-              title={translate("associations-title")}
-              subtitle={translate("associations-subtitle")}
+              title={translate("eventi-3-h")}
+              subtitle={translate("eventi-3-p")}
             />
             <Image
               imageKey="eventi-2"
@@ -87,14 +87,14 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         </div>
         <section className="pb-8 lg:pb-16">
           <SectionHeadings
-            title={translate("our-events-moments")}
-            subtitle={translate("our-events-moments-sub")}
+            title={translate("eventi-4-h")}
+            subtitle={translate("eventi-4-p")}
           />
         </section>
         <Carousel className="mb-8 md:mb-10 lg:mb-20" images={eventCarousel} />
         <ContactUs
-          title={translate("contact-title")}
-          subtitle={translate("contact-subtitle")}
+          title={translate("contact-h")}
+          subtitle={translate("contact-p")}
           contactCards={getListItems(data.eventsPageData, "contact-cards")}
         />
       </main>

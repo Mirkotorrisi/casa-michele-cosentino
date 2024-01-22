@@ -9,21 +9,21 @@ terms:
   - label: Scopri di più
     key: discover-more
   - label: Eventi durante l’anno
-    key: yearly-events
+    key: eventi-2-h
   - label:
       "              Da celebrazioni tradizionali a incontri culturali, ogni
       evento è               un'occasione speciale per riunire la nostra
       comunità"
-    key: yearly-events-sub
+    key: eventi-2-p
   - label: Animazione culturale e musicoterapia
-    key: associations-title
+    key: eventi-3-h
   - label:
       "                Collaborazioni con entità locali per arricchire la vita
       sociale                 e culturale dei nostri ospiti."
-    key: associations-subtitle
+    key: eventi-3-p
   - label: I Momenti dei Nostri Eventi
-    key: our-events-moments
+    key: eventi-4-h
   - label: "            Scorri la galleria per vedere i momenti felici e le
       celebrazioni             nella nostra casa."
-    key: our-events-moments-sub
+    key: eventi-4-p
 ---

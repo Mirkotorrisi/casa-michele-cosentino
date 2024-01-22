@@ -62,7 +62,7 @@ const ServicesPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         <div className="flex flex-col lg:grid lg:grid-cols-2">
           <section className="gap-16 lg:items-start" ref={ref}>
             <h2 className="lg:text-left heading-2">
-              {translate("first-section-h2")}
+              {translate("servizi-2-h")}
             </h2>
             <div className="flex flex-col gap-8 md:grid md:grid-cols-2">
               {servicesCards?.map((card) => (
@@ -88,8 +88,8 @@ const ServicesPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           <section className="md:grid md:grid-cols-2 md:gap-x-20 md:p-10 lg:p-20 lg:flex lg:flex-col lg:items-start gap-6 lg:gap-8">
             <SectionHeadings
               goesToLeft
-              title={translate("second-section-h2")}
-              subtitle={translate("second-section-paragraph")}
+              title={translate("servizi-3-h")}
+              subtitle={translate("servizi-3-p")}
             />
             <div className="flex flex-col gap-4 divide-y">
               {spiritualityCards.map(({ title, text }) => (
@@ -107,8 +107,8 @@ const ServicesPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         <div className="blue-section">
           <section className="gap-8">
             <SectionHeadings
-              title={translate("daily-life-title")}
-              subtitle={translate("daily-life-sub")}
+              title={translate("servizi-4-h")}
+              subtitle={translate("servizi-4-p")}
             />
             <Image
               imageKey="servizi-2"
@@ -132,8 +132,8 @@ const ServicesPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           </section>
         </div>
         <ContactUs
-          title={translate("contact-title")}
-          subtitle={translate("contact-subtitle")}
+          title={translate("contact-h")}
+          subtitle={translate("contact-p")}
           contactCards={getListItems(data.servicesPageData, "contact-cards")}
         />
       </main>

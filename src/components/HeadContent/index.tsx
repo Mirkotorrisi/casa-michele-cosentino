@@ -8,7 +8,6 @@ type Props = {
 };
 
 const HeadContent = ({ title, data, description }: Props) => {
-  console.log("🚀 ~ HeadContent ~ data:", data);
   const images = data.edges.find(
     (edge) => !!edge.node.frontmatter.images?.length
   )?.node.frontmatter.images;

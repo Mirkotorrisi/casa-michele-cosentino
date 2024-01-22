@@ -22,7 +22,7 @@ const ContactUsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         <ContactUs
           title={translate("contact-page-title")}
           isContactPage
-          subtitle={translate("contact-subtitle")}
+          subtitle={translate("contact-p")}
           contactCards={getListItems(data.contactUsPageData, "contact-cards")}
         />
       </main>

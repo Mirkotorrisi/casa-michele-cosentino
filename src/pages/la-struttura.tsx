@@ -60,23 +60,23 @@ const TheBuildingPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
         >
           <SectionHeadings
             goesToLeft
-            title={translate("second-section-heading")}
-            subtitle={translate("second-section-sub")}
+            title={translate("la-struttura-2-h")}
+            subtitle={translate("la-struttura-2-p")}
           />
           <CarouselMini images={theBuildingFirstCarousel} />
         </section>
         <section className="pb-8 lg:pb-16">
           <SectionHeadings
-            title={translate("carousel-title")}
-            subtitle={translate("fourth-section-subtitle")}
+            title={translate("la-struttura-3-h")}
+            subtitle={translate("la-struttura-3-p")}
           />
         </section>
         <Carousel images={theBuildingSecondCarousel} />
         <section className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40">
           <SectionHeadings
             goesToLeft
-            title={translate("fourth-section-title")}
-            subtitle={translate("fourth-section-subtitle")}
+            title={translate("la-struttura-4-h")}
+            subtitle={translate("la-struttura-4-p")}
           />
           <CarouselMini images={theBuildingThirdCarousel} />
         </section>
@@ -88,8 +88,8 @@ const TheBuildingPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           servicesCards={servicesCards}
         />
         <ContactUs
-          title={translate("contact-title")}
-          subtitle={translate("contact-subtitle")}
+          title={translate("contact-h")}
+          subtitle={translate("contact-p")}
           contactCards={getListItems(data.theBuildingPageData, "contact-cards")}
         />
       </main>
