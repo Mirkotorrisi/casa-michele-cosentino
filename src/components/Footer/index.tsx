@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { StaticImage } from "gatsby-plugin-image";
-import routes from "components/Navbar/routes";
 import cartaDeiServizi from "assets/carta-dei-servizi.pdf";
+import routes from "components/Navbar/routes";
+import { StaticImage } from "gatsby-plugin-image";
 import FooterSocials from "./FooterSocials";
 
 const Footer = () => (

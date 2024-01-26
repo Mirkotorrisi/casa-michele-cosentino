@@ -1,8 +1,8 @@
-import React from "react";
-import "./index.scss";
 import LinkCard from "components/LinkCard";
+import React from "react";
 import { getSvgIcon } from "resources/getSvgIcon";
 import { ListItem } from "types/pageData";
+import "./index.scss";
 
 type Props = {
   title: string;

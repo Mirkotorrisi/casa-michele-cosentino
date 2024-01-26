@@ -1,25 +1,25 @@
-import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import { Gallery } from "context/Gallery";
-import Image from "components/Image";
-import ContactUs from "components/ContactUs";
 import Card from "components/Card";
 import Carousel from "components/Carousel";
-import useTranslate from "hooks/useTranslate";
-import { PageData } from "types/pageData";
-import { getImages, getListItems } from "helpers";
+import ContactUs from "components/ContactUs";
+import Footer from "components/Footer";
+import HeadContent from "components/HeadContent";
 import Hero from "components/Hero";
+import Image from "components/Image";
+import Navbar from "components/Navbar";
 import SectionHeadings from "components/SectionHeadings";
-import useScrollToTop from "hooks/useScrollToTop";
+import { Gallery } from "context/Gallery";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { getImages, getListItems } from "helpers";
 import useScrollToRef from "hooks/useScrollToRef";
+import useScrollToTop from "hooks/useScrollToTop";
+import useTranslate from "hooks/useTranslate";
+import * as React from "react";
 import {
   eventsHeroFloatings,
   eventsSecondFloatings,
 } from "resources/floatingsData";
-import HeadContent from "components/HeadContent";
-import { StaticImage } from "gatsby-plugin-image";
+import { PageData } from "types/pageData";
 
 type PagePropsData = { eventsPageData: PageData };
 

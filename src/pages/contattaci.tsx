@@ -1,13 +1,13 @@
-import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import useTranslate from "hooks/useTranslate";
-import { PageData } from "types/pageData";
-import { getListItems } from "helpers";
 import ContactUs from "components/ContactUs";
-import useScrollToTop from "hooks/useScrollToTop";
+import Footer from "components/Footer";
 import HeadContent from "components/HeadContent";
+import Navbar from "components/Navbar";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { getListItems } from "helpers";
+import useScrollToTop from "hooks/useScrollToTop";
+import useTranslate from "hooks/useTranslate";
+import * as React from "react";
+import { PageData } from "types/pageData";
 
 type PagePropsData = { contactUsPageData: PageData };
 const ContactUsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {

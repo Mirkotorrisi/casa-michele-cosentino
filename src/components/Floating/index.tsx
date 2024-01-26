@@ -1,12 +1,12 @@
-import "./index.scss";
-import React from "react";
+import useScrollPosition from "hooks/useScrollPosition";
+import CircleStroke from "images/circle-stroke.svg";
+import Circle from "images/circle.svg";
 import SquareStroke from "images/square-stroke.svg";
 import Square from "images/square.svg";
-import Circle from "images/circle.svg";
-import CircleStroke from "images/circle-stroke.svg";
-import Triangle from "images/triangle.svg";
 import TriangleStroke from "images/triangle-stroke.svg";
-import useScrollPosition from "hooks/useScrollPosition";
+import Triangle from "images/triangle.svg";
+import React from "react";
+import "./index.scss";
 
 type Props = {
   keyName: string;

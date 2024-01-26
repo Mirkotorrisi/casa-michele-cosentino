@@ -1,21 +1,21 @@
-import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import { Gallery } from "context/Gallery";
-import useTranslate from "hooks/useTranslate";
-import { PageData } from "types/pageData";
-import { getImages, getListItems } from "helpers";
 import Carousel from "components/Carousel";
-import ContactUs from "components/ContactUs";
 import CarouselMini from "components/CarouselMini";
+import ContactUs from "components/ContactUs";
+import Footer from "components/Footer";
+import HeadContent from "components/HeadContent";
 import Hero from "components/Hero";
+import Navbar from "components/Navbar";
 import OurServices from "components/OurServices.tsx";
 import SectionHeadings from "components/SectionHeadings";
-import useScrollToTop from "hooks/useScrollToTop";
+import { Gallery } from "context/Gallery";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { getImages, getListItems } from "helpers";
 import useScrollToRef from "hooks/useScrollToRef";
+import useScrollToTop from "hooks/useScrollToTop";
+import useTranslate from "hooks/useTranslate";
+import * as React from "react";
 import { theBuildingHeroFloatings } from "resources/floatingsData";
-import HeadContent from "components/HeadContent";
+import { PageData } from "types/pageData";
 
 type PagePropsData = { theBuildingPageData: PageData };
 

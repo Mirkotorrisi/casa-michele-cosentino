@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import Image from "components/Image";
-import {
-  Pagination,
-  Navigation,
-  EffectCreative,
-  Autoplay,
-} from "swiper/modules";
-import { PaginationOptions } from "swiper/types";
+import React, { useState } from "react";
 import { getSvgIcon } from "resources/getSvgIcon";
+import "swiper/css";
+import {
+  Autoplay,
+  EffectCreative,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { PaginationOptions } from "swiper/types";
 import { ListItem } from "types/pageData";
 
 type Props = {

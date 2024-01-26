@@ -431,15 +431,15 @@ const theBuildingHeroFloatings: FloatingType[] = [
 ];
 
 export {
+  eventsHeroFloatings,
+  eventsSecondFloatings,
   homeHeroFloatings,
   homeSecondFloatings,
   homeThirdFloatings,
+  servicesHeroFloatings,
+  servicesSecondFloatings,
+  theBuildingHeroFloatings,
   whoWeAreHeroFloatings,
   whoWeAreSecondFloatings,
   whoWeAreThirdFloatings,
-  servicesHeroFloatings,
-  servicesSecondFloatings,
-  eventsHeroFloatings,
-  eventsSecondFloatings,
-  theBuildingHeroFloatings,
 };

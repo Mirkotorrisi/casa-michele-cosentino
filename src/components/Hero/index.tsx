@@ -1,8 +1,7 @@
-import React from "react";
-import { getSvgIcon } from "resources/getSvgIcon";
 import Image from "components/Image";
-import Floating from "components/Floating";
+import React from "react";
 import { FloatingType } from "resources/floatingsData";
+import { getSvgIcon } from "resources/getSvgIcon";
 
 type Props = {
   title: string;

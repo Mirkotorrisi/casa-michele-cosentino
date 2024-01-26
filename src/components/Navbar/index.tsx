@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "./index.scss";
-import NavLink from "./NavLink";
-import routes, { contactRoute } from "./routes";
-import { StaticImage } from "gatsby-plugin-image";
-import { getSvgIcon } from "resources/getSvgIcon";
 import FooterSocials from "components/Footer/FooterSocials";
+import { StaticImage } from "gatsby-plugin-image";
+import React, { useEffect, useState } from "react";
+import { getSvgIcon } from "resources/getSvgIcon";
+import NavLink from "./NavLink";
+import "./index.scss";
+import routes, { contactRoute } from "./routes";
 
 type Props = {
   currentPage: string;

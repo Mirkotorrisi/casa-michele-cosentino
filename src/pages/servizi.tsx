@@ -1,25 +1,25 @@
-import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import { Gallery } from "context/Gallery";
-import Image from "components/Image";
-import ContactUs from "components/ContactUs";
 import Card from "components/Card";
-import { PageData } from "types/pageData";
-import useTranslate from "hooks/useTranslate";
-import { getSvgIcon } from "resources/getSvgIcon";
-import { getImages, getListItems } from "helpers";
 import CarouselMini from "components/CarouselMini";
+import ContactUs from "components/ContactUs";
+import Footer from "components/Footer";
+import HeadContent from "components/HeadContent";
 import Hero from "components/Hero";
+import Image from "components/Image";
+import Navbar from "components/Navbar";
 import SectionHeadings from "components/SectionHeadings";
-import useScrollToTop from "hooks/useScrollToTop";
+import { Gallery } from "context/Gallery";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { getImages, getListItems } from "helpers";
 import useScrollToRef from "hooks/useScrollToRef";
+import useScrollToTop from "hooks/useScrollToTop";
+import useTranslate from "hooks/useTranslate";
+import * as React from "react";
 import {
   servicesHeroFloatings,
   servicesSecondFloatings,
 } from "resources/floatingsData";
-import HeadContent from "components/HeadContent";
+import { getSvgIcon } from "resources/getSvgIcon";
+import { PageData } from "types/pageData";
 
 type PagePropsData = { servicesPageData: PageData };
 

@@ -1,5 +1,5 @@
+import { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
-import { Link, HeadFC, PageProps } from "gatsby";
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (

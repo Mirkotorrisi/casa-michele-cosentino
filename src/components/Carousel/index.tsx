@@ -1,10 +1,10 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import Image from "components/Image";
-import { getSvgIcon } from "resources/getSvgIcon";
-import { Autoplay, Navigation } from "swiper/modules";
 import useIsMobile from "hooks/useIsMobile";
+import React from "react";
+import { getSvgIcon } from "resources/getSvgIcon";
+import "swiper/css";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { ListItem } from "types/pageData";
 
 type Props = {
