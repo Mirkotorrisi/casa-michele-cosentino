@@ -19,6 +19,7 @@ import {
   eventsSecondFloatings,
 } from "resources/floatingsData";
 import HeadContent from "components/HeadContent";
+import { StaticImage } from "gatsby-plugin-image";
 
 type PagePropsData = { eventsPageData: PageData };
 
@@ -53,7 +54,7 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
               <Card
                 key={c.title}
                 image={
-                  <img
+                  <StaticImage
                     src={c.image}
                     className="image-card rounded-md"
                     alt={c.text}
