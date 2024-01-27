@@ -34,18 +34,7 @@ const config: GatsbyConfig = {
         name: "img",
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: { maxWidth: 1024 },
-          },
-        ],
-      },
-    },
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
