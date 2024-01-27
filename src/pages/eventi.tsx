@@ -9,7 +9,6 @@ import Navbar from "components/Navbar";
 import SectionHeadings from "components/SectionHeadings";
 import { Gallery } from "context/Gallery";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import { getImages, getListItems } from "helpers";
 import useScrollToRef from "hooks/useScrollToRef";
 import useScrollToTop from "hooks/useScrollToTop";
@@ -54,7 +53,7 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
               <Card
                 key={c.title}
                 image={
-                  <StaticImage
+                  <img
                     src={c.image}
                     className="image-card rounded-md"
                     alt={c.text}

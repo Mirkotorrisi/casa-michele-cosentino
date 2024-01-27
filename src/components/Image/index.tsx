@@ -1,6 +1,5 @@
 import Floating from "components/Floating";
 import { useGallery } from "context/Gallery";
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { FloatingType } from "resources/floatingsData";
 import { ImageItem } from "types/pageData";
@@ -30,7 +29,7 @@ const Image = ({
   const image = imageData ?? getImageSrc(imageKey);
   return (
     <div className="relative w-full flex max-w-2xl lg:max-w-6xl">
-      <StaticImage
+      <img
         src={image.image}
         width={width ?? 1120}
         height={height ?? 630}
