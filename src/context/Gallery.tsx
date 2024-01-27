@@ -40,13 +40,12 @@ export const Gallery = ({ children, images = [] }: Props) => {
       ({ key }: ImageItem) =>
         key.trim().toLowerCase() === searchKey.trim().toLowerCase()
     ) ?? { key: "", image: "" };
-    console.log("🚀 ~ getImage ~ imageItem:", imageItem);
 
     const gatsbyImage = data.allFile.edges.find(
       (e: { node: { name: string; childImageSharp: unknown } }) =>
         imageItem.image.includes(e.node.name)
     )?.node?.childImageSharp?.gatsbyImageData;
-    console.log("🚀 ~ getImage ~ gatsbyImage:", gatsbyImage);
+
     return {
       imageItem,
       gatsbyImage,
