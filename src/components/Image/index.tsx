@@ -32,7 +32,7 @@ const Image = ({
   const props = {
     width: width ?? 112,
     height: height ?? 63,
-    loading: isHero ? "eager" : ("lazy" as "eager" | "lazy"),
+    loading: (isHero ? "eager" : "lazy") as "eager" | "lazy",
     className: `${className ?? ""} ${
       hasShadow ? "shadow-xl" : ""
     } aspect-video w-full h-full object-cover z-10 mx-auto`,
