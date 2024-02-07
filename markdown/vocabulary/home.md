@@ -11,8 +11,8 @@ terms:
   - key: home-2-h
     label: Chi siamo
   - key: home-2-p
-    label: Fornire assistenza e supporto di alta qualità agli anziani, garantendo
-      loro dignità, indipendenza e una vita ricca di momenti felici e sereni.
+    label: Fornire assistenza e supporto di qualità agli anziani, garantendo loro
+      dignità, indipendenza e una vita ricca di momenti felici e sereni.
   - key: home-2-cta
     label: Conosci la nostra storia
   - key: home-3-h
@@ -35,8 +35,9 @@ terms:
   - key: home-5-h
     label: Momenti speciali di socializzazione
   - key: home-5-p
-    label: Fornire assistenza e supporto di alta qualità agli anziani, garantendo
-      loro dignità, indipendenza e una vita ricca di momenti felici e sereni.
+    label: Siamo impegnati a fornire un ambiente accogliente e inclusivo dove gli
+      anziani possono connettersi, condividere esperienze e creare ricordi
+      preziosi insieme
   - key: home-5-cta
     label: Scopri tutti gli eventi
 ---
