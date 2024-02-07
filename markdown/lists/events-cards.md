@@ -2,14 +2,15 @@
 pageKey: eventi
 listKey: events-cards
 listItem:
-  - text: Una festa mensile per tutti gli ospiti che festeggiano nel mese.
+  - text: Festeggiamo il compleanno di ogni nostro ospite tutti insieme
     image: /img/palloncini.webp
-    title: C﻿omplemese
+    title: Compleanno
   - title: Festa della Mamma e del Papà
     text: Celebrazioni dedicate per onorare i genitori.
     image: /img/coppia.webp
   - title: Festa dell’assunta
-    text: Un giorno di festa che unisce tradizione e comunità sotto il segno della condivisione.
+    text: Un giorno di festa che unisce tradizione e comunità sotto il segno della
+      condivisione.
     image: /img/assunta.webp
   - title: Festività Pasquali
     text: Celebriamo la rinascita e la gioia pasquale.
