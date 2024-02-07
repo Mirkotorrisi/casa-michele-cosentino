@@ -15,7 +15,7 @@ terms:
       evento è               un'occasione speciale per riunire la nostra
       comunità"
     key: eventi-2-p
-  - label: Animazione culturale e musicoterapia
+  - label: Animazione culturale
     key: eventi-3-h
   - label:
       "                Collaborazioni con entità locali per arricchire la vita
@@ -26,4 +26,8 @@ terms:
   - label: "            Scorri la galleria per vedere i momenti felici e le
       celebrazioni             nella nostra casa."
     key: eventi-4-p
+  - label: Musicoterapia
+    key: eventi-5-h
+  - label: "La musica lenisce l'anima e allevia lo stress. Siamo impegnati a integrare la musicoterapia nel nostro approccio di cura globale, garantendo che ogni residente possa beneficiare del suo potere curativo e ristoratore."
+    key: eventi-5-p
 ---

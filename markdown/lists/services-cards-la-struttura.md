@@ -3,7 +3,7 @@ pageKey: la-struttura
 listKey: services-cards
 listItem:
   - title: Assistenza medica e infermieristica
-    text: Medici ed infermieri qualificati attenti alla salute dei nostri ospiti.
+    text: Medici, specialisti, infermieri qualificati attenti alla salute dei nostri ospiti.
     links:
       - linkText: "medical-blue"
   - title: Assistenza quotidiana e riabilitativa

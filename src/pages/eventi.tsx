@@ -76,7 +76,7 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
               subtitle={translate("eventi-3-p")}
             />
             <Image
-              imageKey="eventi-2"
+              imageKey="eventi-3"
               className="mt-6 md:mt-0"
               hasShadow
               width={560}
@@ -85,6 +85,21 @@ const EventsPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
             />
           </section>
         </div>
+        <section className="md:grid md:grid-cols-2 gap-2 md:gap-20 ">
+          <Image
+            imageKey="eventi-2"
+            className="mt-6 md:mt-0"
+            hasShadow
+            width={560}
+            height={315}
+            floatings={eventsSecondFloatings}
+          />
+          <SectionHeadings
+            goesToLeft
+            title={translate("eventi-5-h")}
+            subtitle={translate("eventi-5-p")}
+          />
+        </section>
         <section className="pb-8 lg:pb-16">
           <SectionHeadings
             title={translate("eventi-4-h")}

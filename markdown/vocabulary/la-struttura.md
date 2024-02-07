@@ -24,7 +24,7 @@ terms:
   - key: our-services-description
     label:
       Ogni giorno alla Casa di Riposo Mons. Michele Cosentino è arricchito da
-      pasti deliziosi e un'ampia gamma di attività. Ci dedichiamo a fornire
+      pasti deliziosi e diverse attività. Ci dedichiamo a fornire
       esperienze che promuovano il benessere e offrano opportunità per nuove
       amicizie e momenti di relax, garantendo sempre un servizio attento e
       personalizzato.

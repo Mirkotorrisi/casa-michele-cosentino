@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import bilancioSociale from "assets/bilancio-sociale.pdf";
 import cartaDeiServizi from "assets/carta-dei-servizi.pdf";
 import routes from "components/Navbar/routes";
 import { StaticImage } from "gatsby-plugin-image";
@@ -32,7 +33,7 @@ const Footer = () => (
           Carta dei servizi
         </a>
         <a
-          href="bilancio-sociale.pdf"
+          href={bilancioSociale}
           rel="noreferrer"
           target="_blank"
           className="text-neutral-700 text-base not-italic font-semibold leading-6"

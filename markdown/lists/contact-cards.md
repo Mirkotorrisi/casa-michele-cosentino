@@ -3,10 +3,10 @@ pageKey: contattaci
 listKey: contact-cards
 listItem:
   - title: Email
-    text: coopmichelecosentino@pec.it
+    text: admin@casamichelecosentino.it / coopmichelecosentino@pec.it
     links:
       - linkText: "email"
-        linkURL: mailto:coopmichelecosentino@pec.it
+        linkURL: mailto:admin@casamichelecosentino.it
   - title: Indirizzo
     text: Via Marchese di Casalotto, 12, Aci San Antonio (CT)
     links:
