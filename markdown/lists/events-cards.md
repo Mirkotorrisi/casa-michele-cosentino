@@ -8,9 +8,9 @@ listItem:
   - title: Festa della Mamma e del Papà
     text: Celebrazioni dedicate per onorare i genitori.
     image: /img/coppia.webp
-  - title: Festa dell’assunta
+  - title: Festa di Maria Assunta
     text: Un giorno di festa che unisce tradizione e comunità sotto il segno della
-      condivisione.
+      fede e della condivisione.
     image: /img/assunta.webp
   - title: Festività Pasquali
     text: Celebriamo la rinascita e la gioia pasquale.
