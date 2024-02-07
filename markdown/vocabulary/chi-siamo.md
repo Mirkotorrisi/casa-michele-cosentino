@@ -12,7 +12,7 @@ terms:
     key: discover-more
   - key: chi-siamo-2-h
     label: La nostra missione
-  - label: "              Fornire assistenza e supporto di alta qualità agli
+  - label: "              Fornire assistenza e supporto di qualità agli
       anziani,               garantendo loro dignità, indipendenza e una vita
       ricca di momenti               felici e sereni."
     key: chi-siamo-2-p
