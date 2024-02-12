@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Casa di cura Michele Cosentino`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://casamonsmichelecosentino.it`,
     lang: "it-IT",
     description:
       "Casa Mons.Michele Cosentino, la residenza che accoglie anziani, alla ricerca di un contesto familiare nel quale vivere serenamente la propria quotidianità",

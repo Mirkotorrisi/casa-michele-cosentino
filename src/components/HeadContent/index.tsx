@@ -19,8 +19,12 @@ const HeadContent = ({ title, data, description }: Props) => {
       <title>{title}</title>
       <meta lang="it-IT" />
       <meta property="description" content={description} />
+      <meta property="og:description" content={description} />
       <meta property="og:title" content={title} />
-      <meta property="og:image" content={ogImage} />
+      <meta
+        property="og:image"
+        content={`https://casamonsmichelecosentino.it/${ogImage}`}
+      />
     </>
   );
 };
