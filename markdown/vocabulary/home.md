@@ -11,14 +11,16 @@ terms:
   - key: home-2-h
     label: Chi siamo
   - key: home-2-p
-    label: Fornire assistenza e supporto di qualità agli anziani, garantendo loro
+    label:
+      Fornire assistenza e supporto di qualità agli anziani, garantendo loro
       dignità, indipendenza e una vita ricca di momenti felici e sereni.
   - key: home-2-cta
     label: Conosci la nostra storia
   - key: home-3-h
     label: I nostri servizi
   - key: home-3-p
-    label: Ogni giorno alla Casa di Riposo Mons. Michele Cosentino è arricchito da
+    label:
+      Ogni giorno alla Casa di Riposo Mons. Michele Cosentino è arricchito da
       pasti deliziosi e diverse attività. Ci dedichiamo a fornire esperienze che
       promuovano il benessere e offrano opportunità per nuove amicizie e momenti
       di relax, garantendo sempre un servizio attento e personalizzato.
@@ -33,9 +35,10 @@ terms:
   - key: home-4-cta
     label: Esplora la struttura
   - key: home-5-h
-    label: Momenti speciali di socializzazione
+    label: Momenti speciali di Socializzazione
   - key: home-5-p
-    label: Siamo impegnati a fornire un ambiente accogliente e inclusivo dove gli
+    label:
+      Siamo impegnati a fornire un ambiente accogliente e inclusivo dove gli
       anziani possono connettersi, condividere esperienze e creare ricordi
       preziosi insieme
   - key: home-5-cta

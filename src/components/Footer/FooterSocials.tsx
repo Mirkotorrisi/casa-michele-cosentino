@@ -14,7 +14,7 @@ const FooterSocials = ({ changeLayout = false }: Props) => {
     >
       <div className="flex flex-col gap-2 items-start">
         <p className="text-neutral-400 text-sm not-italic font-semibold leading-5">
-          Casa Michele Cosentino © 2024
+          Casa Mons. Michele Cosentino © 2024
         </p>
         <p className="text-neutral-400 text-sm not-italic font-semibold leading-5">
           Partita IVA: {VAT}
