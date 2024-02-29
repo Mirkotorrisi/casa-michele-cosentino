@@ -10,4 +10,8 @@ listItem:
     image: /img/struttura-carousel-3.webp
   - title: Stanza con tavolo
     image: /img/struttura-carousel-4.webp
+  - title: Cappella
+    image: /img/cappella.jpeg
+  - title: Biblioteca
+    image: /img/biblioteca.jpeg
 ---
