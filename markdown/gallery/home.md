@@ -10,4 +10,7 @@ images:
   - key: home-3
     description: Violinista
     image: /img/violino.webp
+  - key: servizio-civile
+    description: Partecipa al servizio civile
+    image: /img/servizio-civile.jpeg
 ---

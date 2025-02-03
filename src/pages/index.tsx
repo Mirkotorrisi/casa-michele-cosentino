@@ -19,6 +19,7 @@ import {
   homeHeroFloatings,
   homeSecondFloatings,
   homeThirdFloatings,
+  whoWeAreSecondFloatings,
 } from "resources/floatingsData";
 import { PageData } from "types/pageData";
 
@@ -52,6 +53,19 @@ const IndexPage: React.FC<PageProps<PagePropsData>> = ({ data }) => {
           ctaText={translate("discover-more")}
           floatings={homeHeroFloatings}
         />
+        <section
+          className="gap-8  md:gap-20 lg:gap-40"
+          ref={ref}
+        >
+          <Image
+            imageKey="servizio-civile"
+            className="mx-auto max-w-xl !aspect-[5/4] !object-contain"
+            hasShadow
+            width={560}
+            height={800}
+            floatings={whoWeAreSecondFloatings}
+          />
+        </section>
         <section
           className="gap-8 md:grid md:grid-cols-2 md:gap-20 lg:gap-40"
           ref={ref}
